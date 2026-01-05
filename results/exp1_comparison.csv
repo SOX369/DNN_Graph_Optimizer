@@ -1,0 +1,3 @@
+Model,Method,Accuracy(%),Latency(ms),Memory(MB)
+googlenet,Baseline,90.0,15.0,0.01782
+googlenet,C-DGOSA,81.55,156.3072967529297,0.006885

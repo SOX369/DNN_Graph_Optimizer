@@ -27,7 +27,8 @@ def run_experiment_1_ablation():
     print(">> Running Experiment 1: Performance Comparison (Table 1)")
     print("=" * 60)
 
-    models_to_test = ['vgg16', 'resnet50', 'resnext50', 'googlenet']
+    models_to_test = ['googlenet']
+    # models_to_test = ['vgg16', 'resnet50', 'resnext50', 'googlenet']
     # 为了演示快速运行，ResNet等大模型只跑少量 epoch
     demo_epochs = 5
 
