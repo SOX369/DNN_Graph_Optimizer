@@ -1,0 +1,4 @@
+Variant,Params(M),FLOPs(M)
+C-DGOSA (Full),0.001528875,1.565568
+w/o Constraint,0.00176175,1.804032
+w/o Split,0.003969,4.064256
