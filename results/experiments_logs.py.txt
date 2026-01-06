@@ -1,0 +1,819 @@
+/home/xupt-807/anaconda3/envs/wxw/bin/python /home/xupt-807/PycharmProjects/task_train/DNN_Graph_Optimizer/run_experiments.py 
+/home/xupt-807/.cache/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-xsercf7z because there was an issue with the default path (/home/xupt-807/.cache/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+============================================================
+>> Running Experiment 1: Performance Comparison (Table 1)
+============================================================
+Files already downloaded and verified
+Files already downloaded and verified
+
+--- Processing Model: vgg16 ---
+[vgg16] Evaluating Baseline...
+[vgg16] Running C-DGOSA Optimization...
+Start Searching... Initial Energy: 1.5276
+[Iter 0] New Best Found! Energy: 1.3625 | FLOPs: 136.25M | Params: 8.96M
+[Iter 1] New Best Found! Energy: 1.2666 | FLOPs: 126.66M | Params: 8.00M
+[Iter 11] New Best Found! Energy: 1.0790 | FLOPs: 107.90M | Params: 6.76M
+[Iter 12] New Best Found! Energy: 1.0316 | FLOPs: 103.16M | Params: 6.69M
+[Iter 43] New Best Found! Energy: 0.9773 | FLOPs: 97.73M | Params: 4.46M
+[Iter 51] New Best Found! Energy: 0.7460 | FLOPs: 74.60M | Params: 3.28M
+[Iter 94] New Best Found! Energy: 0.6697 | FLOPs: 66.97M | Params: 4.34M
+[Iter 102] New Best Found! Energy: 0.6587 | FLOPs: 65.87M | Params: 3.85M
+[Iter 103] New Best Found! Energy: 0.5393 | FLOPs: 53.93M | Params: 3.10M
+[Iter 105] New Best Found! Energy: 0.5089 | FLOPs: 50.89M | Params: 3.05M
+[Iter 114] New Best Found! Energy: 0.5042 | FLOPs: 50.42M | Params: 2.27M
+[Iter 131] New Best Found! Energy: 0.4651 | FLOPs: 46.51M | Params: 3.62M
+[Iter 135] New Best Found! Energy: 0.4283 | FLOPs: 42.83M | Params: 3.45M
+[Iter 155] New Best Found! Energy: 0.4220 | FLOPs: 42.20M | Params: 2.71M
+[Iter 158] New Best Found! Energy: 0.4121 | FLOPs: 41.21M | Params: 2.46M
+[Iter 301] New Best Found! Energy: 0.3682 | FLOPs: 36.82M | Params: 3.27M
+[Iter 333] New Best Found! Energy: 0.3587 | FLOPs: 35.87M | Params: 1.96M
+[Iter 334] New Best Found! Energy: 0.3516 | FLOPs: 35.16M | Params: 1.96M
+[Iter 339] New Best Found! Energy: 0.2533 | FLOPs: 25.33M | Params: 1.34M
+[Iter 362] New Best Found! Energy: 0.2101 | FLOPs: 21.01M | Params: 0.60M
+[Iter 364] New Best Found! Energy: 0.2079 | FLOPs: 20.79M | Params: 0.55M
+[Iter 365] New Best Found! Energy: 0.1991 | FLOPs: 19.91M | Params: 0.55M
+[Iter 366] New Best Found! Energy: 0.1914 | FLOPs: 19.14M | Params: 0.54M
+Training on cuda...
+Epoch 1/30, Loss: 1.6611
+Epoch 2/30, Loss: 1.2589
+Epoch 3/30, Loss: 1.0823
+Epoch 4/30, Loss: 0.9827
+Epoch 5/30, Loss: 0.9002
+Epoch 6/30, Loss: 0.8491
+Epoch 7/30, Loss: 0.8047
+Epoch 8/30, Loss: 0.7575
+Epoch 9/30, Loss: 0.7302
+Epoch 10/30, Loss: 0.6981
+Epoch 11/30, Loss: 0.6775
+Epoch 12/30, Loss: 0.6557
+Epoch 13/30, Loss: 0.6331
+Epoch 14/30, Loss: 0.6148
+Epoch 15/30, Loss: 0.6000
+Epoch 16/30, Loss: 0.5858
+Epoch 17/30, Loss: 0.5686
+Epoch 18/30, Loss: 0.5583
+Epoch 19/30, Loss: 0.5438
+Epoch 20/30, Loss: 0.5343
+Epoch 21/30, Loss: 0.5263
+Epoch 22/30, Loss: 0.5135
+Epoch 23/30, Loss: 0.5142
+Epoch 24/30, Loss: 0.5034
+Epoch 25/30, Loss: 0.4924
+Epoch 26/30, Loss: 0.4797
+Epoch 27/30, Loss: 0.4789
+Epoch 28/30, Loss: 0.4671
+Epoch 29/30, Loss: 0.4627
+Epoch 30/30, Loss: 0.4536
+
+--- Processing Model: resnet50 ---
+[resnet50] Evaluating Baseline...
+[resnet50] Running C-DGOSA Optimization...
+Start Searching... Initial Energy: 0.0406
+[Iter 1] New Best Found! Energy: 0.0400 | FLOPs: 4.00M | Params: 0.00M
+[Iter 5] New Best Found! Energy: 0.0393 | FLOPs: 3.93M | Params: 0.00M
+[Iter 11] New Best Found! Energy: 0.0387 | FLOPs: 3.87M | Params: 0.00M
+[Iter 12] New Best Found! Energy: 0.0383 | FLOPs: 3.83M | Params: 0.00M
+[Iter 13] New Best Found! Energy: 0.0375 | FLOPs: 3.75M | Params: 0.00M
+[Iter 14] New Best Found! Energy: 0.0368 | FLOPs: 3.68M | Params: 0.00M
+[Iter 16] New Best Found! Energy: 0.0364 | FLOPs: 3.64M | Params: 0.00M
+[Iter 24] New Best Found! Energy: 0.0360 | FLOPs: 3.60M | Params: 0.00M
+[Iter 25] New Best Found! Energy: 0.0354 | FLOPs: 3.54M | Params: 0.00M
+[Iter 26] New Best Found! Energy: 0.0349 | FLOPs: 3.49M | Params: 0.00M
+[Iter 29] New Best Found! Energy: 0.0345 | FLOPs: 3.45M | Params: 0.00M
+[Iter 30] New Best Found! Energy: 0.0341 | FLOPs: 3.41M | Params: 0.00M
+[Iter 36] New Best Found! Energy: 0.0334 | FLOPs: 3.34M | Params: 0.00M
+[Iter 38] New Best Found! Energy: 0.0332 | FLOPs: 3.32M | Params: 0.00M
+[Iter 43] New Best Found! Energy: 0.0325 | FLOPs: 3.25M | Params: 0.00M
+[Iter 45] New Best Found! Energy: 0.0317 | FLOPs: 3.17M | Params: 0.00M
+[Iter 51] New Best Found! Energy: 0.0314 | FLOPs: 3.14M | Params: 0.00M
+[Iter 57] New Best Found! Energy: 0.0310 | FLOPs: 3.10M | Params: 0.00M
+[Iter 61] New Best Found! Energy: 0.0308 | FLOPs: 3.08M | Params: 0.00M
+[Iter 62] New Best Found! Energy: 0.0302 | FLOPs: 3.02M | Params: 0.00M
+[Iter 68] New Best Found! Energy: 0.0297 | FLOPs: 2.97M | Params: 0.00M
+[Iter 73] New Best Found! Energy: 0.0293 | FLOPs: 2.93M | Params: 0.00M
+[Iter 74] New Best Found! Energy: 0.0289 | FLOPs: 2.89M | Params: 0.00M
+[Iter 75] New Best Found! Energy: 0.0283 | FLOPs: 2.83M | Params: 0.00M
+[Iter 79] New Best Found! Energy: 0.0279 | FLOPs: 2.79M | Params: 0.00M
+[Iter 80] New Best Found! Energy: 0.0275 | FLOPs: 2.75M | Params: 0.00M
+[Iter 81] New Best Found! Energy: 0.0272 | FLOPs: 2.72M | Params: 0.00M
+[Iter 90] New Best Found! Energy: 0.0264 | FLOPs: 2.64M | Params: 0.00M
+[Iter 118] New Best Found! Energy: 0.0262 | FLOPs: 2.62M | Params: 0.00M
+[Iter 157] New Best Found! Energy: 0.0260 | FLOPs: 2.60M | Params: 0.00M
+[Iter 158] New Best Found! Energy: 0.0254 | FLOPs: 2.54M | Params: 0.00M
+[Iter 160] New Best Found! Energy: 0.0250 | FLOPs: 2.50M | Params: 0.00M
+[Iter 166] New Best Found! Energy: 0.0243 | FLOPs: 2.43M | Params: 0.00M
+[Iter 167] New Best Found! Energy: 0.0241 | FLOPs: 2.41M | Params: 0.00M
+[Iter 173] New Best Found! Energy: 0.0236 | FLOPs: 2.36M | Params: 0.00M
+[Iter 175] New Best Found! Energy: 0.0230 | FLOPs: 2.30M | Params: 0.00M
+[Iter 181] New Best Found! Energy: 0.0229 | FLOPs: 2.29M | Params: 0.00M
+[Iter 183] New Best Found! Energy: 0.0225 | FLOPs: 2.25M | Params: 0.00M
+[Iter 190] New Best Found! Energy: 0.0221 | FLOPs: 2.21M | Params: 0.00M
+[Iter 191] New Best Found! Energy: 0.0218 | FLOPs: 2.18M | Params: 0.00M
+[Iter 201] New Best Found! Energy: 0.0217 | FLOPs: 2.17M | Params: 0.00M
+[Iter 207] New Best Found! Energy: 0.0216 | FLOPs: 2.16M | Params: 0.00M
+[Iter 231] New Best Found! Energy: 0.0215 | FLOPs: 2.15M | Params: 0.00M
+[Iter 243] New Best Found! Energy: 0.0210 | FLOPs: 2.10M | Params: 0.00M
+[Iter 281] New Best Found! Energy: 0.0207 | FLOPs: 2.07M | Params: 0.00M
+[Iter 287] New Best Found! Energy: 0.0200 | FLOPs: 2.00M | Params: 0.00M
+[Iter 292] New Best Found! Energy: 0.0197 | FLOPs: 1.97M | Params: 0.00M
+[Iter 293] New Best Found! Energy: 0.0196 | FLOPs: 1.96M | Params: 0.00M
+[Iter 294] New Best Found! Energy: 0.0195 | FLOPs: 1.95M | Params: 0.00M
+[Iter 296] New Best Found! Energy: 0.0188 | FLOPs: 1.88M | Params: 0.00M
+[Iter 376] New Best Found! Energy: 0.0187 | FLOPs: 1.87M | Params: 0.00M
+[Iter 578] New Best Found! Energy: 0.0186 | FLOPs: 1.86M | Params: 0.00M
+[Iter 579] New Best Found! Energy: 0.0185 | FLOPs: 1.85M | Params: 0.00M
+[Iter 580] New Best Found! Energy: 0.0180 | FLOPs: 1.80M | Params: 0.00M
+[Iter 592] New Best Found! Energy: 0.0178 | FLOPs: 1.78M | Params: 0.00M
+[Iter 596] New Best Found! Energy: 0.0171 | FLOPs: 1.71M | Params: 0.00M
+[Iter 599] New Best Found! Energy: 0.0170 | FLOPs: 1.70M | Params: 0.00M
+Training on cuda...
+Epoch 1/30, Loss: 2.1898
+Epoch 2/30, Loss: 1.3718
+Epoch 3/30, Loss: 1.0612
+Epoch 4/30, Loss: 0.8737
+Epoch 5/30, Loss: 0.7407
+Epoch 6/30, Loss: 0.6429
+Epoch 7/30, Loss: 0.5715
+Epoch 8/30, Loss: 0.5102
+Epoch 9/30, Loss: 0.4728
+Epoch 10/30, Loss: 0.4371
+Epoch 11/30, Loss: 0.4044
+Epoch 12/30, Loss: 0.3713
+Epoch 13/30, Loss: 0.3507
+Epoch 14/30, Loss: 0.3302
+Epoch 15/30, Loss: 0.3144
+Epoch 16/30, Loss: 0.2930
+Epoch 17/30, Loss: 0.2774
+Epoch 18/30, Loss: 0.2654
+Epoch 19/30, Loss: 0.2561
+Epoch 20/30, Loss: 0.2446
+Epoch 21/30, Loss: 0.2324
+Epoch 22/30, Loss: 0.2292
+Epoch 23/30, Loss: 0.2128
+Epoch 24/30, Loss: 0.2042
+Epoch 25/30, Loss: 0.2005
+Epoch 26/30, Loss: 0.1892
+Epoch 27/30, Loss: 0.1835
+Epoch 28/30, Loss: 0.1844
+Epoch 29/30, Loss: 0.1702
+Epoch 30/30, Loss: 0.1662
+
+--- Processing Model: resnext50 ---
+[resnext50] Evaluating Baseline...
+[resnext50] Running C-DGOSA Optimization...
+Start Searching... Initial Energy: 0.0406
+[Iter 0] New Best Found! Energy: 0.0402 | FLOPs: 4.02M | Params: 0.00M
+[Iter 1] New Best Found! Energy: 0.0395 | FLOPs: 3.95M | Params: 0.00M
+[Iter 6] New Best Found! Energy: 0.0389 | FLOPs: 3.89M | Params: 0.00M
+[Iter 15] New Best Found! Energy: 0.0382 | FLOPs: 3.82M | Params: 0.00M
+[Iter 16] New Best Found! Energy: 0.0375 | FLOPs: 3.75M | Params: 0.00M
+[Iter 21] New Best Found! Energy: 0.0372 | FLOPs: 3.72M | Params: 0.00M
+[Iter 23] New Best Found! Energy: 0.0366 | FLOPs: 3.66M | Params: 0.00M
+[Iter 26] New Best Found! Energy: 0.0362 | FLOPs: 3.62M | Params: 0.00M
+[Iter 29] New Best Found! Energy: 0.0356 | FLOPs: 3.56M | Params: 0.00M
+[Iter 30] New Best Found! Energy: 0.0349 | FLOPs: 3.49M | Params: 0.00M
+[Iter 31] New Best Found! Energy: 0.0345 | FLOPs: 3.45M | Params: 0.00M
+[Iter 33] New Best Found! Energy: 0.0338 | FLOPs: 3.38M | Params: 0.00M
+[Iter 43] New Best Found! Energy: 0.0332 | FLOPs: 3.32M | Params: 0.00M
+[Iter 45] New Best Found! Energy: 0.0328 | FLOPs: 3.28M | Params: 0.00M
+[Iter 46] New Best Found! Energy: 0.0323 | FLOPs: 3.23M | Params: 0.00M
+[Iter 51] New Best Found! Energy: 0.0316 | FLOPs: 3.16M | Params: 0.00M
+[Iter 66] New Best Found! Energy: 0.0313 | FLOPs: 3.13M | Params: 0.00M
+[Iter 71] New Best Found! Energy: 0.0312 | FLOPs: 3.12M | Params: 0.00M
+[Iter 75] New Best Found! Energy: 0.0306 | FLOPs: 3.06M | Params: 0.00M
+[Iter 76] New Best Found! Energy: 0.0302 | FLOPs: 3.02M | Params: 0.00M
+[Iter 78] New Best Found! Energy: 0.0295 | FLOPs: 2.95M | Params: 0.00M
+[Iter 80] New Best Found! Energy: 0.0288 | FLOPs: 2.88M | Params: 0.00M
+[Iter 103] New Best Found! Energy: 0.0285 | FLOPs: 2.85M | Params: 0.00M
+[Iter 109] New Best Found! Energy: 0.0281 | FLOPs: 2.81M | Params: 0.00M
+[Iter 110] New Best Found! Energy: 0.0277 | FLOPs: 2.77M | Params: 0.00M
+[Iter 121] New Best Found! Energy: 0.0275 | FLOPs: 2.75M | Params: 0.00M
+[Iter 125] New Best Found! Energy: 0.0274 | FLOPs: 2.74M | Params: 0.00M
+[Iter 126] New Best Found! Energy: 0.0273 | FLOPs: 2.73M | Params: 0.00M
+[Iter 131] New Best Found! Energy: 0.0269 | FLOPs: 2.69M | Params: 0.00M
+[Iter 133] New Best Found! Energy: 0.0264 | FLOPs: 2.64M | Params: 0.00M
+[Iter 134] New Best Found! Energy: 0.0261 | FLOPs: 2.61M | Params: 0.00M
+[Iter 138] New Best Found! Energy: 0.0260 | FLOPs: 2.60M | Params: 0.00M
+[Iter 151] New Best Found! Energy: 0.0257 | FLOPs: 2.57M | Params: 0.00M
+[Iter 152] New Best Found! Energy: 0.0253 | FLOPs: 2.53M | Params: 0.00M
+[Iter 154] New Best Found! Energy: 0.0252 | FLOPs: 2.52M | Params: 0.00M
+[Iter 169] New Best Found! Energy: 0.0250 | FLOPs: 2.50M | Params: 0.00M
+[Iter 181] New Best Found! Energy: 0.0248 | FLOPs: 2.48M | Params: 0.00M
+[Iter 235] New Best Found! Energy: 0.0243 | FLOPs: 2.43M | Params: 0.00M
+[Iter 287] New Best Found! Energy: 0.0236 | FLOPs: 2.36M | Params: 0.00M
+[Iter 290] New Best Found! Energy: 0.0235 | FLOPs: 2.35M | Params: 0.00M
+[Iter 292] New Best Found! Energy: 0.0232 | FLOPs: 2.32M | Params: 0.00M
+[Iter 332] New Best Found! Energy: 0.0231 | FLOPs: 2.31M | Params: 0.00M
+[Iter 357] New Best Found! Energy: 0.0229 | FLOPs: 2.29M | Params: 0.00M
+[Iter 359] New Best Found! Energy: 0.0222 | FLOPs: 2.22M | Params: 0.00M
+[Iter 363] New Best Found! Energy: 0.0219 | FLOPs: 2.19M | Params: 0.00M
+[Iter 538] New Best Found! Energy: 0.0216 | FLOPs: 2.16M | Params: 0.00M
+[Iter 539] New Best Found! Energy: 0.0212 | FLOPs: 2.12M | Params: 0.00M
+[Iter 545] New Best Found! Energy: 0.0209 | FLOPs: 2.09M | Params: 0.00M
+[Iter 546] New Best Found! Energy: 0.0202 | FLOPs: 2.02M | Params: 0.00M
+[Iter 548] New Best Found! Energy: 0.0196 | FLOPs: 1.96M | Params: 0.00M
+[Iter 571] New Best Found! Energy: 0.0193 | FLOPs: 1.93M | Params: 0.00M
+[Iter 576] New Best Found! Energy: 0.0187 | FLOPs: 1.87M | Params: 0.00M
+[Iter 578] New Best Found! Energy: 0.0185 | FLOPs: 1.85M | Params: 0.00M
+[Iter 579] New Best Found! Energy: 0.0177 | FLOPs: 1.77M | Params: 0.00M
+[Iter 581] New Best Found! Energy: 0.0174 | FLOPs: 1.74M | Params: 0.00M
+[Iter 583] New Best Found! Energy: 0.0170 | FLOPs: 1.70M | Params: 0.00M
+[Iter 610] New Best Found! Energy: 0.0167 | FLOPs: 1.67M | Params: 0.00M
+[Iter 613] New Best Found! Energy: 0.0165 | FLOPs: 1.65M | Params: 0.00M
+[Iter 615] New Best Found! Energy: 0.0162 | FLOPs: 1.62M | Params: 0.00M
+[Iter 616] New Best Found! Energy: 0.0154 | FLOPs: 1.54M | Params: 0.00M
+[Iter 617] New Best Found! Energy: 0.0153 | FLOPs: 1.53M | Params: 0.00M
+[Iter 618] New Best Found! Energy: 0.0149 | FLOPs: 1.49M | Params: 0.00M
+Training on cuda...
+Epoch 1/30, Loss: 2.2120
+Epoch 2/30, Loss: 1.3796
+Epoch 3/30, Loss: 1.0504
+Epoch 4/30, Loss: 0.8525
+Epoch 5/30, Loss: 0.7213
+Epoch 6/30, Loss: 0.6286
+Epoch 7/30, Loss: 0.5575
+Epoch 8/30, Loss: 0.5027
+Epoch 9/30, Loss: 0.4585
+Epoch 10/30, Loss: 0.4229
+Epoch 11/30, Loss: 0.3924
+Epoch 12/30, Loss: 0.3698
+Epoch 13/30, Loss: 0.3492
+Epoch 14/30, Loss: 0.3162
+Epoch 15/30, Loss: 0.3018
+Epoch 16/30, Loss: 0.2937
+Epoch 17/30, Loss: 0.2752
+Epoch 18/30, Loss: 0.2606
+Epoch 19/30, Loss: 0.2498
+Epoch 20/30, Loss: 0.2396
+Epoch 21/30, Loss: 0.2292
+Epoch 22/30, Loss: 0.2264
+Epoch 23/30, Loss: 0.2141
+Epoch 24/30, Loss: 0.2023
+Epoch 25/30, Loss: 0.1940
+Epoch 26/30, Loss: 0.1870
+Epoch 27/30, Loss: 0.1796
+Epoch 28/30, Loss: 0.1806
+Epoch 29/30, Loss: 0.1697
+Epoch 30/30, Loss: 0.1689
+
+--- Processing Model: googlenet ---
+[googlenet] Evaluating Baseline...
+[googlenet] Running C-DGOSA Optimization...
+Start Searching... Initial Energy: 0.0456
+[Iter 1] New Best Found! Energy: 0.0450 | FLOPs: 4.50M | Params: 0.00M
+[Iter 2] New Best Found! Energy: 0.0443 | FLOPs: 4.43M | Params: 0.00M
+[Iter 4] New Best Found! Energy: 0.0435 | FLOPs: 4.35M | Params: 0.00M
+[Iter 7] New Best Found! Energy: 0.0428 | FLOPs: 4.28M | Params: 0.00M
+[Iter 15] New Best Found! Energy: 0.0424 | FLOPs: 4.24M | Params: 0.00M
+[Iter 16] New Best Found! Energy: 0.0418 | FLOPs: 4.18M | Params: 0.00M
+[Iter 21] New Best Found! Energy: 0.0412 | FLOPs: 4.12M | Params: 0.00M
+[Iter 22] New Best Found! Energy: 0.0405 | FLOPs: 4.05M | Params: 0.00M
+[Iter 32] New Best Found! Energy: 0.0402 | FLOPs: 4.02M | Params: 0.00M
+[Iter 35] New Best Found! Energy: 0.0398 | FLOPs: 3.98M | Params: 0.00M
+[Iter 40] New Best Found! Energy: 0.0391 | FLOPs: 3.91M | Params: 0.00M
+[Iter 41] New Best Found! Energy: 0.0384 | FLOPs: 3.84M | Params: 0.00M
+[Iter 42] New Best Found! Energy: 0.0379 | FLOPs: 3.79M | Params: 0.00M
+[Iter 43] New Best Found! Energy: 0.0372 | FLOPs: 3.72M | Params: 0.00M
+[Iter 44] New Best Found! Energy: 0.0365 | FLOPs: 3.65M | Params: 0.00M
+[Iter 53] New Best Found! Energy: 0.0364 | FLOPs: 3.64M | Params: 0.00M
+[Iter 70] New Best Found! Energy: 0.0358 | FLOPs: 3.58M | Params: 0.00M
+[Iter 79] New Best Found! Energy: 0.0356 | FLOPs: 3.56M | Params: 0.00M
+[Iter 80] New Best Found! Energy: 0.0349 | FLOPs: 3.49M | Params: 0.00M
+[Iter 86] New Best Found! Energy: 0.0345 | FLOPs: 3.45M | Params: 0.00M
+[Iter 87] New Best Found! Energy: 0.0339 | FLOPs: 3.39M | Params: 0.00M
+[Iter 91] New Best Found! Energy: 0.0334 | FLOPs: 3.34M | Params: 0.00M
+[Iter 92] New Best Found! Energy: 0.0327 | FLOPs: 3.27M | Params: 0.00M
+[Iter 93] New Best Found! Energy: 0.0319 | FLOPs: 3.19M | Params: 0.00M
+[Iter 94] New Best Found! Energy: 0.0315 | FLOPs: 3.15M | Params: 0.00M
+[Iter 104] New Best Found! Energy: 0.0314 | FLOPs: 3.14M | Params: 0.00M
+[Iter 140] New Best Found! Energy: 0.0309 | FLOPs: 3.09M | Params: 0.00M
+[Iter 142] New Best Found! Energy: 0.0302 | FLOPs: 3.02M | Params: 0.00M
+[Iter 157] New Best Found! Energy: 0.0301 | FLOPs: 3.01M | Params: 0.00M
+[Iter 159] New Best Found! Energy: 0.0297 | FLOPs: 2.97M | Params: 0.00M
+[Iter 161] New Best Found! Energy: 0.0293 | FLOPs: 2.93M | Params: 0.00M
+[Iter 206] New Best Found! Energy: 0.0292 | FLOPs: 2.92M | Params: 0.00M
+[Iter 211] New Best Found! Energy: 0.0285 | FLOPs: 2.85M | Params: 0.00M
+[Iter 224] New Best Found! Energy: 0.0278 | FLOPs: 2.78M | Params: 0.00M
+[Iter 259] New Best Found! Energy: 0.0277 | FLOPs: 2.77M | Params: 0.00M
+[Iter 260] New Best Found! Energy: 0.0274 | FLOPs: 2.74M | Params: 0.00M
+[Iter 264] New Best Found! Energy: 0.0270 | FLOPs: 2.70M | Params: 0.00M
+[Iter 277] New Best Found! Energy: 0.0266 | FLOPs: 2.66M | Params: 0.00M
+[Iter 284] New Best Found! Energy: 0.0261 | FLOPs: 2.61M | Params: 0.00M
+[Iter 292] New Best Found! Energy: 0.0257 | FLOPs: 2.57M | Params: 0.00M
+[Iter 294] New Best Found! Energy: 0.0251 | FLOPs: 2.51M | Params: 0.00M
+[Iter 316] New Best Found! Energy: 0.0244 | FLOPs: 2.44M | Params: 0.00M
+[Iter 331] New Best Found! Energy: 0.0240 | FLOPs: 2.40M | Params: 0.00M
+[Iter 333] New Best Found! Energy: 0.0232 | FLOPs: 2.32M | Params: 0.00M
+[Iter 334] New Best Found! Energy: 0.0228 | FLOPs: 2.28M | Params: 0.00M
+[Iter 336] New Best Found! Energy: 0.0227 | FLOPs: 2.27M | Params: 0.00M
+[Iter 339] New Best Found! Energy: 0.0223 | FLOPs: 2.23M | Params: 0.00M
+[Iter 342] New Best Found! Energy: 0.0216 | FLOPs: 2.16M | Params: 0.00M
+[Iter 343] New Best Found! Energy: 0.0209 | FLOPs: 2.09M | Params: 0.00M
+[Iter 353] New Best Found! Energy: 0.0203 | FLOPs: 2.03M | Params: 0.00M
+[Iter 357] New Best Found! Energy: 0.0196 | FLOPs: 1.96M | Params: 0.00M
+[Iter 358] New Best Found! Energy: 0.0194 | FLOPs: 1.94M | Params: 0.00M
+[Iter 363] New Best Found! Energy: 0.0192 | FLOPs: 1.92M | Params: 0.00M
+[Iter 369] New Best Found! Energy: 0.0191 | FLOPs: 1.91M | Params: 0.00M
+[Iter 461] New Best Found! Energy: 0.0190 | FLOPs: 1.90M | Params: 0.00M
+[Iter 470] New Best Found! Energy: 0.0184 | FLOPs: 1.84M | Params: 0.00M
+[Iter 471] New Best Found! Energy: 0.0176 | FLOPs: 1.76M | Params: 0.00M
+[Iter 482] New Best Found! Energy: 0.0172 | FLOPs: 1.72M | Params: 0.00M
+[Iter 483] New Best Found! Energy: 0.0171 | FLOPs: 1.71M | Params: 0.00M
+[Iter 550] New Best Found! Energy: 0.0170 | FLOPs: 1.70M | Params: 0.00M
+[Iter 557] New Best Found! Energy: 0.0167 | FLOPs: 1.67M | Params: 0.00M
+[Iter 558] New Best Found! Energy: 0.0165 | FLOPs: 1.65M | Params: 0.00M
+[Iter 561] New Best Found! Energy: 0.0158 | FLOPs: 1.58M | Params: 0.00M
+[Iter 570] New Best Found! Energy: 0.0154 | FLOPs: 1.54M | Params: 0.00M
+[Iter 579] New Best Found! Energy: 0.0151 | FLOPs: 1.51M | Params: 0.00M
+Training on cuda...
+Epoch 1/30, Loss: 1.2240
+Epoch 2/30, Loss: 0.7716
+Epoch 3/30, Loss: 0.6015
+Epoch 4/30, Loss: 0.5052
+Epoch 5/30, Loss: 0.4417
+Epoch 6/30, Loss: 0.3961
+Epoch 7/30, Loss: 0.3566
+Epoch 8/30, Loss: 0.3300
+Epoch 9/30, Loss: 0.3005
+Epoch 10/30, Loss: 0.2810
+Epoch 11/30, Loss: 0.2633
+Epoch 12/30, Loss: 0.2448
+Epoch 13/30, Loss: 0.2227
+Epoch 14/30, Loss: 0.2125
+Epoch 15/30, Loss: 0.1978
+Epoch 16/30, Loss: 0.1909
+Epoch 17/30, Loss: 0.1800
+Epoch 18/30, Loss: 0.1709
+Epoch 19/30, Loss: 0.1664
+Epoch 20/30, Loss: 0.1589
+Epoch 21/30, Loss: 0.1478
+Epoch 22/30, Loss: 0.1478
+Epoch 23/30, Loss: 0.1417
+Epoch 24/30, Loss: 0.1313
+Epoch 25/30, Loss: 0.1300
+Epoch 26/30, Loss: 0.1205
+Epoch 27/30, Loss: 0.1197
+Epoch 28/30, Loss: 0.1163
+Epoch 29/30, Loss: 0.1092
+Epoch 30/30, Loss: 0.1096
+
+>>> Results saved to results/Table_1_Performance_Comparison.csv
+
+--- Table 1 Comparison ---
+   Models             Method  Top-1 Accuracy(%)  Latency(ms)  Peak Memory(MB) Latency Reduction Memory Reduction
+    vgg16 PyTorch (Baseline)              10.00         8.32           368.71                 -                -
+    vgg16     C-DGOSA (Ours)              82.34         6.73            21.79             19.1%            94.1%
+ resnet50 PyTorch (Baseline)               9.97        21.94             0.16                 -                -
+ resnet50     C-DGOSA (Ours)              88.60        28.26             0.07            -28.8%            58.2%
+resnext50 PyTorch (Baseline)               9.27        21.80             0.16                 -                -
+resnext50     C-DGOSA (Ours)              89.19        25.61             0.06            -17.5%            63.3%
+googlenet PyTorch (Baseline)              10.00        20.56             0.18                 -                -
+googlenet     C-DGOSA (Ours)              87.05        20.19             0.06              1.8%            66.8%
+Table 1 Visualization saved.
+
+============================================================
+>> Running Experiment 2: Ablation Study (Table 2 - ResNet50)
+============================================================
+Files already downloaded and verified
+Files already downloaded and verified
+Running Variant: C-DGOSA (Full)...
+Start Searching... Initial Energy: 0.0406
+[Iter 0] New Best Found! Energy: 0.0402 | FLOPs: 4.02M | Params: 0.00M
+[Iter 1] New Best Found! Energy: 0.0396 | FLOPs: 3.96M | Params: 0.00M
+[Iter 2] New Best Found! Energy: 0.0392 | FLOPs: 3.92M | Params: 0.00M
+[Iter 4] New Best Found! Energy: 0.0388 | FLOPs: 3.88M | Params: 0.00M
+[Iter 9] New Best Found! Energy: 0.0384 | FLOPs: 3.84M | Params: 0.00M
+[Iter 10] New Best Found! Energy: 0.0376 | FLOPs: 3.76M | Params: 0.00M
+[Iter 12] New Best Found! Energy: 0.0371 | FLOPs: 3.71M | Params: 0.00M
+[Iter 13] New Best Found! Energy: 0.0370 | FLOPs: 3.70M | Params: 0.00M
+[Iter 16] New Best Found! Energy: 0.0366 | FLOPs: 3.66M | Params: 0.00M
+[Iter 17] New Best Found! Energy: 0.0360 | FLOPs: 3.60M | Params: 0.00M
+[Iter 21] New Best Found! Energy: 0.0353 | FLOPs: 3.53M | Params: 0.00M
+[Iter 25] New Best Found! Energy: 0.0345 | FLOPs: 3.45M | Params: 0.00M
+[Iter 27] New Best Found! Energy: 0.0339 | FLOPs: 3.39M | Params: 0.00M
+[Iter 32] New Best Found! Energy: 0.0333 | FLOPs: 3.33M | Params: 0.00M
+[Iter 33] New Best Found! Energy: 0.0329 | FLOPs: 3.29M | Params: 0.00M
+[Iter 38] New Best Found! Energy: 0.0328 | FLOPs: 3.28M | Params: 0.00M
+[Iter 39] New Best Found! Energy: 0.0321 | FLOPs: 3.21M | Params: 0.00M
+[Iter 40] New Best Found! Energy: 0.0315 | FLOPs: 3.15M | Params: 0.00M
+[Iter 42] New Best Found! Energy: 0.0309 | FLOPs: 3.09M | Params: 0.00M
+[Iter 44] New Best Found! Energy: 0.0308 | FLOPs: 3.08M | Params: 0.00M
+[Iter 45] New Best Found! Energy: 0.0302 | FLOPs: 3.02M | Params: 0.00M
+[Iter 46] New Best Found! Energy: 0.0294 | FLOPs: 2.94M | Params: 0.00M
+[Iter 47] New Best Found! Energy: 0.0290 | FLOPs: 2.90M | Params: 0.00M
+[Iter 49] New Best Found! Energy: 0.0284 | FLOPs: 2.84M | Params: 0.00M
+[Iter 51] New Best Found! Energy: 0.0278 | FLOPs: 2.78M | Params: 0.00M
+[Iter 67] New Best Found! Energy: 0.0275 | FLOPs: 2.75M | Params: 0.00M
+[Iter 68] New Best Found! Energy: 0.0273 | FLOPs: 2.73M | Params: 0.00M
+[Iter 72] New Best Found! Energy: 0.0266 | FLOPs: 2.66M | Params: 0.00M
+[Iter 77] New Best Found! Energy: 0.0265 | FLOPs: 2.65M | Params: 0.00M
+[Iter 78] New Best Found! Energy: 0.0259 | FLOPs: 2.59M | Params: 0.00M
+[Iter 82] New Best Found! Energy: 0.0253 | FLOPs: 2.53M | Params: 0.00M
+[Iter 89] New Best Found! Energy: 0.0251 | FLOPs: 2.51M | Params: 0.00M
+[Iter 99] New Best Found! Energy: 0.0248 | FLOPs: 2.48M | Params: 0.00M
+[Iter 102] New Best Found! Energy: 0.0242 | FLOPs: 2.42M | Params: 0.00M
+[Iter 103] New Best Found! Energy: 0.0237 | FLOPs: 2.37M | Params: 0.00M
+[Iter 106] New Best Found! Energy: 0.0233 | FLOPs: 2.33M | Params: 0.00M
+[Iter 110] New Best Found! Energy: 0.0229 | FLOPs: 2.29M | Params: 0.00M
+[Iter 115] New Best Found! Energy: 0.0226 | FLOPs: 2.26M | Params: 0.00M
+[Iter 119] New Best Found! Energy: 0.0219 | FLOPs: 2.19M | Params: 0.00M
+[Iter 130] New Best Found! Energy: 0.0214 | FLOPs: 2.14M | Params: 0.00M
+[Iter 132] New Best Found! Energy: 0.0209 | FLOPs: 2.09M | Params: 0.00M
+[Iter 135] New Best Found! Energy: 0.0203 | FLOPs: 2.03M | Params: 0.00M
+[Iter 141] New Best Found! Energy: 0.0197 | FLOPs: 1.97M | Params: 0.00M
+[Iter 202] New Best Found! Energy: 0.0196 | FLOPs: 1.96M | Params: 0.00M
+[Iter 204] New Best Found! Energy: 0.0192 | FLOPs: 1.92M | Params: 0.00M
+[Iter 207] New Best Found! Energy: 0.0188 | FLOPs: 1.88M | Params: 0.00M
+[Iter 209] New Best Found! Energy: 0.0187 | FLOPs: 1.87M | Params: 0.00M
+[Iter 210] New Best Found! Energy: 0.0185 | FLOPs: 1.85M | Params: 0.00M
+[Iter 212] New Best Found! Energy: 0.0184 | FLOPs: 1.84M | Params: 0.00M
+[Iter 213] New Best Found! Energy: 0.0179 | FLOPs: 1.79M | Params: 0.00M
+[Iter 235] New Best Found! Energy: 0.0178 | FLOPs: 1.78M | Params: 0.00M
+[Iter 244] New Best Found! Energy: 0.0175 | FLOPs: 1.75M | Params: 0.00M
+[Iter 260] New Best Found! Energy: 0.0169 | FLOPs: 1.69M | Params: 0.00M
+[Iter 261] New Best Found! Energy: 0.0165 | FLOPs: 1.65M | Params: 0.00M
+[Iter 274] New Best Found! Energy: 0.0161 | FLOPs: 1.61M | Params: 0.00M
+[Iter 453] New Best Found! Energy: 0.0160 | FLOPs: 1.60M | Params: 0.00M
+[Iter 533] New Best Found! Energy: 0.0159 | FLOPs: 1.59M | Params: 0.00M
+[Iter 535] New Best Found! Energy: 0.0156 | FLOPs: 1.56M | Params: 0.00M
+[Iter 540] New Best Found! Energy: 0.0154 | FLOPs: 1.54M | Params: 0.00M
+[Iter 599] New Best Found! Energy: 0.0150 | FLOPs: 1.50M | Params: 0.00M
+[Iter 604] New Best Found! Energy: 0.0145 | FLOPs: 1.45M | Params: 0.00M
+[Iter 616] New Best Found! Energy: 0.0144 | FLOPs: 1.44M | Params: 0.00M
+Training on cuda...
+Epoch 1/1, Loss: 2.6808
+Running Variant: w/o Split...
+Running Variant: w/o Constraint...
+Start Searching... Initial Energy: 0.0406
+[Iter 0] New Best Found! Energy: 0.0399 | FLOPs: 3.99M | Params: 0.00M
+[Iter 1] New Best Found! Energy: 0.0392 | FLOPs: 3.92M | Params: 0.00M
+[Iter 11] New Best Found! Energy: 0.0389 | FLOPs: 3.89M | Params: 0.00M
+[Iter 12] New Best Found! Energy: 0.0382 | FLOPs: 3.82M | Params: 0.00M
+[Iter 15] New Best Found! Energy: 0.0374 | FLOPs: 3.74M | Params: 0.00M
+[Iter 18] New Best Found! Energy: 0.0368 | FLOPs: 3.68M | Params: 0.00M
+[Iter 19] New Best Found! Energy: 0.0362 | FLOPs: 3.62M | Params: 0.00M
+[Iter 22] New Best Found! Energy: 0.0358 | FLOPs: 3.58M | Params: 0.00M
+[Iter 23] New Best Found! Energy: 0.0356 | FLOPs: 3.56M | Params: 0.00M
+[Iter 27] New Best Found! Energy: 0.0353 | FLOPs: 3.53M | Params: 0.00M
+[Iter 28] New Best Found! Energy: 0.0348 | FLOPs: 3.48M | Params: 0.00M
+[Iter 29] New Best Found! Energy: 0.0344 | FLOPs: 3.44M | Params: 0.00M
+[Iter 34] New Best Found! Energy: 0.0339 | FLOPs: 3.39M | Params: 0.00M
+[Iter 52] New Best Found! Energy: 0.0336 | FLOPs: 3.36M | Params: 0.00M
+[Iter 54] New Best Found! Energy: 0.0330 | FLOPs: 3.30M | Params: 0.00M
+[Iter 55] New Best Found! Energy: 0.0326 | FLOPs: 3.26M | Params: 0.00M
+[Iter 57] New Best Found! Energy: 0.0321 | FLOPs: 3.21M | Params: 0.00M
+[Iter 62] New Best Found! Energy: 0.0320 | FLOPs: 3.20M | Params: 0.00M
+[Iter 66] New Best Found! Energy: 0.0316 | FLOPs: 3.16M | Params: 0.00M
+[Iter 68] New Best Found! Energy: 0.0312 | FLOPs: 3.12M | Params: 0.00M
+[Iter 77] New Best Found! Energy: 0.0305 | FLOPs: 3.05M | Params: 0.00M
+[Iter 80] New Best Found! Energy: 0.0301 | FLOPs: 3.01M | Params: 0.00M
+[Iter 85] New Best Found! Energy: 0.0298 | FLOPs: 2.98M | Params: 0.00M
+[Iter 88] New Best Found! Energy: 0.0295 | FLOPs: 2.95M | Params: 0.00M
+[Iter 89] New Best Found! Energy: 0.0291 | FLOPs: 2.91M | Params: 0.00M
+[Iter 91] New Best Found! Energy: 0.0284 | FLOPs: 2.84M | Params: 0.00M
+[Iter 92] New Best Found! Energy: 0.0277 | FLOPs: 2.77M | Params: 0.00M
+[Iter 93] New Best Found! Energy: 0.0273 | FLOPs: 2.73M | Params: 0.00M
+[Iter 94] New Best Found! Energy: 0.0271 | FLOPs: 2.71M | Params: 0.00M
+[Iter 96] New Best Found! Energy: 0.0266 | FLOPs: 2.66M | Params: 0.00M
+[Iter 108] New Best Found! Energy: 0.0262 | FLOPs: 2.62M | Params: 0.00M
+[Iter 120] New Best Found! Energy: 0.0260 | FLOPs: 2.60M | Params: 0.00M
+[Iter 121] New Best Found! Energy: 0.0254 | FLOPs: 2.54M | Params: 0.00M
+[Iter 122] New Best Found! Energy: 0.0248 | FLOPs: 2.48M | Params: 0.00M
+[Iter 130] New Best Found! Energy: 0.0247 | FLOPs: 2.47M | Params: 0.00M
+[Iter 141] New Best Found! Energy: 0.0241 | FLOPs: 2.41M | Params: 0.00M
+[Iter 156] New Best Found! Energy: 0.0238 | FLOPs: 2.38M | Params: 0.00M
+[Iter 164] New Best Found! Energy: 0.0235 | FLOPs: 2.35M | Params: 0.00M
+[Iter 169] New Best Found! Energy: 0.0234 | FLOPs: 2.34M | Params: 0.00M
+[Iter 171] New Best Found! Energy: 0.0228 | FLOPs: 2.28M | Params: 0.00M
+[Iter 173] New Best Found! Energy: 0.0224 | FLOPs: 2.24M | Params: 0.00M
+[Iter 176] New Best Found! Energy: 0.0223 | FLOPs: 2.23M | Params: 0.00M
+[Iter 240] New Best Found! Energy: 0.0217 | FLOPs: 2.17M | Params: 0.00M
+[Iter 241] New Best Found! Energy: 0.0214 | FLOPs: 2.14M | Params: 0.00M
+[Iter 243] New Best Found! Energy: 0.0207 | FLOPs: 2.07M | Params: 0.00M
+[Iter 244] New Best Found! Energy: 0.0206 | FLOPs: 2.06M | Params: 0.00M
+[Iter 245] New Best Found! Energy: 0.0203 | FLOPs: 2.03M | Params: 0.00M
+[Iter 247] New Best Found! Energy: 0.0199 | FLOPs: 1.99M | Params: 0.00M
+[Iter 251] New Best Found! Energy: 0.0196 | FLOPs: 1.96M | Params: 0.00M
+[Iter 253] New Best Found! Energy: 0.0195 | FLOPs: 1.95M | Params: 0.00M
+[Iter 254] New Best Found! Energy: 0.0191 | FLOPs: 1.91M | Params: 0.00M
+[Iter 255] New Best Found! Energy: 0.0190 | FLOPs: 1.90M | Params: 0.00M
+[Iter 257] New Best Found! Energy: 0.0189 | FLOPs: 1.89M | Params: 0.00M
+[Iter 332] New Best Found! Energy: 0.0188 | FLOPs: 1.88M | Params: 0.00M
+[Iter 333] New Best Found! Energy: 0.0181 | FLOPs: 1.81M | Params: 0.00M
+[Iter 337] New Best Found! Energy: 0.0179 | FLOPs: 1.79M | Params: 0.00M
+[Iter 341] New Best Found! Energy: 0.0174 | FLOPs: 1.74M | Params: 0.00M
+[Iter 358] New Best Found! Energy: 0.0169 | FLOPs: 1.69M | Params: 0.00M
+[Iter 400] New Best Found! Energy: 0.0162 | FLOPs: 1.62M | Params: 0.00M
+[Iter 442] New Best Found! Energy: 0.0160 | FLOPs: 1.60M | Params: 0.00M
+[Iter 633] New Best Found! Energy: 0.0154 | FLOPs: 1.54M | Params: 0.00M
+Running Variant: C-DGOSA-Greedy...
+
+>>> Results saved to results/Table_2_Ablation_Study.csv
+
+--- Table 2 Ablation ---
+               Variant  Latency (ms)  Peak Memory (MB)  Top-1 Acc (%)
+        C-DGOSA (Full)         29.44              0.06          34.35
+     C-DGOSA w/o Split         23.43              0.16           9.64
+C-DGOSA w/o Constraint         25.53              0.06          10.05
+        C-DGOSA-Greedy         33.85              0.07          34.35
+
+============================================================
+>> Running Experiment 3: Sensitivity Analysis (Table 3)
+============================================================
+Files already downloaded and verified
+Files already downloaded and verified
+Testing Lambda = 0...
+Start Searching... Initial Energy: 0.0406
+[Iter 0] New Best Found! Energy: 0.0400 | FLOPs: 4.00M | Params: 0.00M
+[Iter 1] New Best Found! Energy: 0.0394 | FLOPs: 3.94M | Params: 0.00M
+[Iter 5] New Best Found! Energy: 0.0387 | FLOPs: 3.87M | Params: 0.00M
+[Iter 8] New Best Found! Energy: 0.0383 | FLOPs: 3.83M | Params: 0.00M
+[Iter 10] New Best Found! Energy: 0.0378 | FLOPs: 3.78M | Params: 0.00M
+[Iter 16] New Best Found! Energy: 0.0371 | FLOPs: 3.71M | Params: 0.00M
+[Iter 19] New Best Found! Energy: 0.0364 | FLOPs: 3.64M | Params: 0.00M
+[Iter 22] New Best Found! Energy: 0.0358 | FLOPs: 3.58M | Params: 0.00M
+[Iter 29] New Best Found! Energy: 0.0355 | FLOPs: 3.55M | Params: 0.00M
+[Iter 32] New Best Found! Energy: 0.0347 | FLOPs: 3.47M | Params: 0.00M
+[Iter 34] New Best Found! Energy: 0.0343 | FLOPs: 3.43M | Params: 0.00M
+[Iter 41] New Best Found! Energy: 0.0337 | FLOPs: 3.37M | Params: 0.00M
+[Iter 44] New Best Found! Energy: 0.0331 | FLOPs: 3.31M | Params: 0.00M
+[Iter 45] New Best Found! Energy: 0.0325 | FLOPs: 3.25M | Params: 0.00M
+[Iter 46] New Best Found! Energy: 0.0318 | FLOPs: 3.18M | Params: 0.00M
+[Iter 50] New Best Found! Energy: 0.0314 | FLOPs: 3.14M | Params: 0.00M
+[Iter 52] New Best Found! Energy: 0.0310 | FLOPs: 3.10M | Params: 0.00M
+[Iter 60] New Best Found! Energy: 0.0308 | FLOPs: 3.08M | Params: 0.00M
+[Iter 61] New Best Found! Energy: 0.0304 | FLOPs: 3.04M | Params: 0.00M
+[Iter 70] New Best Found! Energy: 0.0301 | FLOPs: 3.01M | Params: 0.00M
+[Iter 71] New Best Found! Energy: 0.0293 | FLOPs: 2.93M | Params: 0.00M
+[Iter 74] New Best Found! Energy: 0.0286 | FLOPs: 2.86M | Params: 0.00M
+[Iter 79] New Best Found! Energy: 0.0284 | FLOPs: 2.84M | Params: 0.00M
+[Iter 82] New Best Found! Energy: 0.0283 | FLOPs: 2.83M | Params: 0.00M
+[Iter 88] New Best Found! Energy: 0.0276 | FLOPs: 2.76M | Params: 0.00M
+[Iter 89] New Best Found! Energy: 0.0269 | FLOPs: 2.69M | Params: 0.00M
+[Iter 90] New Best Found! Energy: 0.0264 | FLOPs: 2.64M | Params: 0.00M
+[Iter 161] New Best Found! Energy: 0.0263 | FLOPs: 2.63M | Params: 0.00M
+[Iter 164] New Best Found! Energy: 0.0256 | FLOPs: 2.56M | Params: 0.00M
+[Iter 183] New Best Found! Energy: 0.0253 | FLOPs: 2.53M | Params: 0.00M
+[Iter 185] New Best Found! Energy: 0.0252 | FLOPs: 2.52M | Params: 0.00M
+[Iter 200] New Best Found! Energy: 0.0246 | FLOPs: 2.46M | Params: 0.00M
+[Iter 201] New Best Found! Energy: 0.0238 | FLOPs: 2.38M | Params: 0.00M
+[Iter 225] New Best Found! Energy: 0.0235 | FLOPs: 2.35M | Params: 0.00M
+[Iter 232] New Best Found! Energy: 0.0233 | FLOPs: 2.33M | Params: 0.00M
+[Iter 234] New Best Found! Energy: 0.0229 | FLOPs: 2.29M | Params: 0.00M
+[Iter 239] New Best Found! Energy: 0.0228 | FLOPs: 2.28M | Params: 0.00M
+[Iter 246] New Best Found! Energy: 0.0222 | FLOPs: 2.22M | Params: 0.00M
+[Iter 250] New Best Found! Energy: 0.0220 | FLOPs: 2.20M | Params: 0.00M
+[Iter 251] New Best Found! Energy: 0.0219 | FLOPs: 2.19M | Params: 0.00M
+[Iter 253] New Best Found! Energy: 0.0212 | FLOPs: 2.12M | Params: 0.00M
+[Iter 256] New Best Found! Energy: 0.0205 | FLOPs: 2.05M | Params: 0.00M
+[Iter 264] New Best Found! Energy: 0.0203 | FLOPs: 2.03M | Params: 0.00M
+[Iter 266] New Best Found! Energy: 0.0202 | FLOPs: 2.02M | Params: 0.00M
+[Iter 269] New Best Found! Energy: 0.0195 | FLOPs: 1.95M | Params: 0.00M
+[Iter 281] New Best Found! Energy: 0.0188 | FLOPs: 1.88M | Params: 0.00M
+[Iter 331] New Best Found! Energy: 0.0187 | FLOPs: 1.87M | Params: 0.00M
+[Iter 332] New Best Found! Energy: 0.0184 | FLOPs: 1.84M | Params: 0.00M
+[Iter 528] New Best Found! Energy: 0.0178 | FLOPs: 1.78M | Params: 0.00M
+[Iter 529] New Best Found! Energy: 0.0172 | FLOPs: 1.72M | Params: 0.00M
+[Iter 534] New Best Found! Energy: 0.0170 | FLOPs: 1.70M | Params: 0.00M
+Testing Lambda = 0.1...
+Start Searching... Initial Energy: 0.0406
+[Iter 1] New Best Found! Energy: 0.0399 | FLOPs: 3.99M | Params: 0.00M
+[Iter 5] New Best Found! Energy: 0.0393 | FLOPs: 3.93M | Params: 0.00M
+[Iter 8] New Best Found! Energy: 0.0386 | FLOPs: 3.86M | Params: 0.00M
+[Iter 18] New Best Found! Energy: 0.0382 | FLOPs: 3.82M | Params: 0.00M
+[Iter 19] New Best Found! Energy: 0.0374 | FLOPs: 3.74M | Params: 0.00M
+[Iter 20] New Best Found! Energy: 0.0368 | FLOPs: 3.68M | Params: 0.00M
+[Iter 21] New Best Found! Energy: 0.0361 | FLOPs: 3.61M | Params: 0.00M
+[Iter 22] New Best Found! Energy: 0.0355 | FLOPs: 3.55M | Params: 0.00M
+[Iter 27] New Best Found! Energy: 0.0351 | FLOPs: 3.51M | Params: 0.00M
+[Iter 30] New Best Found! Energy: 0.0344 | FLOPs: 3.44M | Params: 0.00M
+[Iter 31] New Best Found! Energy: 0.0340 | FLOPs: 3.40M | Params: 0.00M
+[Iter 37] New Best Found! Energy: 0.0336 | FLOPs: 3.36M | Params: 0.00M
+[Iter 40] New Best Found! Energy: 0.0333 | FLOPs: 3.33M | Params: 0.00M
+[Iter 44] New Best Found! Energy: 0.0327 | FLOPs: 3.27M | Params: 0.00M
+[Iter 46] New Best Found! Energy: 0.0320 | FLOPs: 3.20M | Params: 0.00M
+[Iter 47] New Best Found! Energy: 0.0316 | FLOPs: 3.16M | Params: 0.00M
+[Iter 48] New Best Found! Energy: 0.0309 | FLOPs: 3.09M | Params: 0.00M
+[Iter 49] New Best Found! Energy: 0.0308 | FLOPs: 3.08M | Params: 0.00M
+[Iter 64] New Best Found! Energy: 0.0302 | FLOPs: 3.02M | Params: 0.00M
+[Iter 66] New Best Found! Energy: 0.0295 | FLOPs: 2.95M | Params: 0.00M
+[Iter 72] New Best Found! Energy: 0.0291 | FLOPs: 2.91M | Params: 0.00M
+[Iter 81] New Best Found! Energy: 0.0285 | FLOPs: 2.85M | Params: 0.00M
+[Iter 90] New Best Found! Energy: 0.0281 | FLOPs: 2.81M | Params: 0.00M
+[Iter 91] New Best Found! Energy: 0.0274 | FLOPs: 2.74M | Params: 0.00M
+[Iter 92] New Best Found! Energy: 0.0271 | FLOPs: 2.71M | Params: 0.00M
+[Iter 94] New Best Found! Energy: 0.0264 | FLOPs: 2.64M | Params: 0.00M
+[Iter 95] New Best Found! Energy: 0.0257 | FLOPs: 2.57M | Params: 0.00M
+[Iter 96] New Best Found! Energy: 0.0250 | FLOPs: 2.50M | Params: 0.00M
+[Iter 97] New Best Found! Energy: 0.0246 | FLOPs: 2.46M | Params: 0.00M
+[Iter 102] New Best Found! Energy: 0.0241 | FLOPs: 2.41M | Params: 0.00M
+[Iter 111] New Best Found! Energy: 0.0237 | FLOPs: 2.37M | Params: 0.00M
+[Iter 121] New Best Found! Energy: 0.0235 | FLOPs: 2.35M | Params: 0.00M
+[Iter 126] New Best Found! Energy: 0.0231 | FLOPs: 2.31M | Params: 0.00M
+[Iter 127] New Best Found! Energy: 0.0229 | FLOPs: 2.29M | Params: 0.00M
+[Iter 134] New Best Found! Energy: 0.0227 | FLOPs: 2.27M | Params: 0.00M
+[Iter 137] New Best Found! Energy: 0.0221 | FLOPs: 2.21M | Params: 0.00M
+[Iter 156] New Best Found! Energy: 0.0218 | FLOPs: 2.18M | Params: 0.00M
+[Iter 157] New Best Found! Energy: 0.0216 | FLOPs: 2.16M | Params: 0.00M
+[Iter 169] New Best Found! Energy: 0.0215 | FLOPs: 2.15M | Params: 0.00M
+[Iter 187] New Best Found! Energy: 0.0210 | FLOPs: 2.10M | Params: 0.00M
+[Iter 189] New Best Found! Energy: 0.0206 | FLOPs: 2.06M | Params: 0.00M
+[Iter 194] New Best Found! Energy: 0.0205 | FLOPs: 2.05M | Params: 0.00M
+[Iter 200] New Best Found! Energy: 0.0202 | FLOPs: 2.02M | Params: 0.00M
+[Iter 203] New Best Found! Energy: 0.0198 | FLOPs: 1.98M | Params: 0.00M
+[Iter 204] New Best Found! Energy: 0.0192 | FLOPs: 1.92M | Params: 0.00M
+[Iter 206] New Best Found! Energy: 0.0191 | FLOPs: 1.91M | Params: 0.00M
+[Iter 227] New Best Found! Energy: 0.0190 | FLOPs: 1.90M | Params: 0.00M
+[Iter 232] New Best Found! Energy: 0.0188 | FLOPs: 1.88M | Params: 0.00M
+[Iter 444] New Best Found! Energy: 0.0186 | FLOPs: 1.86M | Params: 0.00M
+[Iter 535] New Best Found! Energy: 0.0180 | FLOPs: 1.80M | Params: 0.00M
+[Iter 540] New Best Found! Energy: 0.0176 | FLOPs: 1.76M | Params: 0.00M
+[Iter 545] New Best Found! Energy: 0.0169 | FLOPs: 1.69M | Params: 0.00M
+[Iter 550] New Best Found! Energy: 0.0162 | FLOPs: 1.62M | Params: 0.00M
+Testing Lambda = 0.5...
+Start Searching... Initial Energy: 0.0406
+[Iter 0] New Best Found! Energy: 0.0399 | FLOPs: 3.99M | Params: 0.00M
+[Iter 1] New Best Found! Energy: 0.0395 | FLOPs: 3.95M | Params: 0.00M
+[Iter 3] New Best Found! Energy: 0.0388 | FLOPs: 3.88M | Params: 0.00M
+[Iter 7] New Best Found! Energy: 0.0381 | FLOPs: 3.81M | Params: 0.00M
+[Iter 9] New Best Found! Energy: 0.0376 | FLOPs: 3.76M | Params: 0.00M
+[Iter 12] New Best Found! Energy: 0.0369 | FLOPs: 3.69M | Params: 0.00M
+[Iter 17] New Best Found! Energy: 0.0368 | FLOPs: 3.68M | Params: 0.00M
+[Iter 18] New Best Found! Energy: 0.0362 | FLOPs: 3.62M | Params: 0.00M
+[Iter 20] New Best Found! Energy: 0.0356 | FLOPs: 3.56M | Params: 0.00M
+[Iter 21] New Best Found! Energy: 0.0351 | FLOPs: 3.51M | Params: 0.00M
+[Iter 22] New Best Found! Energy: 0.0345 | FLOPs: 3.45M | Params: 0.00M
+[Iter 24] New Best Found! Energy: 0.0341 | FLOPs: 3.41M | Params: 0.00M
+[Iter 25] New Best Found! Energy: 0.0335 | FLOPs: 3.35M | Params: 0.00M
+[Iter 31] New Best Found! Energy: 0.0331 | FLOPs: 3.31M | Params: 0.00M
+[Iter 32] New Best Found! Energy: 0.0323 | FLOPs: 3.23M | Params: 0.00M
+[Iter 39] New Best Found! Energy: 0.0317 | FLOPs: 3.17M | Params: 0.00M
+[Iter 53] New Best Found! Energy: 0.0313 | FLOPs: 3.13M | Params: 0.00M
+[Iter 55] New Best Found! Energy: 0.0310 | FLOPs: 3.10M | Params: 0.00M
+[Iter 58] New Best Found! Energy: 0.0309 | FLOPs: 3.09M | Params: 0.00M
+[Iter 64] New Best Found! Energy: 0.0305 | FLOPs: 3.05M | Params: 0.00M
+[Iter 66] New Best Found! Energy: 0.0298 | FLOPs: 2.98M | Params: 0.00M
+[Iter 69] New Best Found! Energy: 0.0290 | FLOPs: 2.90M | Params: 0.00M
+[Iter 72] New Best Found! Energy: 0.0287 | FLOPs: 2.87M | Params: 0.00M
+[Iter 82] New Best Found! Energy: 0.0283 | FLOPs: 2.83M | Params: 0.00M
+[Iter 83] New Best Found! Energy: 0.0276 | FLOPs: 2.76M | Params: 0.00M
+[Iter 84] New Best Found! Energy: 0.0270 | FLOPs: 2.70M | Params: 0.00M
+[Iter 87] New Best Found! Energy: 0.0265 | FLOPs: 2.65M | Params: 0.00M
+[Iter 91] New Best Found! Energy: 0.0259 | FLOPs: 2.59M | Params: 0.00M
+[Iter 92] New Best Found! Energy: 0.0255 | FLOPs: 2.55M | Params: 0.00M
+[Iter 95] New Best Found! Energy: 0.0248 | FLOPs: 2.48M | Params: 0.00M
+[Iter 96] New Best Found! Energy: 0.0247 | FLOPs: 2.47M | Params: 0.00M
+[Iter 109] New Best Found! Energy: 0.0246 | FLOPs: 2.46M | Params: 0.00M
+[Iter 183] New Best Found! Energy: 0.0243 | FLOPs: 2.43M | Params: 0.00M
+[Iter 189] New Best Found! Energy: 0.0236 | FLOPs: 2.36M | Params: 0.00M
+[Iter 192] New Best Found! Energy: 0.0233 | FLOPs: 2.33M | Params: 0.00M
+[Iter 193] New Best Found! Energy: 0.0226 | FLOPs: 2.26M | Params: 0.00M
+[Iter 196] New Best Found! Energy: 0.0220 | FLOPs: 2.20M | Params: 0.00M
+[Iter 198] New Best Found! Energy: 0.0219 | FLOPs: 2.19M | Params: 0.00M
+[Iter 199] New Best Found! Energy: 0.0212 | FLOPs: 2.12M | Params: 0.00M
+[Iter 204] New Best Found! Energy: 0.0207 | FLOPs: 2.07M | Params: 0.00M
+[Iter 207] New Best Found! Energy: 0.0201 | FLOPs: 2.01M | Params: 0.00M
+[Iter 208] New Best Found! Energy: 0.0198 | FLOPs: 1.98M | Params: 0.00M
+[Iter 240] New Best Found! Energy: 0.0197 | FLOPs: 1.97M | Params: 0.00M
+[Iter 241] New Best Found! Energy: 0.0190 | FLOPs: 1.90M | Params: 0.00M
+[Iter 658] New Best Found! Energy: 0.0187 | FLOPs: 1.87M | Params: 0.00M
+[Iter 660] New Best Found! Energy: 0.0186 | FLOPs: 1.86M | Params: 0.00M
+[Iter 665] New Best Found! Energy: 0.0184 | FLOPs: 1.84M | Params: 0.00M
+[Iter 674] New Best Found! Energy: 0.0180 | FLOPs: 1.80M | Params: 0.00M
+Testing Lambda = 2...
+Start Searching... Initial Energy: 0.0406
+[Iter 0] New Best Found! Energy: 0.0402 | FLOPs: 4.02M | Params: 0.00M
+[Iter 1] New Best Found! Energy: 0.0396 | FLOPs: 3.96M | Params: 0.00M
+[Iter 2] New Best Found! Energy: 0.0389 | FLOPs: 3.89M | Params: 0.00M
+[Iter 3] New Best Found! Energy: 0.0383 | FLOPs: 3.83M | Params: 0.00M
+[Iter 6] New Best Found! Energy: 0.0375 | FLOPs: 3.75M | Params: 0.00M
+[Iter 7] New Best Found! Energy: 0.0368 | FLOPs: 3.68M | Params: 0.00M
+[Iter 8] New Best Found! Energy: 0.0361 | FLOPs: 3.61M | Params: 0.00M
+[Iter 9] New Best Found! Energy: 0.0355 | FLOPs: 3.55M | Params: 0.00M
+[Iter 17] New Best Found! Energy: 0.0347 | FLOPs: 3.47M | Params: 0.00M
+[Iter 18] New Best Found! Energy: 0.0340 | FLOPs: 3.40M | Params: 0.00M
+[Iter 19] New Best Found! Energy: 0.0333 | FLOPs: 3.33M | Params: 0.00M
+[Iter 21] New Best Found! Energy: 0.0327 | FLOPs: 3.27M | Params: 0.00M
+[Iter 33] New Best Found! Energy: 0.0320 | FLOPs: 3.20M | Params: 0.00M
+[Iter 35] New Best Found! Energy: 0.0313 | FLOPs: 3.13M | Params: 0.00M
+[Iter 50] New Best Found! Energy: 0.0312 | FLOPs: 3.12M | Params: 0.00M
+[Iter 52] New Best Found! Energy: 0.0311 | FLOPs: 3.11M | Params: 0.00M
+[Iter 58] New Best Found! Energy: 0.0306 | FLOPs: 3.06M | Params: 0.00M
+[Iter 59] New Best Found! Energy: 0.0300 | FLOPs: 3.00M | Params: 0.00M
+[Iter 61] New Best Found! Energy: 0.0295 | FLOPs: 2.95M | Params: 0.00M
+[Iter 64] New Best Found! Energy: 0.0288 | FLOPs: 2.88M | Params: 0.00M
+[Iter 71] New Best Found! Energy: 0.0286 | FLOPs: 2.86M | Params: 0.00M
+[Iter 80] New Best Found! Energy: 0.0281 | FLOPs: 2.81M | Params: 0.00M
+[Iter 83] New Best Found! Energy: 0.0278 | FLOPs: 2.78M | Params: 0.00M
+[Iter 106] New Best Found! Energy: 0.0272 | FLOPs: 2.72M | Params: 0.00M
+[Iter 116] New Best Found! Energy: 0.0271 | FLOPs: 2.71M | Params: 0.00M
+[Iter 119] New Best Found! Energy: 0.0266 | FLOPs: 2.66M | Params: 0.00M
+[Iter 121] New Best Found! Energy: 0.0259 | FLOPs: 2.59M | Params: 0.00M
+[Iter 123] New Best Found! Energy: 0.0255 | FLOPs: 2.55M | Params: 0.00M
+[Iter 129] New Best Found! Energy: 0.0254 | FLOPs: 2.54M | Params: 0.00M
+[Iter 134] New Best Found! Energy: 0.0252 | FLOPs: 2.52M | Params: 0.00M
+[Iter 140] New Best Found! Energy: 0.0250 | FLOPs: 2.50M | Params: 0.00M
+[Iter 141] New Best Found! Energy: 0.0248 | FLOPs: 2.48M | Params: 0.00M
+[Iter 143] New Best Found! Energy: 0.0247 | FLOPs: 2.47M | Params: 0.00M
+[Iter 144] New Best Found! Energy: 0.0240 | FLOPs: 2.40M | Params: 0.00M
+[Iter 148] New Best Found! Energy: 0.0236 | FLOPs: 2.36M | Params: 0.00M
+[Iter 156] New Best Found! Energy: 0.0229 | FLOPs: 2.29M | Params: 0.00M
+[Iter 182] New Best Found! Energy: 0.0226 | FLOPs: 2.26M | Params: 0.00M
+[Iter 187] New Best Found! Energy: 0.0223 | FLOPs: 2.23M | Params: 0.00M
+[Iter 188] New Best Found! Energy: 0.0222 | FLOPs: 2.22M | Params: 0.00M
+[Iter 197] New Best Found! Energy: 0.0220 | FLOPs: 2.20M | Params: 0.00M
+[Iter 208] New Best Found! Energy: 0.0213 | FLOPs: 2.13M | Params: 0.00M
+[Iter 210] New Best Found! Energy: 0.0209 | FLOPs: 2.09M | Params: 0.00M
+[Iter 325] New Best Found! Energy: 0.0207 | FLOPs: 2.07M | Params: 0.00M
+[Iter 335] New Best Found! Energy: 0.0203 | FLOPs: 2.03M | Params: 0.00M
+[Iter 391] New Best Found! Energy: 0.0197 | FLOPs: 1.97M | Params: 0.00M
+[Iter 397] New Best Found! Energy: 0.0193 | FLOPs: 1.93M | Params: 0.00M
+[Iter 400] New Best Found! Energy: 0.0191 | FLOPs: 1.91M | Params: 0.00M
+[Iter 401] New Best Found! Energy: 0.0190 | FLOPs: 1.90M | Params: 0.00M
+[Iter 402] New Best Found! Energy: 0.0189 | FLOPs: 1.89M | Params: 0.00M
+[Iter 403] New Best Found! Energy: 0.0186 | FLOPs: 1.86M | Params: 0.00M
+[Iter 408] New Best Found! Energy: 0.0185 | FLOPs: 1.85M | Params: 0.00M
+[Iter 505] New Best Found! Energy: 0.0181 | FLOPs: 1.81M | Params: 0.00M
+[Iter 552] New Best Found! Energy: 0.0180 | FLOPs: 1.80M | Params: 0.00M
+[Iter 553] New Best Found! Energy: 0.0178 | FLOPs: 1.78M | Params: 0.00M
+[Iter 556] New Best Found! Energy: 0.0177 | FLOPs: 1.77M | Params: 0.00M
+[Iter 570] New Best Found! Energy: 0.0175 | FLOPs: 1.75M | Params: 0.00M
+[Iter 572] New Best Found! Energy: 0.0173 | FLOPs: 1.73M | Params: 0.00M
+[Iter 595] New Best Found! Energy: 0.0172 | FLOPs: 1.72M | Params: 0.00M
+[Iter 601] New Best Found! Energy: 0.0171 | FLOPs: 1.71M | Params: 0.00M
+[Iter 603] New Best Found! Energy: 0.0165 | FLOPs: 1.65M | Params: 0.00M
+Testing Lambda = 5...
+Start Searching... Initial Energy: 0.0406
+[Iter 0] New Best Found! Energy: 0.0400 | FLOPs: 4.00M | Params: 0.00M
+[Iter 10] New Best Found! Energy: 0.0393 | FLOPs: 3.93M | Params: 0.00M
+[Iter 12] New Best Found! Energy: 0.0387 | FLOPs: 3.87M | Params: 0.00M
+[Iter 17] New Best Found! Energy: 0.0381 | FLOPs: 3.81M | Params: 0.00M
+[Iter 19] New Best Found! Energy: 0.0374 | FLOPs: 3.74M | Params: 0.00M
+[Iter 23] New Best Found! Energy: 0.0367 | FLOPs: 3.67M | Params: 0.00M
+[Iter 24] New Best Found! Energy: 0.0361 | FLOPs: 3.61M | Params: 0.00M
+[Iter 25] New Best Found! Energy: 0.0357 | FLOPs: 3.57M | Params: 0.00M
+[Iter 26] New Best Found! Energy: 0.0350 | FLOPs: 3.50M | Params: 0.00M
+[Iter 27] New Best Found! Energy: 0.0343 | FLOPs: 3.43M | Params: 0.00M
+[Iter 29] New Best Found! Energy: 0.0339 | FLOPs: 3.39M | Params: 0.00M
+[Iter 31] New Best Found! Energy: 0.0335 | FLOPs: 3.35M | Params: 0.00M
+[Iter 32] New Best Found! Energy: 0.0329 | FLOPs: 3.29M | Params: 0.00M
+[Iter 39] New Best Found! Energy: 0.0322 | FLOPs: 3.22M | Params: 0.00M
+[Iter 53] New Best Found! Energy: 0.0315 | FLOPs: 3.15M | Params: 0.00M
+[Iter 54] New Best Found! Energy: 0.0311 | FLOPs: 3.11M | Params: 0.00M
+[Iter 55] New Best Found! Energy: 0.0305 | FLOPs: 3.05M | Params: 0.00M
+[Iter 58] New Best Found! Energy: 0.0302 | FLOPs: 3.02M | Params: 0.00M
+[Iter 73] New Best Found! Energy: 0.0301 | FLOPs: 3.01M | Params: 0.00M
+[Iter 74] New Best Found! Energy: 0.0299 | FLOPs: 2.99M | Params: 0.00M
+[Iter 76] New Best Found! Energy: 0.0294 | FLOPs: 2.94M | Params: 0.00M
+[Iter 80] New Best Found! Energy: 0.0293 | FLOPs: 2.93M | Params: 0.00M
+[Iter 83] New Best Found! Energy: 0.0286 | FLOPs: 2.86M | Params: 0.00M
+[Iter 87] New Best Found! Energy: 0.0279 | FLOPs: 2.79M | Params: 0.00M
+[Iter 89] New Best Found! Energy: 0.0275 | FLOPs: 2.75M | Params: 0.00M
+[Iter 90] New Best Found! Energy: 0.0271 | FLOPs: 2.71M | Params: 0.00M
+[Iter 93] New Best Found! Energy: 0.0270 | FLOPs: 2.70M | Params: 0.00M
+[Iter 98] New Best Found! Energy: 0.0262 | FLOPs: 2.62M | Params: 0.00M
+[Iter 99] New Best Found! Energy: 0.0258 | FLOPs: 2.58M | Params: 0.00M
+[Iter 100] New Best Found! Energy: 0.0255 | FLOPs: 2.55M | Params: 0.00M
+[Iter 107] New Best Found! Energy: 0.0254 | FLOPs: 2.54M | Params: 0.00M
+[Iter 110] New Best Found! Energy: 0.0247 | FLOPs: 2.47M | Params: 0.00M
+[Iter 113] New Best Found! Energy: 0.0243 | FLOPs: 2.43M | Params: 0.00M
+[Iter 117] New Best Found! Energy: 0.0242 | FLOPs: 2.42M | Params: 0.00M
+[Iter 118] New Best Found! Energy: 0.0237 | FLOPs: 2.37M | Params: 0.00M
+[Iter 119] New Best Found! Energy: 0.0230 | FLOPs: 2.30M | Params: 0.00M
+[Iter 126] New Best Found! Energy: 0.0227 | FLOPs: 2.27M | Params: 0.00M
+[Iter 128] New Best Found! Energy: 0.0224 | FLOPs: 2.24M | Params: 0.00M
+[Iter 129] New Best Found! Energy: 0.0221 | FLOPs: 2.21M | Params: 0.00M
+[Iter 130] New Best Found! Energy: 0.0220 | FLOPs: 2.20M | Params: 0.00M
+[Iter 131] New Best Found! Energy: 0.0214 | FLOPs: 2.14M | Params: 0.00M
+[Iter 139] New Best Found! Energy: 0.0208 | FLOPs: 2.08M | Params: 0.00M
+[Iter 143] New Best Found! Energy: 0.0201 | FLOPs: 2.01M | Params: 0.00M
+[Iter 176] New Best Found! Energy: 0.0199 | FLOPs: 1.99M | Params: 0.00M
+[Iter 206] New Best Found! Energy: 0.0194 | FLOPs: 1.94M | Params: 0.00M
+[Iter 224] New Best Found! Energy: 0.0192 | FLOPs: 1.92M | Params: 0.00M
+[Iter 225] New Best Found! Energy: 0.0188 | FLOPs: 1.88M | Params: 0.00M
+[Iter 226] New Best Found! Energy: 0.0180 | FLOPs: 1.80M | Params: 0.00M
+[Iter 243] New Best Found! Energy: 0.0175 | FLOPs: 1.75M | Params: 0.00M
+[Iter 295] New Best Found! Energy: 0.0172 | FLOPs: 1.72M | Params: 0.00M
+[Iter 299] New Best Found! Energy: 0.0171 | FLOPs: 1.71M | Params: 0.00M
+[Iter 300] New Best Found! Energy: 0.0167 | FLOPs: 1.67M | Params: 0.00M
+[Iter 310] New Best Found! Energy: 0.0161 | FLOPs: 1.61M | Params: 0.00M
+[Iter 312] New Best Found! Energy: 0.0153 | FLOPs: 1.53M | Params: 0.00M
+
+>>> Results saved to results/Table_3_Sensitivity_Analysis.csv
+
+--- Table 3 Sensitivity ---
+ Penalty Coef (λ)  Params (M)  GFLOPs  Latency (ms)  Peak Mem (MB)
+              0.0         0.0     0.0         23.15           0.07
+              0.1         0.0     0.0         22.66           0.06
+              0.5         0.0     0.0         21.85           0.07
+              2.0         0.0     0.0         24.36           0.06
+              5.0         0.0     0.0         25.80           0.06
+Table 3 Visualization saved.
+
+All Experiments Finished! Total Time: 160.77 mins
+Check the 'results' directory for CSVs and Plots.
+
+Process finished with exit code 0
+
