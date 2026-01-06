@@ -1,9 +1,3 @@
-import sys
-import os
-
-# 将项目根目录添加到路径，确保能导入配置文件
-# 假设当前文件位于 DNN_Graph_Optimizer/optimizer/cost_model.py
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from DNN_Graph_Optimizer.config import HARDWARE_CONSTRAINTS
 
 

@@ -5,12 +5,11 @@ from models.googlenet import GoogLeNet_Cifar
 
 def generate_default_config(model_name):
     """
-    根据模型名称生成默认的 graph_config (全为标准卷积)
+    生成默认的图结构配置 (Baseline)。
+    [修复]: 显式包含 'out' (输出通道数) 字段，确保 CostModel 能正确计算 Params 和 FLOPs。
     """
-    base_item = {'groups': 1, 'fused': False, 'out': 0}  # out在这里主要占位，ResNet等在代码里写死了通道数
 
     if model_name == 'vgg16':
-        # VGG16 (Cifar版) 约13个卷积层
         return [
             {'type': 'conv', 'out': 64, 'groups': 1, 'fused': False}, 'M',
             {'type': 'conv', 'out': 128, 'groups': 1, 'fused': False}, 'M',
@@ -22,18 +21,68 @@ def generate_default_config(model_name):
             {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False}, 'M',
         ]
 
-    elif model_name == 'resnet50' or model_name == 'resnext50':
-        # 1 (pre) + 3*3 (layer1) + 4*3 (layer2) + 6*3 (layer3) + 3*3 (layer4) = 1 + 9 + 12 + 18 + 9 = 49 个卷积配置
-        # out 字段在 ResNet 中由结构决定，这里只存 groups 和 fused
-        count = 1 + (3 + 4 + 6 + 3) * 3
+    elif model_name in ['resnet50', 'resnext50']:
+        # ResNet-50 结构: [3, 4, 6, 3] 个 Bottleneck
+        # 每个 Bottleneck 包含: 1x1, 3x3, 1x1 (expansion=4)
 
-        # 对于 ResNeXt, 默认 groups 可以设为 32，但为了作为 Baseline 对比，初始设为 1，让优化器去搜索
-        return [{'groups': 1, 'fused': False, 'type': 'conv'} for _ in range(count)]
+        cfg = []
+        # Pre-layer (conv1)
+        cfg.append({'type': 'conv', 'out': 64, 'groups': 1, 'fused': False})
+
+        # Stages: (num_blocks, base_planes)
+        # Expansion is fixed to 4 in Bottleneck
+        stages = [
+            (3, 64),  # Layer 1
+            (4, 128),  # Layer 2
+            (6, 256),  # Layer 3
+            (3, 512)  # Layer 4
+        ]
+
+        for num_blocks, planes in stages:
+            for _ in range(num_blocks):
+                # Bottleneck internal layers
+                # Conv1: 1x1, reduces/keeps dimensions
+                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False})
+                # Conv2: 3x3, processes features
+                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False})
+                # Conv3: 1x1, expands dimensions (*4)
+                cfg.append({'type': 'conv', 'out': planes * 4, 'groups': 1, 'fused': False})
+
+        return cfg
 
     elif model_name == 'googlenet':
-        # 1 (pre) + 9 * 6 (Inception modules) = 55 个卷积配置
-        count = 1 + 9 * 6
-        return [{'groups': 1, 'fused': False, 'type': 'conv'} for _ in range(count)]
+        # GoogLeNet (Inception) 结构
+        # 必须显式定义每个 Inception 模块内部 6 个卷积层的输出通道
+        # 参数顺序对应 models/googlenet.py 中的初始化顺序
+
+        cfg = []
+        # Pre-layers
+        cfg.append({'type': 'conv', 'out': 192, 'groups': 1, 'fused': False})
+
+        # Inception Configs: (n1x1, n3x3red, n3x3, n5x5red, n5x5, pool_planes)
+        inception_params = [
+            (64, 96, 128, 16, 32, 32),  # a3
+            (128, 128, 192, 32, 96, 64),  # b3
+            (192, 96, 208, 16, 48, 64),  # a4
+            (160, 112, 224, 24, 64, 64),  # b4
+            (128, 128, 256, 24, 64, 64),  # c4
+            (112, 144, 288, 32, 64, 64),  # d4
+            (256, 160, 320, 32, 128, 128),  # e4
+            (256, 160, 320, 32, 128, 128),  # a5
+            (384, 192, 384, 48, 128, 128)  # b5
+        ]
+
+        for params in inception_params:
+            n1x1, n3x3red, n3x3, n5x5red, n5x5, pool_planes = params
+            # 依次添加模块内的卷积配置
+            cfg.append({'type': 'conv', 'out': n1x1, 'groups': 1, 'fused': False})  # b1
+            cfg.append({'type': 'conv', 'out': n3x3red, 'groups': 1, 'fused': False})  # b2_1
+            cfg.append({'type': 'conv', 'out': n3x3, 'groups': 1, 'fused': False})  # b2_2
+            cfg.append({'type': 'conv', 'out': n5x5red, 'groups': 1, 'fused': False})  # b3_1
+            cfg.append({'type': 'conv', 'out': n5x5, 'groups': 1, 'fused': False})  # b3_2
+            cfg.append({'type': 'conv', 'out': pool_planes, 'groups': 1, 'fused': False})  # b4
+
+        return cfg
 
     else:
         raise ValueError(f"Unknown model name: {model_name}")

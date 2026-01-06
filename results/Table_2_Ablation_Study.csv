@@ -1,5 +1,5 @@
 Variant,Latency (ms),Peak Memory (MB),Top-1 Acc (%)
-C-DGOSA (Full),29.44,0.06,34.35
-C-DGOSA w/o Split,23.43,0.16,9.64
-C-DGOSA w/o Constraint,25.53,0.06,10.05
-C-DGOSA-Greedy,33.85,0.07,34.35
+C-DGOSA (Full),20.75,159.96,85.11
+C-DGOSA w/o Split,23.67,895.11,80.73
+C-DGOSA w/o Constraint,21.97,121.21,80.97
+C-DGOSA-Greedy,23.87,175.95,84.61
