@@ -13,7 +13,7 @@ from train_eval import train_model, evaluate_performance
 from utils.model_utils import generate_default_config, get_model
 
 # 结果保存路径
-RESULTS_DIR = "results"
+RESULTS_DIR = "results_50epochs_V2"
 if not os.path.exists(RESULTS_DIR):
     os.makedirs(RESULTS_DIR)
 
@@ -42,9 +42,8 @@ def run_experiment_1_comparison():
     # 获取数据 (Batch Size 128)
     train_loader, test_loader = get_cifar10_loaders(batch_size=128)
 
-    # 训练轮数：设为 20 以保证 Baseline 能达到较合理的精度 (如 >80%)
-    # 如果服务器速度快，建议设为 30+
-    EPOCHS = 20
+    # 训练轮数：设为50以保证 Baseline 能达到较合理的精度 (如 >80%)
+    EPOCHS = 50
 
     for model_name in models_list:
         print(f"\n--- Processing Model: {model_name} ---")

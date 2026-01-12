@@ -1,0 +1,9 @@
+Models,Method,Top-1 Accuracy(%),Latency(ms),Peak Memory(MB),Latency Reduction,Memory Reduction
+vgg16,PyTorch (Baseline),88.01,7.18,110.61,-,-
+vgg16,C-DGOSA (Ours),81.16,6.88,10.33,4.2%,90.7%
+resnet50,PyTorch (Baseline),89.34,22.05,248.14,-,-
+resnet50,C-DGOSA (Ours),88.25,21.4,53.35,2.9%,78.5%
+resnext50,PyTorch (Baseline),89.88,21.81,248.14,-,-
+resnext50,C-DGOSA (Ours),89.61,21.33,40.74,2.2%,83.6%
+googlenet,PyTorch (Baseline),84.85,20.61,45.03,-,-
+googlenet,C-DGOSA (Ours),88.62,19.37,7.84,6.0%,82.6%

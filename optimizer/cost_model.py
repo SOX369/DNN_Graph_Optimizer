@@ -1,3 +1,9 @@
+import sys
+import os
+
+# 将项目根目录添加到路径，确保能导入配置文件
+# 假设当前文件位于 DNN_Graph_Optimizer/optimizer/cost_model.py
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from DNN_Graph_Optimizer.config import HARDWARE_CONSTRAINTS
 
 
@@ -38,7 +44,10 @@ class HardwareAwareCostModel:
             # 如果配置中缺少 out，默认保持通道数不变
             out_c = layer.get('out', in_c)
             groups = layer.get('groups', 1)
-            k = 3  # 简化假设所有可变卷积核均为 3x3 (1x1的FLOPs会略有高估，但在搜索对比中影响不大)
+
+            # [修复]: 动态获取卷积核大小 k。如果配置中没有 k，则默认为 3 (兼容旧 VGG 配置)
+            # 解决了 ResNet 1x1 卷积被误算为 3x3 导致显存虚高 9 倍的问题
+            k = layer.get('k', 3)
 
             # FLOPs 计算公式 (简化版，忽略 stride 带来的 feature map 尺寸变化细节，主要关注相对值)
             # FLOPs = H * W * Cin * Cout * K^2 / groups

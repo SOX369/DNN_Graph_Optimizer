@@ -6,19 +6,20 @@ from models.googlenet import GoogLeNet_Cifar
 def generate_default_config(model_name):
     """
     生成默认的图结构配置 (Baseline)。
-    [修复]: 显式包含 'out' (输出通道数) 字段，确保 CostModel 能正确计算 Params 和 FLOPs。
+    [修复]: 显式包含 'out' (输出通道数) 和 'k' (卷积核大小) 字段，确保 CostModel 能正确计算 Params 和 FLOPs。
     """
 
     if model_name == 'vgg16':
+        # VGG 全是 3x3 卷积
         return [
-            {'type': 'conv', 'out': 64, 'groups': 1, 'fused': False}, 'M',
-            {'type': 'conv', 'out': 128, 'groups': 1, 'fused': False}, 'M',
-            {'type': 'conv', 'out': 256, 'groups': 1, 'fused': False},
-            {'type': 'conv', 'out': 256, 'groups': 1, 'fused': False}, 'M',
-            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False},
-            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False}, 'M',
-            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False},
-            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False}, 'M',
+            {'type': 'conv', 'out': 64, 'groups': 1, 'fused': False, 'k': 3}, 'M',
+            {'type': 'conv', 'out': 128, 'groups': 1, 'fused': False, 'k': 3}, 'M',
+            {'type': 'conv', 'out': 256, 'groups': 1, 'fused': False, 'k': 3},
+            {'type': 'conv', 'out': 256, 'groups': 1, 'fused': False, 'k': 3}, 'M',
+            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False, 'k': 3},
+            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False, 'k': 3}, 'M',
+            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False, 'k': 3},
+            {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False, 'k': 3}, 'M',
         ]
 
     elif model_name in ['resnet50', 'resnext50']:
@@ -26,8 +27,8 @@ def generate_default_config(model_name):
         # 每个 Bottleneck 包含: 1x1, 3x3, 1x1 (expansion=4)
 
         cfg = []
-        # Pre-layer (conv1)
-        cfg.append({'type': 'conv', 'out': 64, 'groups': 1, 'fused': False})
+        # Pre-layer (conv1) - 3x3
+        cfg.append({'type': 'conv', 'out': 64, 'groups': 1, 'fused': False, 'k': 3})
 
         # Stages: (num_blocks, base_planes)
         # Expansion is fixed to 4 in Bottleneck
@@ -42,11 +43,11 @@ def generate_default_config(model_name):
             for _ in range(num_blocks):
                 # Bottleneck internal layers
                 # Conv1: 1x1, reduces/keeps dimensions
-                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False})
+                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 1})
                 # Conv2: 3x3, processes features
-                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False})
+                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 3})
                 # Conv3: 1x1, expands dimensions (*4)
-                cfg.append({'type': 'conv', 'out': planes * 4, 'groups': 1, 'fused': False})
+                cfg.append({'type': 'conv', 'out': planes * 4, 'groups': 1, 'fused': False, 'k': 1})
 
         return cfg
 
@@ -56,8 +57,8 @@ def generate_default_config(model_name):
         # 参数顺序对应 models/googlenet.py 中的初始化顺序
 
         cfg = []
-        # Pre-layers
-        cfg.append({'type': 'conv', 'out': 192, 'groups': 1, 'fused': False})
+        # Pre-layers - 3x3
+        cfg.append({'type': 'conv', 'out': 192, 'groups': 1, 'fused': False, 'k': 3})
 
         # Inception Configs: (n1x1, n3x3red, n3x3, n5x5red, n5x5, pool_planes)
         inception_params = [
@@ -74,13 +75,14 @@ def generate_default_config(model_name):
 
         for params in inception_params:
             n1x1, n3x3red, n3x3, n5x5red, n5x5, pool_planes = params
-            # 依次添加模块内的卷积配置
-            cfg.append({'type': 'conv', 'out': n1x1, 'groups': 1, 'fused': False})  # b1
-            cfg.append({'type': 'conv', 'out': n3x3red, 'groups': 1, 'fused': False})  # b2_1
-            cfg.append({'type': 'conv', 'out': n3x3, 'groups': 1, 'fused': False})  # b2_2
-            cfg.append({'type': 'conv', 'out': n5x5red, 'groups': 1, 'fused': False})  # b3_1
-            cfg.append({'type': 'conv', 'out': n5x5, 'groups': 1, 'fused': False})  # b3_2
-            cfg.append({'type': 'conv', 'out': pool_planes, 'groups': 1, 'fused': False})  # b4
+            # 依次添加模块内的卷积配置，并指定卷积核大小
+            cfg.append({'type': 'conv', 'out': n1x1, 'groups': 1, 'fused': False, 'k': 1})  # b1 (1x1)
+            cfg.append({'type': 'conv', 'out': n3x3red, 'groups': 1, 'fused': False, 'k': 1})  # b2_1 (3x3 reduce -> 1x1)
+            cfg.append({'type': 'conv', 'out': n3x3, 'groups': 1, 'fused': False, 'k': 3})  # b2_2 (3x3)
+            cfg.append({'type': 'conv', 'out': n5x5red, 'groups': 1, 'fused': False, 'k': 1})  # b3_1 (5x5 reduce -> 1x1)
+            # Cifar版 GoogLeNet 通常用 3x3 代替 5x5 以保持一致性
+            cfg.append({'type': 'conv', 'out': n5x5, 'groups': 1, 'fused': False, 'k': 3})  # b3_2 (5x5 -> 3x3)
+            cfg.append({'type': 'conv', 'out': pool_planes, 'groups': 1, 'fused': False, 'k': 1})  # b4 (pool proj -> 1x1)
 
         return cfg
 
