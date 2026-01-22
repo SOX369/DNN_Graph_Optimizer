@@ -14,8 +14,13 @@ from utils.model_utils import generate_default_config, get_model
 
 # 结果保存路径
 RESULTS_DIR = "results_50epochs_V2"
+PTH_DIR = "pth"
+
 if not os.path.exists(RESULTS_DIR):
     os.makedirs(RESULTS_DIR)
+
+if not os.path.exists(PTH_DIR):
+    os.makedirs(PTH_DIR)
 
 
 def save_results(df, filename, title=None):
@@ -30,19 +35,20 @@ def save_results(df, filename, title=None):
 def run_experiment_1_comparison():
     """
     实验1: 复现 Table 1 - 不同模型的性能对比
+    [Updated]: 替换 ResNet50 为 ResNet18，新增 MobileNetV2
     """
     print("\n" + "=" * 60)
     print(">> Running Experiment 1: Performance Comparison (Table 1)")
     print("=" * 60)
 
-    # 四个目标模型
-    models_list = ['vgg16', 'resnet50', 'resnext50', 'googlenet']
+    # 目标模型列表 (已更新)
+    models_list = ['vgg16', 'resnet18', 'resnext50', 'googlenet', 'mobilenetv2']
     results = []
 
     # 获取数据 (Batch Size 128)
     train_loader, test_loader = get_cifar10_loaders(batch_size=128)
 
-    # 训练轮数：设为50以保证 Baseline 能达到较合理的精度 (如 >80%)
+    # 训练轮数
     EPOCHS = 50
 
     for model_name in models_list:
@@ -57,10 +63,13 @@ def run_experiment_1_comparison():
         cost_model = HardwareAwareCostModel()
         _, base_flops, base_params = cost_model.evaluate(base_config)
 
-        # [Fix]: 必须训练 Baseline，否则 Acc 为 10%
         print(f"[{model_name}] Training Baseline ({EPOCHS} epochs)...")
         train_model(base_model, train_loader, epochs=EPOCHS)
         base_acc, base_lat = evaluate_performance(base_model, test_loader)
+
+        # [New]: 保存 Baseline 模型权重
+        torch.save(base_model.state_dict(), os.path.join(PTH_DIR, f"{model_name}_baseline.pth"))
+        print(f"[{model_name}] Baseline model saved to {PTH_DIR}/{model_name}_baseline.pth")
 
         # 估算显存 (Params(M) * 4 Bytes * 3倍余量)
         base_mem = (base_params / 1e6) * 4 * 3
@@ -90,6 +99,10 @@ def run_experiment_1_comparison():
         train_model(opt_model, train_loader, epochs=EPOCHS)
         opt_acc, opt_lat = evaluate_performance(opt_model, test_loader)
 
+        # [New]: 保存 Optimized 模型权重
+        torch.save(opt_model.state_dict(), os.path.join(PTH_DIR, f"{model_name}_optimized.pth"))
+        print(f"[{model_name}] Optimized model saved to {PTH_DIR}/{model_name}_optimized.pth")
+
         # 计算提升比例
         lat_red = (1 - opt_lat / base_lat) * 100
         mem_red = (1 - opt_mem / base_mem) * 100
@@ -112,14 +125,13 @@ def run_experiment_1_comparison():
     df_ours = df[df["Method"] == "C-DGOSA (Ours)"]
     labels = df_ours["Models"]
 
-    # 处理百分号字符串转换为浮点数
     lat_vals = [float(str(x).strip('%')) for x in df_ours["Latency Reduction"]]
     mem_vals = [float(str(x).strip('%')) for x in df_ours["Memory Reduction"]]
 
     x = np.arange(len(labels))
     width = 0.35
 
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(12, 6))  # 稍微加宽以容纳更多模型
     rects1 = ax.bar(x - width / 2, lat_vals, width, label='Latency Reduction')
     rects2 = ax.bar(x + width / 2, mem_vals, width, label='Memory Reduction')
 
@@ -136,13 +148,14 @@ def run_experiment_1_comparison():
 
 def run_experiment_2_ablation():
     """
-    实验2: 复现 Table 2 - 消融实验 (ResNet-50)
+    实验2: 复现 Table 2 - 消融实验
+    [Updated]: 使用 ResNet18 替代 ResNet50
     """
     print("\n" + "=" * 60)
-    print(">> Running Experiment 2: Ablation Study (Table 2 - ResNet50)")
+    print(">> Running Experiment 2: Ablation Study (Table 2 - ResNet18)")
     print("=" * 60)
 
-    model_name = 'resnet50'
+    model_name = 'resnet18'  # [Change]: ResNet50 -> ResNet18
     base_config = generate_default_config(model_name)
     train_loader, test_loader = get_cifar10_loaders(batch_size=128)
     EPOCHS = 10
@@ -151,13 +164,16 @@ def run_experiment_2_ablation():
 
     # 1. C-DGOSA (Full)
     print(">>> Running Variant: C-DGOSA (Full)...")
-    HARDWARE_CONSTRAINTS['PENALTY_COEF'] = 10.0  # 默认约束
+    HARDWARE_CONSTRAINTS['PENALTY_COEF'] = 10.0
     optimizer = SAGraphOptimizer(base_config)
     cfg_full, _ = optimizer.search()
 
     model_full = get_model(model_name, cfg_full)
     train_model(model_full, train_loader, epochs=EPOCHS)
     acc_full, lat_full = evaluate_performance(model_full, test_loader)
+
+    # Save Model
+    torch.save(model_full.state_dict(), os.path.join(PTH_DIR, f"{model_name}_ablation_full.pth"))
 
     cm = HardwareAwareCostModel()
     _, _, p_full = cm.evaluate(cfg_full)
@@ -170,7 +186,7 @@ def run_experiment_2_ablation():
         "Top-1 Acc (%)": round(acc_full, 2)
     })
 
-    # 2. w/o Split (模拟: 强制 groups=1)
+    # 2. w/o Split
     print(">>> Running Variant: w/o Split...")
     cfg_no_split = copy.deepcopy(cfg_full)
     for layer in cfg_no_split:
@@ -178,7 +194,6 @@ def run_experiment_2_ablation():
             layer['groups'] = 1
 
     model_ns = get_model(model_name, cfg_no_split)
-    # 简略训练或直接评估 (为了对比公平，这里同样训练)
     train_model(model_ns, train_loader, epochs=EPOCHS)
     acc_ns, lat_ns = evaluate_performance(model_ns, test_loader)
     _, _, p_ns = cm.evaluate(cfg_no_split)
@@ -191,12 +206,11 @@ def run_experiment_2_ablation():
         "Top-1 Acc (%)": round(acc_ns, 2)
     })
 
-    # 3. w/o Constraint (Lambda=0)
+    # 3. w/o Constraint
     print(">>> Running Variant: w/o Constraint...")
     HARDWARE_CONSTRAINTS['PENALTY_COEF'] = 0.0
     optimizer_nc = SAGraphOptimizer(base_config)
     cfg_nc, _ = optimizer_nc.search()
-    # 恢复配置以免影响后续
     HARDWARE_CONSTRAINTS['PENALTY_COEF'] = 10.0
 
     model_nc = get_model(model_name, cfg_nc)
@@ -212,8 +226,7 @@ def run_experiment_2_ablation():
         "Top-1 Acc (%)": round(acc_nc, 2)
     })
 
-    # 4. Greedy (模拟)
-    # 简单模拟：假设贪婪搜索找到了一个次优解（延迟略高，显存一般）
+    # 4. Greedy
     print(">>> Running Variant: C-DGOSA-Greedy (Simulated)...")
     results.append({
         "Variant": "C-DGOSA-Greedy",
@@ -229,13 +242,14 @@ def run_experiment_2_ablation():
 def run_experiment_3_sensitivity():
     """
     实验3: 复现 Table 3 - 敏感度分析
+    [Updated]: 使用 ResNet18 替代 ResNet50
     """
     print("\n" + "=" * 60)
     print(">> Running Experiment 3: Sensitivity Analysis (Table 3)")
     print("=" * 60)
 
     lambdas = [0, 0.1, 0.5, 2, 5]
-    model_name = 'resnet50'
+    model_name = 'resnet18'  # [Change]: ResNet50 -> ResNet18
     base_config = generate_default_config(model_name)
     train_loader, test_loader = get_cifar10_loaders(batch_size=128)
 
@@ -251,10 +265,7 @@ def run_experiment_3_sensitivity():
         cm = HardwareAwareCostModel()
         _, flops, params = cm.evaluate(opt_cfg)
 
-        # 这里只做推理以节省时间（敏感度主要看结构变化带来的计算量/参数量变化）
-        # 延迟可以用真实推理测得
         model_lam = get_model(model_name, opt_cfg)
-        # model_lam.to(DEVICE) # 如果是在 evaluate_performance 里 to device，这里不需要
         _, lat_real = evaluate_performance(model_lam, test_loader)
 
         mem_real = (params / 1e6) * 4 * 3
@@ -267,13 +278,11 @@ def run_experiment_3_sensitivity():
             "Peak Mem (MB)": round(mem_real, 2)
         })
 
-    # 恢复默认
     HARDWARE_CONSTRAINTS['PENALTY_COEF'] = 10.0
 
     df = pd.DataFrame(results)
     save_results(df, "Table_3_Sensitivity_Analysis.csv", "Table 3 Sensitivity")
 
-    # 双轴绘图
     fig, ax1 = plt.subplots(figsize=(10, 6))
 
     color = 'tab:red'
@@ -298,7 +307,6 @@ def run_experiment_3_sensitivity():
 if __name__ == "__main__":
     start_time = time.time()
 
-    # 依次运行
     run_experiment_1_comparison()
     run_experiment_2_ablation()
     run_experiment_3_sensitivity()
@@ -306,3 +314,4 @@ if __name__ == "__main__":
     end_time = time.time()
     print(f"\nAll Experiments Finished! Total Time: {(end_time - start_time) / 60:.2f} mins")
     print(f"Check the '{RESULTS_DIR}' directory for CSVs and Plots.")
+    print(f"Check the '{PTH_DIR}' directory for saved model weights.")

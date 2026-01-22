@@ -1,16 +1,15 @@
 from models.vgg import VGG_Cifar
 from models.resnet import ResNet_Cifar
 from models.googlenet import GoogLeNet_Cifar
+from models.mobilenetv2 import MobileNetV2_Cifar
 
 
 def generate_default_config(model_name):
     """
     生成默认的图结构配置 (Baseline)。
-    [修复]: 显式包含 'out' (输出通道数) 和 'k' (卷积核大小) 字段，确保 CostModel 能正确计算 Params 和 FLOPs。
     """
 
     if model_name == 'vgg16':
-        # VGG 全是 3x3 卷积
         return [
             {'type': 'conv', 'out': 64, 'groups': 1, 'fused': False, 'k': 3}, 'M',
             {'type': 'conv', 'out': 128, 'groups': 1, 'fused': False, 'k': 3}, 'M',
@@ -22,68 +21,96 @@ def generate_default_config(model_name):
             {'type': 'conv', 'out': 512, 'groups': 1, 'fused': False, 'k': 3}, 'M',
         ]
 
-    elif model_name in ['resnet50', 'resnext50']:
-        # ResNet-50 结构: [3, 4, 6, 3] 个 Bottleneck
-        # 每个 Bottleneck 包含: 1x1, 3x3, 1x1 (expansion=4)
-
+    elif model_name == 'resnet18':
+        # ResNet-18 结构: [2, 2, 2, 2] BasicBlocks
         cfg = []
-        # Pre-layer (conv1) - 3x3
+        # Pre-layer (conv1)
         cfg.append({'type': 'conv', 'out': 64, 'groups': 1, 'fused': False, 'k': 3})
 
-        # Stages: (num_blocks, base_planes)
-        # Expansion is fixed to 4 in Bottleneck
+        # Stages (num_blocks, planes)
         stages = [
-            (3, 64),  # Layer 1
-            (4, 128),  # Layer 2
-            (6, 256),  # Layer 3
-            (3, 512)  # Layer 4
+            (2, 64), (2, 128), (2, 256), (2, 512)
         ]
 
         for num_blocks, planes in stages:
             for _ in range(num_blocks):
-                # Bottleneck internal layers
-                # Conv1: 1x1, reduces/keeps dimensions
-                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 1})
-                # Conv2: 3x3, processes features
+                # BasicBlock internal layers (2 layers)
+                # Conv1: 3x3
+                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': True, 'k': 3})
+                # Conv2: 3x3 (no fused relu at end of block inside conv, done after add)
                 cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 3})
-                # Conv3: 1x1, expands dimensions (*4)
+        return cfg
+
+    elif model_name in ['resnet50', 'resnext50']:
+        cfg = []
+        cfg.append({'type': 'conv', 'out': 64, 'groups': 1, 'fused': False, 'k': 3})
+        stages = [(3, 64), (4, 128), (6, 256), (3, 512)]
+        for num_blocks, planes in stages:
+            for _ in range(num_blocks):
+                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 1})
+                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 3})
                 cfg.append({'type': 'conv', 'out': planes * 4, 'groups': 1, 'fused': False, 'k': 1})
+        return cfg
+
+    elif model_name == 'mobilenetv2':
+        # MobileNetV2 Config
+        cfg = []
+        # First Conv
+        cfg.append({'type': 'conv', 'out': 32, 'groups': 1, 'fused': False, 'k': 3})
+
+        # Inverted Residual Settings (t, c, n, s)
+        # Needs to match MobileNetV2_Cifar implementation
+        settings = [
+            [1, 16, 1, 1],
+            [6, 24, 2, 1],
+            [6, 32, 3, 2],
+            [6, 64, 4, 2],
+            [6, 96, 3, 1],
+            [6, 160, 3, 2],
+            [6, 320, 1, 1],
+        ]
+
+        input_channel = 32
+        for t, c, n, s in settings:
+            output_channel = c
+            for i in range(n):
+                hidden_dim = int(round(input_channel * t))
+
+                if t != 1:
+                    # PW Expansion (1x1)
+                    cfg.append({'type': 'conv', 'out': hidden_dim, 'groups': 1, 'fused': True, 'k': 1})
+
+                # DW Conv (3x3) - Default groups = hidden_dim (Depthwise)
+                cfg.append({'type': 'conv', 'out': hidden_dim, 'groups': hidden_dim, 'fused': True, 'k': 3})
+
+                # PW Project (1x1)
+                cfg.append({'type': 'conv', 'out': output_channel, 'groups': 1, 'fused': False, 'k': 1})
+
+                input_channel = output_channel
+
+        # Last Conv (1280)
+        cfg.append({'type': 'conv', 'out': 1280, 'groups': 1, 'fused': True, 'k': 1})
 
         return cfg
 
     elif model_name == 'googlenet':
-        # GoogLeNet (Inception) 结构
-        # 必须显式定义每个 Inception 模块内部 6 个卷积层的输出通道
-        # 参数顺序对应 models/googlenet.py 中的初始化顺序
-
         cfg = []
-        # Pre-layers - 3x3
         cfg.append({'type': 'conv', 'out': 192, 'groups': 1, 'fused': False, 'k': 3})
-
-        # Inception Configs: (n1x1, n3x3red, n3x3, n5x5red, n5x5, pool_planes)
         inception_params = [
-            (64, 96, 128, 16, 32, 32),  # a3
-            (128, 128, 192, 32, 96, 64),  # b3
-            (192, 96, 208, 16, 48, 64),  # a4
-            (160, 112, 224, 24, 64, 64),  # b4
-            (128, 128, 256, 24, 64, 64),  # c4
-            (112, 144, 288, 32, 64, 64),  # d4
-            (256, 160, 320, 32, 128, 128),  # e4
-            (256, 160, 320, 32, 128, 128),  # a5
-            (384, 192, 384, 48, 128, 128)  # b5
+            (64, 96, 128, 16, 32, 32), (128, 128, 192, 32, 96, 64),
+            (192, 96, 208, 16, 48, 64), (160, 112, 224, 24, 64, 64),
+            (128, 128, 256, 24, 64, 64), (112, 144, 288, 32, 64, 64),
+            (256, 160, 320, 32, 128, 128), (256, 160, 320, 32, 128, 128),
+            (384, 192, 384, 48, 128, 128)
         ]
-
         for params in inception_params:
             n1x1, n3x3red, n3x3, n5x5red, n5x5, pool_planes = params
-            # 依次添加模块内的卷积配置，并指定卷积核大小
-            cfg.append({'type': 'conv', 'out': n1x1, 'groups': 1, 'fused': False, 'k': 1})  # b1 (1x1)
-            cfg.append({'type': 'conv', 'out': n3x3red, 'groups': 1, 'fused': False, 'k': 1})  # b2_1 (3x3 reduce -> 1x1)
-            cfg.append({'type': 'conv', 'out': n3x3, 'groups': 1, 'fused': False, 'k': 3})  # b2_2 (3x3)
-            cfg.append({'type': 'conv', 'out': n5x5red, 'groups': 1, 'fused': False, 'k': 1})  # b3_1 (5x5 reduce -> 1x1)
-            # Cifar版 GoogLeNet 通常用 3x3 代替 5x5 以保持一致性
-            cfg.append({'type': 'conv', 'out': n5x5, 'groups': 1, 'fused': False, 'k': 3})  # b3_2 (5x5 -> 3x3)
-            cfg.append({'type': 'conv', 'out': pool_planes, 'groups': 1, 'fused': False, 'k': 1})  # b4 (pool proj -> 1x1)
-
+            cfg.append({'type': 'conv', 'out': n1x1, 'groups': 1, 'fused': False, 'k': 1})
+            cfg.append({'type': 'conv', 'out': n3x3red, 'groups': 1, 'fused': False, 'k': 1})
+            cfg.append({'type': 'conv', 'out': n3x3, 'groups': 1, 'fused': False, 'k': 3})
+            cfg.append({'type': 'conv', 'out': n5x5red, 'groups': 1, 'fused': False, 'k': 1})
+            cfg.append({'type': 'conv', 'out': n5x5, 'groups': 1, 'fused': False, 'k': 3})
+            cfg.append({'type': 'conv', 'out': pool_planes, 'groups': 1, 'fused': False, 'k': 1})
         return cfg
 
     else:
@@ -93,10 +120,15 @@ def generate_default_config(model_name):
 def get_model(model_name, graph_config):
     if model_name == 'vgg16':
         return VGG_Cifar(graph_config)
+    elif model_name == 'resnet18':
+        # 调用 ResNet_Cifar，指定 depth=18
+        return ResNet_Cifar(graph_config, depth=18, is_resnext=False)
     elif model_name == 'resnet50':
         return ResNet_Cifar(graph_config, depth=50, is_resnext=False)
     elif model_name == 'resnext50':
         return ResNet_Cifar(graph_config, depth=50, is_resnext=True)
+    elif model_name == 'mobilenetv2':
+        return MobileNetV2_Cifar(graph_config)
     elif model_name == 'googlenet':
         return GoogLeNet_Cifar(graph_config)
     else:

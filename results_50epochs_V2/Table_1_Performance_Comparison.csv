@@ -1,9 +1,11 @@
 Models,Method,Top-1 Accuracy(%),Latency(ms),Peak Memory(MB),Latency Reduction,Memory Reduction
-vgg16,PyTorch (Baseline),88.01,7.18,110.61,-,-
-vgg16,C-DGOSA (Ours),81.16,6.88,10.33,4.2%,90.7%
-resnet50,PyTorch (Baseline),89.34,22.05,248.14,-,-
-resnet50,C-DGOSA (Ours),88.25,21.4,53.35,2.9%,78.5%
-resnext50,PyTorch (Baseline),89.88,21.81,248.14,-,-
-resnext50,C-DGOSA (Ours),89.61,21.33,40.74,2.2%,83.6%
-googlenet,PyTorch (Baseline),84.85,20.61,45.03,-,-
-googlenet,C-DGOSA (Ours),88.62,19.37,7.84,6.0%,82.6%
+vgg16,PyTorch (Baseline),85.79,6.92,110.61,-,-
+vgg16,C-DGOSA (Ours),81.71,6.65,9.86,3.8%,91.1%
+resnet18,PyTorch (Baseline),89.85,7.92,131.85,-,-
+resnet18,C-DGOSA (Ours),88.82,6.69,11.35,15.5%,91.4%
+resnext50,PyTorch (Baseline),90.47,21.7,248.14,-,-
+resnext50,C-DGOSA (Ours),88.38,21.93,52.18,-1.1%,79.0%
+googlenet,PyTorch (Baseline),86.47,20.32,45.03,-,-
+googlenet,C-DGOSA (Ours),87.36,20.99,9.72,-3.3%,78.4%
+mobilenetv2,PyTorch (Baseline),88.7,8.37,26.28,-,-
+mobilenetv2,C-DGOSA (Ours),88.28,8.21,26.28,1.9%,0.0%
