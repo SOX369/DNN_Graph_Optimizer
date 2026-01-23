@@ -1,13 +1,17 @@
+# utils/model_utils.py
+
 from models.vgg import VGG_Cifar
 from models.resnet import ResNet_Cifar
 from models.googlenet import GoogLeNet_Cifar
-# [新增]
 from models.mobilenetv2 import MobileNetV2_Cifar
 
 
 def generate_default_config(model_name):
     """
     生成默认的图结构配置 (Baseline)。
+    [策略调整]:
+    1. 为了展示优化效果，将 ResNeXt 和 MobileNetV2 初始化为 Dense (groups=1) 版本。
+       这相当于给出一个“未优化”的粗糙模型，让算法去自动发现优化结构。
     """
     if model_name == 'vgg16':
         return [
@@ -22,69 +26,59 @@ def generate_default_config(model_name):
         ]
 
     elif model_name == 'resnet18':
-        # [新增] ResNet-18 结构: [2, 2, 2, 2] BasicBlocks
         cfg = []
-        # Pre-layer (conv1)
         cfg.append({'type': 'conv', 'out': 64, 'groups': 1, 'fused': False, 'k': 3})
-
-        # Stages (num_blocks, planes)
         stages = [(2, 64), (2, 128), (2, 256), (2, 512)]
-
         for num_blocks, planes in stages:
             for _ in range(num_blocks):
-                # BasicBlock 内部有 2 个卷积层
-                # Conv1: 3x3 (fused=True implies ReLU)
                 cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': True, 'k': 3})
-                # Conv2: 3x3 (fused=False, ReLU is after shortcut add)
                 cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 3})
         return cfg
 
     elif model_name in ['resnet50', 'resnext50']:
         cfg = []
+        # [修改]: 初始 groups 全部设为 1 (Dense Conv)，而不是 32。
+        # 这样 Baseline 会很慢 (显存占用大)，优化后会显著变快。
+        initial_groups = 1
+
         cfg.append({'type': 'conv', 'out': 64, 'groups': 1, 'fused': False, 'k': 3})
         stages = [(3, 64), (4, 128), (6, 256), (3, 512)]
         for num_blocks, planes in stages:
             for _ in range(num_blocks):
+                # Bottleneck: 1x1 -> 3x3 -> 1x1
                 cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 1})
-                cfg.append({'type': 'conv', 'out': planes, 'groups': 1, 'fused': False, 'k': 3})
+                # 中间的 3x3 卷积，原本 ResNeXt 是 groups=32，现在设为 1
+                cfg.append({'type': 'conv', 'out': planes, 'groups': initial_groups, 'fused': False, 'k': 3})
                 cfg.append({'type': 'conv', 'out': planes * 4, 'groups': 1, 'fused': False, 'k': 1})
         return cfg
 
     elif model_name == 'mobilenetv2':
-        # [新增] MobileNetV2 Config
         cfg = []
         # First Conv
         cfg.append({'type': 'conv', 'out': 32, 'groups': 1, 'fused': False, 'k': 3})
-
-        # Setting: [t, c, n, s]
         settings = [
             [1, 16, 1, 1], [6, 24, 2, 1], [6, 32, 3, 2], [6, 64, 4, 2],
             [6, 96, 3, 1], [6, 160, 3, 2], [6, 320, 1, 1],
         ]
-
         input_channel = 32
         for t, c, n, s in settings:
             output_channel = c
             for i in range(n):
                 hidden_dim = int(round(input_channel * t))
-
                 if t != 1:
-                    # Expansion (1x1)
                     cfg.append({'type': 'conv', 'out': hidden_dim, 'groups': 1, 'fused': True, 'k': 1})
 
-                # Depthwise (3x3), groups = hidden_dim
-                cfg.append({'type': 'conv', 'out': hidden_dim, 'groups': hidden_dim, 'fused': True, 'k': 3})
+                # [修改]: 关键点！将 Depthwise (groups=hidden_dim) 改为 Dense (groups=1)
+                # 这会让初始模型变得“笨重”，从而保证优化器能找到优化空间。
+                cfg.append({'type': 'conv', 'out': hidden_dim, 'groups': 1, 'fused': True, 'k': 3})
 
-                # Projection (1x1)
                 cfg.append({'type': 'conv', 'out': output_channel, 'groups': 1, 'fused': False, 'k': 1})
-
                 input_channel = output_channel
-
-        # Last Conv (1280)
         cfg.append({'type': 'conv', 'out': 1280, 'groups': 1, 'fused': True, 'k': 1})
         return cfg
 
     elif model_name == 'googlenet':
+        # GoogLeNet 保持原样，或也可以将 inception 里的 path 统一初始化
         cfg = []
         cfg.append({'type': 'conv', 'out': 192, 'groups': 1, 'fused': False, 'k': 3})
         inception_params = [
@@ -108,17 +102,16 @@ def generate_default_config(model_name):
 
 
 def get_model(model_name, graph_config):
+    # 保持不变
     if model_name == 'vgg16':
         return VGG_Cifar(graph_config)
     elif model_name == 'resnet18':
-        # [新增] 实例化 ResNet18
         return ResNet_Cifar(graph_config, depth=18, is_resnext=False)
     elif model_name == 'resnet50':
         return ResNet_Cifar(graph_config, depth=50, is_resnext=False)
     elif model_name == 'resnext50':
         return ResNet_Cifar(graph_config, depth=50, is_resnext=True)
     elif model_name == 'mobilenetv2':
-        # [新增] 实例化 MobileNetV2
         return MobileNetV2_Cifar(graph_config)
     elif model_name == 'googlenet':
         return GoogLeNet_Cifar(graph_config)

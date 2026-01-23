@@ -13,7 +13,7 @@ from train_eval import train_model, evaluate_performance
 from utils.model_utils import generate_default_config, get_model
 
 # 结果保存路径
-RESULTS_DIR = "results_50epochs_V2"
+RESULTS_DIR = "results_50epochs_V3"
 PTH_DIR = "pth"  # [新增] 模型权重保存路径
 
 if not os.path.exists(RESULTS_DIR):
@@ -52,7 +52,7 @@ def run_experiment_1_comparison():
 
     # 获取数据 (Batch Size 128)
     train_loader, test_loader = get_cifar10_loaders(batch_size=128)
-    EPOCHS = 50
+    EPOCHS = 20
 
     for model_name in models_list:
         print(f"\n--- Processing Model: {model_name} ---")
