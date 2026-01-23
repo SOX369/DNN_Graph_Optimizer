@@ -1,9 +1,10 @@
 /home/xupt-807/anaconda3/envs/wxw/bin/python /home/xupt-807/PycharmProjects/task_train/DNN_Graph_Optimizer/run_experiments.py
 /home/xupt-807/.cache/matplotlib is not a writable directory
-Matplotlib created a temporary cache directory at /tmp/matplotlib-14rp6h6b because there was an issue with the default path (/home/xupt-807/.cache/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib created a temporary cache directory at /tmp/matplotlib-2lkjzjb6 because there was an issue with the default path (/home/xupt-807/.cache/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
 
 ============================================================
 >> Running Experiment 1: Performance Comparison (Table 1)
+>> NOTE: Setting Penalty Coefficient lambda = 0.5 for Best Performance
 ============================================================
 Files already downloaded and verified
 Files already downloaded and verified
@@ -12,1016 +13,1019 @@ Files already downloaded and verified
 [vgg16] Evaluating Baseline...
 [vgg16] Training Baseline (50 epochs)...
 Training on cuda...
-Epoch 1/50, Loss: 1.5452
-Epoch 2/50, Loss: 1.0968
-Epoch 3/50, Loss: 0.9052
-Epoch 4/50, Loss: 0.7921
-Epoch 5/50, Loss: 0.7101
-Epoch 6/50, Loss: 0.6505
-Epoch 7/50, Loss: 0.5989
-Epoch 8/50, Loss: 0.5590
-Epoch 9/50, Loss: 0.5285
-Epoch 10/50, Loss: 0.4990
-Epoch 11/50, Loss: 0.4693
-Epoch 12/50, Loss: 0.4467
-Epoch 13/50, Loss: 0.4292
-Epoch 14/50, Loss: 0.4006
-Epoch 15/50, Loss: 0.3892
-Epoch 16/50, Loss: 0.3718
-Epoch 17/50, Loss: 0.3621
-Epoch 18/50, Loss: 0.3514
-Epoch 19/50, Loss: 0.3301
-Epoch 20/50, Loss: 0.3268
-Epoch 21/50, Loss: 0.3104
-Epoch 22/50, Loss: 0.2947
-Epoch 23/50, Loss: 0.2875
-Epoch 24/50, Loss: 0.2779
-Epoch 25/50, Loss: 0.2738
-Epoch 26/50, Loss: 0.2611
-Epoch 27/50, Loss: 0.2509
-Epoch 28/50, Loss: 0.2523
-Epoch 29/50, Loss: 0.2382
-Epoch 30/50, Loss: 0.2304
-Epoch 31/50, Loss: 0.2206
-Epoch 32/50, Loss: 0.2169
-Epoch 33/50, Loss: 0.2127
-Epoch 34/50, Loss: 0.2057
-Epoch 35/50, Loss: 0.1967
-Epoch 36/50, Loss: 0.1968
-Epoch 37/50, Loss: 0.1894
-Epoch 38/50, Loss: 0.1893
-Epoch 39/50, Loss: 0.1792
-Epoch 40/50, Loss: 0.1803
-Epoch 41/50, Loss: 0.1709
-Epoch 42/50, Loss: 0.1696
-Epoch 43/50, Loss: 0.1659
-Epoch 44/50, Loss: 0.1629
-Epoch 45/50, Loss: 0.1551
-Epoch 46/50, Loss: 0.1518
-Epoch 47/50, Loss: 0.1501
-Epoch 48/50, Loss: 0.1586
-Epoch 49/50, Loss: 0.1457
-Epoch 50/50, Loss: 0.1433
-[vgg16] Running C-DGOSA Optimization...
+Epoch 1/50, Loss: 1.5748
+Epoch 2/50, Loss: 1.1122
+Epoch 3/50, Loss: 0.9218
+Epoch 4/50, Loss: 0.7972
+Epoch 5/50, Loss: 0.7140
+Epoch 6/50, Loss: 0.6511
+Epoch 7/50, Loss: 0.6009
+Epoch 8/50, Loss: 0.5660
+Epoch 9/50, Loss: 0.5261
+Epoch 10/50, Loss: 0.4930
+Epoch 11/50, Loss: 0.4740
+Epoch 12/50, Loss: 0.4474
+Epoch 13/50, Loss: 0.4257
+Epoch 14/50, Loss: 0.4114
+Epoch 15/50, Loss: 0.3898
+Epoch 16/50, Loss: 0.3748
+Epoch 17/50, Loss: 0.3613
+Epoch 18/50, Loss: 0.3490
+Epoch 19/50, Loss: 0.3355
+Epoch 20/50, Loss: 0.3226
+Epoch 21/50, Loss: 0.3112
+Epoch 22/50, Loss: 0.3005
+Epoch 23/50, Loss: 0.2881
+Epoch 24/50, Loss: 0.2752
+Epoch 25/50, Loss: 0.2690
+Epoch 26/50, Loss: 0.2575
+Epoch 27/50, Loss: 0.2513
+Epoch 28/50, Loss: 0.2434
+Epoch 29/50, Loss: 0.2359
+Epoch 30/50, Loss: 0.2269
+Epoch 31/50, Loss: 0.2252
+Epoch 32/50, Loss: 0.2192
+Epoch 33/50, Loss: 0.2112
+Epoch 34/50, Loss: 0.2031
+Epoch 35/50, Loss: 0.2009
+Epoch 36/50, Loss: 0.1960
+Epoch 37/50, Loss: 0.1917
+Epoch 38/50, Loss: 0.1832
+Epoch 39/50, Loss: 0.1803
+Epoch 40/50, Loss: 0.1790
+Epoch 41/50, Loss: 0.1742
+Epoch 42/50, Loss: 0.1663
+Epoch 43/50, Loss: 0.1703
+Epoch 44/50, Loss: 0.1617
+Epoch 45/50, Loss: 0.1519
+Epoch 46/50, Loss: 0.1557
+Epoch 47/50, Loss: 0.1524
+Epoch 48/50, Loss: 0.1495
+Epoch 49/50, Loss: 0.1531
+Epoch 50/50, Loss: 0.1458
+[vgg16] Saved baseline weights to pth/
+[vgg16] Running C-DGOSA Optimization (lambda=0.5)...
 Start Searching... Initial Energy: 1.5276
-[Iter 0] New Best Found! Energy: 1.4569 | FLOPs: 145.69M | Params: 7.45M
-[Iter 1] New Best Found! Energy: 1.4414 | FLOPs: 144.14M | Params: 7.45M
-[Iter 2] New Best Found! Energy: 1.3175 | FLOPs: 131.75M | Params: 7.25M
-[Iter 4] New Best Found! Energy: 1.2231 | FLOPs: 122.31M | Params: 7.22M
-[Iter 7] New Best Found! Energy: 1.2125 | FLOPs: 121.25M | Params: 7.24M
-[Iter 10] New Best Found! Energy: 1.1299 | FLOPs: 112.99M | Params: 5.18M
-[Iter 11] New Best Found! Energy: 1.0508 | FLOPs: 105.08M | Params: 4.64M
-[Iter 19] New Best Found! Energy: 0.9699 | FLOPs: 96.99M | Params: 6.57M
-[Iter 20] New Best Found! Energy: 0.8648 | FLOPs: 86.48M | Params: 6.41M
-[Iter 26] New Best Found! Energy: 0.8543 | FLOPs: 85.43M | Params: 6.62M
-[Iter 34] New Best Found! Energy: 0.8349 | FLOPs: 83.49M | Params: 6.36M
-[Iter 38] New Best Found! Energy: 0.8264 | FLOPs: 82.64M | Params: 6.35M
-[Iter 63] New Best Found! Energy: 0.7147 | FLOPs: 71.47M | Params: 3.44M
-[Iter 68] New Best Found! Energy: 0.6981 | FLOPs: 69.81M | Params: 3.44M
-[Iter 73] New Best Found! Energy: 0.4875 | FLOPs: 48.75M | Params: 2.12M
-[Iter 75] New Best Found! Energy: 0.4817 | FLOPs: 48.17M | Params: 2.12M
-[Iter 83] New Best Found! Energy: 0.4478 | FLOPs: 44.78M | Params: 2.18M
-[Iter 84] New Best Found! Energy: 0.4449 | FLOPs: 44.49M | Params: 2.11M
-[Iter 190] New Best Found! Energy: 0.4287 | FLOPs: 42.87M | Params: 3.22M
-[Iter 331] New Best Found! Energy: 0.4198 | FLOPs: 41.98M | Params: 3.55M
-[Iter 332] New Best Found! Energy: 0.3819 | FLOPs: 38.19M | Params: 2.60M
-[Iter 340] New Best Found! Energy: 0.3688 | FLOPs: 36.88M | Params: 2.53M
-[Iter 342] New Best Found! Energy: 0.3078 | FLOPs: 30.78M | Params: 2.14M
-[Iter 365] New Best Found! Energy: 0.2902 | FLOPs: 29.02M | Params: 3.34M
-[Iter 366] New Best Found! Energy: 0.2646 | FLOPs: 26.46M | Params: 2.70M
-[Iter 369] New Best Found! Energy: 0.2525 | FLOPs: 25.25M | Params: 2.68M
-[Iter 372] New Best Found! Energy: 0.2437 | FLOPs: 24.37M | Params: 2.67M
-[Iter 378] New Best Found! Energy: 0.2363 | FLOPs: 23.63M | Params: 2.66M
-[Iter 384] New Best Found! Energy: 0.2195 | FLOPs: 21.95M | Params: 2.58M
-[Iter 387] New Best Found! Energy: 0.1754 | FLOPs: 17.54M | Params: 1.48M
-[Iter 390] New Best Found! Energy: 0.1699 | FLOPs: 16.99M | Params: 1.51M
-[Iter 517] New Best Found! Energy: 0.1661 | FLOPs: 16.61M | Params: 0.93M
-[Iter 523] New Best Found! Energy: 0.1623 | FLOPs: 16.23M | Params: 0.90M
-[Iter 662] New Best Found! Energy: 0.1285 | FLOPs: 12.85M | Params: 0.86M
+[Iter 1] New Best Found! Energy: 1.4038 | FLOPs: 140.38M | Params: 9.02M
+[Iter 2] New Best Found! Energy: 1.3301 | FLOPs: 133.01M | Params: 8.91M
+[Iter 4] New Best Found! Energy: 1.1089 | FLOPs: 110.89M | Params: 8.56M
+[Iter 7] New Best Found! Energy: 1.0263 | FLOPs: 102.63M | Params: 6.50M
+[Iter 10] New Best Found! Energy: 0.9791 | FLOPs: 97.91M | Params: 5.32M
+[Iter 17] New Best Found! Energy: 0.6127 | FLOPs: 61.27M | Params: 3.96M
+[Iter 19] New Best Found! Energy: 0.5979 | FLOPs: 59.79M | Params: 3.81M
+[Iter 30] New Best Found! Energy: 0.5646 | FLOPs: 56.46M | Params: 3.50M
+[Iter 44] New Best Found! Energy: 0.5327 | FLOPs: 53.27M | Params: 3.57M
+[Iter 143] New Best Found! Energy: 0.4897 | FLOPs: 48.97M | Params: 3.56M
+[Iter 146] New Best Found! Energy: 0.4574 | FLOPs: 45.74M | Params: 4.82M
+[Iter 156] New Best Found! Energy: 0.3783 | FLOPs: 37.83M | Params: 4.29M
+[Iter 157] New Best Found! Energy: 0.3268 | FLOPs: 32.68M | Params: 3.00M
+[Iter 169] New Best Found! Energy: 0.2986 | FLOPs: 29.86M | Params: 3.26M
+[Iter 170] New Best Found! Energy: 0.2956 | FLOPs: 29.56M | Params: 3.26M
+[Iter 172] New Best Found! Energy: 0.2733 | FLOPs: 27.33M | Params: 3.18M
+[Iter 317] New Best Found! Energy: 0.2703 | FLOPs: 27.03M | Params: 2.16M
+[Iter 318] New Best Found! Energy: 0.1874 | FLOPs: 18.74M | Params: 2.03M
+[Iter 583] New Best Found! Energy: 0.1823 | FLOPs: 18.23M | Params: 2.46M
+[Iter 653] New Best Found! Energy: 0.1761 | FLOPs: 17.61M | Params: 2.66M
+[Iter 656] New Best Found! Energy: 0.1700 | FLOPs: 17.00M | Params: 2.63M
+[Iter 659] New Best Found! Energy: 0.1566 | FLOPs: 15.66M | Params: 2.55M
+[Iter 665] New Best Found! Energy: 0.1479 | FLOPs: 14.79M | Params: 2.54M
+[Iter 666] New Best Found! Energy: 0.1458 | FLOPs: 14.58M | Params: 2.53M
+[Iter 668] New Best Found! Energy: 0.1306 | FLOPs: 13.06M | Params: 2.15M
 [vgg16] Training Optimized Model...
 Training on cuda...
-Epoch 1/50, Loss: 1.7001
-Epoch 2/50, Loss: 1.3489
-Epoch 3/50, Loss: 1.2035
-Epoch 4/50, Loss: 1.1074
-Epoch 5/50, Loss: 1.0281
-Epoch 6/50, Loss: 0.9783
-Epoch 7/50, Loss: 0.9354
-Epoch 8/50, Loss: 0.8863
-Epoch 9/50, Loss: 0.8602
-Epoch 10/50, Loss: 0.8251
-Epoch 11/50, Loss: 0.8054
-Epoch 12/50, Loss: 0.7771
-Epoch 13/50, Loss: 0.7613
-Epoch 14/50, Loss: 0.7491
-Epoch 15/50, Loss: 0.7253
-Epoch 16/50, Loss: 0.7063
-Epoch 17/50, Loss: 0.6948
-Epoch 18/50, Loss: 0.6751
-Epoch 19/50, Loss: 0.6685
-Epoch 20/50, Loss: 0.6526
-Epoch 21/50, Loss: 0.6419
-Epoch 22/50, Loss: 0.6368
-Epoch 23/50, Loss: 0.6262
-Epoch 24/50, Loss: 0.6202
-Epoch 25/50, Loss: 0.6090
-Epoch 26/50, Loss: 0.5983
-Epoch 27/50, Loss: 0.5938
-Epoch 28/50, Loss: 0.5864
-Epoch 29/50, Loss: 0.5764
-Epoch 30/50, Loss: 0.5738
-Epoch 31/50, Loss: 0.5648
-Epoch 32/50, Loss: 0.5573
-Epoch 33/50, Loss: 0.5514
-Epoch 34/50, Loss: 0.5455
-Epoch 35/50, Loss: 0.5321
-Epoch 36/50, Loss: 0.5346
-Epoch 37/50, Loss: 0.5283
-Epoch 38/50, Loss: 0.5224
-Epoch 39/50, Loss: 0.5160
-Epoch 40/50, Loss: 0.5134
-Epoch 41/50, Loss: 0.5078
-Epoch 42/50, Loss: 0.5039
-Epoch 43/50, Loss: 0.4983
-Epoch 44/50, Loss: 0.5046
-Epoch 45/50, Loss: 0.4914
-Epoch 46/50, Loss: 0.4915
-Epoch 47/50, Loss: 0.4907
-Epoch 48/50, Loss: 0.4848
-Epoch 49/50, Loss: 0.4764
-Epoch 50/50, Loss: 0.4794
+Epoch 1/50, Loss: 1.7163
+Epoch 2/50, Loss: 1.3834
+Epoch 3/50, Loss: 1.2295
+Epoch 4/50, Loss: 1.1250
+Epoch 5/50, Loss: 1.0541
+Epoch 6/50, Loss: 0.9999
+Epoch 7/50, Loss: 0.9517
+Epoch 8/50, Loss: 0.9227
+Epoch 9/50, Loss: 0.8984
+Epoch 10/50, Loss: 0.8645
+Epoch 11/50, Loss: 0.8378
+Epoch 12/50, Loss: 0.8201
+Epoch 13/50, Loss: 0.8049
+Epoch 14/50, Loss: 0.7956
+Epoch 15/50, Loss: 0.7778
+Epoch 16/50, Loss: 0.7583
+Epoch 17/50, Loss: 0.7476
+Epoch 18/50, Loss: 0.7312
+Epoch 19/50, Loss: 0.7292
+Epoch 20/50, Loss: 0.7151
+Epoch 21/50, Loss: 0.7053
+Epoch 22/50, Loss: 0.6935
+Epoch 23/50, Loss: 0.6901
+Epoch 24/50, Loss: 0.6846
+Epoch 25/50, Loss: 0.6783
+Epoch 26/50, Loss: 0.6690
+Epoch 27/50, Loss: 0.6640
+Epoch 28/50, Loss: 0.6583
+Epoch 29/50, Loss: 0.6532
+Epoch 30/50, Loss: 0.6471
+Epoch 31/50, Loss: 0.6379
+Epoch 32/50, Loss: 0.6403
+Epoch 33/50, Loss: 0.6352
+Epoch 34/50, Loss: 0.6283
+Epoch 35/50, Loss: 0.6230
+Epoch 36/50, Loss: 0.6228
+Epoch 37/50, Loss: 0.6147
+Epoch 38/50, Loss: 0.6128
+Epoch 39/50, Loss: 0.6090
+Epoch 40/50, Loss: 0.6059
+Epoch 41/50, Loss: 0.6095
+Epoch 42/50, Loss: 0.5973
+Epoch 43/50, Loss: 0.5970
+Epoch 44/50, Loss: 0.5932
+Epoch 45/50, Loss: 0.5905
+Epoch 46/50, Loss: 0.5904
+Epoch 47/50, Loss: 0.5856
+Epoch 48/50, Loss: 0.5831
+Epoch 49/50, Loss: 0.5785
+Epoch 50/50, Loss: 0.5797
+[vgg16] Saved optimized weights to pth/
 
---- Processing Model: resnet50 ---
-[resnet50] Evaluating Baseline...
-[resnet50] Training Baseline (50 epochs)...
+--- Processing Model: resnet18 ---
+[resnet18] Evaluating Baseline...
+[resnet18] Training Baseline (50 epochs)...
 Training on cuda...
-Epoch 1/50, Loss: 1.8025
-Epoch 2/50, Loss: 1.1558
-Epoch 3/50, Loss: 0.9141
-Epoch 4/50, Loss: 0.7567
-Epoch 5/50, Loss: 0.6539
-Epoch 6/50, Loss: 0.5847
-Epoch 7/50, Loss: 0.5267
-Epoch 8/50, Loss: 0.4853
-Epoch 9/50, Loss: 0.4467
-Epoch 10/50, Loss: 0.4224
-Epoch 11/50, Loss: 0.3990
-Epoch 12/50, Loss: 0.3699
-Epoch 13/50, Loss: 0.3559
-Epoch 14/50, Loss: 0.3383
-Epoch 15/50, Loss: 0.3192
-Epoch 16/50, Loss: 0.3049
-Epoch 17/50, Loss: 0.2900
-Epoch 18/50, Loss: 0.2830
-Epoch 19/50, Loss: 0.2782
-Epoch 20/50, Loss: 0.2659
-Epoch 21/50, Loss: 0.2568
-Epoch 22/50, Loss: 0.2508
-Epoch 23/50, Loss: 0.2397
-Epoch 24/50, Loss: 0.2294
-Epoch 25/50, Loss: 0.2258
-Epoch 26/50, Loss: 0.2206
-Epoch 27/50, Loss: 0.2160
-Epoch 28/50, Loss: 0.2111
-Epoch 29/50, Loss: 0.2052
-Epoch 30/50, Loss: 0.2004
-Epoch 31/50, Loss: 0.1912
-Epoch 32/50, Loss: 0.1895
-Epoch 33/50, Loss: 0.1892
-Epoch 34/50, Loss: 0.1884
-Epoch 35/50, Loss: 0.1816
-Epoch 36/50, Loss: 0.1768
-Epoch 37/50, Loss: 0.1760
-Epoch 38/50, Loss: 0.1658
-Epoch 39/50, Loss: 0.1672
-Epoch 40/50, Loss: 0.1619
-Epoch 41/50, Loss: 0.1646
-Epoch 42/50, Loss: 0.1567
-Epoch 43/50, Loss: 0.1589
-Epoch 44/50, Loss: 0.1476
-Epoch 45/50, Loss: 0.1524
-Epoch 46/50, Loss: 0.1464
-Epoch 47/50, Loss: 0.1485
-Epoch 48/50, Loss: 0.1441
-Epoch 49/50, Loss: 0.1434
-Epoch 50/50, Loss: 0.1379
-[resnet50] Running C-DGOSA Optimization...
-Start Searching... Initial Energy: 268.5295
-[Iter 2] New Best Found! Energy: 265.8766 | FLOPs: 21040.40M | Params: 20.55M
-[Iter 7] New Best Found! Energy: 265.4828 | FLOPs: 21020.48M | Params: 20.53M
-[Iter 11] New Best Found! Energy: 235.7828 | FLOPs: 19517.87M | Params: 19.06M
-[Iter 26] New Best Found! Energy: 233.8061 | FLOPs: 19417.86M | Params: 18.96M
-[Iter 27] New Best Found! Energy: 229.4951 | FLOPs: 19199.75M | Params: 18.75M
-[Iter 32] New Best Found! Energy: 228.4174 | FLOPs: 19145.23M | Params: 18.70M
-[Iter 33] New Best Found! Energy: 209.8471 | FLOPs: 18205.70M | Params: 17.78M
-[Iter 37] New Best Found! Energy: 205.8483 | FLOPs: 18003.39M | Params: 17.58M
-[Iter 38] New Best Found! Energy: 195.2368 | FLOPs: 17466.52M | Params: 17.06M
-[Iter 40] New Best Found! Energy: 192.5839 | FLOPs: 17332.31M | Params: 16.93M
-[Iter 43] New Best Found! Energy: 190.3040 | FLOPs: 17216.96M | Params: 16.81M
-[Iter 45] New Best Found! Energy: 186.2975 | FLOPs: 17014.26M | Params: 16.62M
-[Iter 46] New Best Found! Energy: 186.1006 | FLOPs: 17004.30M | Params: 16.61M
-[Iter 49] New Best Found! Energy: 181.4580 | FLOPs: 16769.42M | Params: 16.38M
-[Iter 52] New Best Found! Energy: 179.2455 | FLOPs: 16657.48M | Params: 16.27M
-[Iter 80] New Best Found! Energy: 149.2497 | FLOPs: 14924.97M | Params: 14.58M
-[Iter 81] New Best Found! Energy: 147.7817 | FLOPs: 14778.17M | Params: 14.43M
-[Iter 83] New Best Found! Energy: 147.5196 | FLOPs: 14751.96M | Params: 14.41M
-[Iter 103] New Best Found! Energy: 143.8981 | FLOPs: 14389.81M | Params: 14.05M
-[Iter 104] New Best Found! Energy: 141.5388 | FLOPs: 14153.88M | Params: 13.82M
-[Iter 110] New Best Found! Energy: 141.1180 | FLOPs: 14111.80M | Params: 13.78M
-[Iter 115] New Best Found! Energy: 140.0275 | FLOPs: 14002.75M | Params: 13.67M
-[Iter 146] New Best Found! Energy: 135.5899 | FLOPs: 13558.99M | Params: 13.24M
-[Iter 149] New Best Found! Energy: 135.1583 | FLOPs: 13515.83M | Params: 13.20M
-[Iter 156] New Best Found! Energy: 133.3168 | FLOPs: 13331.68M | Params: 13.02M
-[Iter 158] New Best Found! Energy: 133.2552 | FLOPs: 13325.52M | Params: 13.01M
-[Iter 160] New Best Found! Energy: 132.9273 | FLOPs: 13292.73M | Params: 12.98M
-[Iter 162] New Best Found! Energy: 132.8526 | FLOPs: 13285.26M | Params: 12.97M
-[Iter 163] New Best Found! Energy: 132.3912 | FLOPs: 13239.12M | Params: 12.93M
-[Iter 166] New Best Found! Energy: 130.6599 | FLOPs: 13065.99M | Params: 12.76M
-[Iter 169] New Best Found! Energy: 129.8276 | FLOPs: 12982.76M | Params: 12.68M
-[Iter 173] New Best Found! Energy: 129.8099 | FLOPs: 12980.99M | Params: 12.68M
-[Iter 180] New Best Found! Energy: 129.1728 | FLOPs: 12917.28M | Params: 12.61M
-[Iter 181] New Best Found! Energy: 125.0441 | FLOPs: 12504.41M | Params: 12.21M
-[Iter 182] New Best Found! Energy: 124.0532 | FLOPs: 12405.32M | Params: 12.11M
-[Iter 186] New Best Found! Energy: 123.0977 | FLOPs: 12309.77M | Params: 12.02M
-[Iter 187] New Best Found! Energy: 120.7384 | FLOPs: 12073.84M | Params: 11.79M
-[Iter 190] New Best Found! Energy: 120.5496 | FLOPs: 12054.96M | Params: 11.77M
-[Iter 193] New Best Found! Energy: 120.4500 | FLOPs: 12045.00M | Params: 11.76M
-[Iter 195] New Best Found! Energy: 119.9061 | FLOPs: 11990.61M | Params: 11.71M
-[Iter 206] New Best Found! Energy: 117.7765 | FLOPs: 11777.65M | Params: 11.50M
-[Iter 208] New Best Found! Energy: 117.6985 | FLOPs: 11769.85M | Params: 11.49M
-[Iter 251] New Best Found! Energy: 115.8401 | FLOPs: 11584.01M | Params: 11.31M
-[Iter 254] New Best Found! Energy: 114.6568 | FLOPs: 11465.68M | Params: 11.20M
-[Iter 258] New Best Found! Energy: 114.5536 | FLOPs: 11455.36M | Params: 11.19M
-[Iter 262] New Best Found! Energy: 114.2496 | FLOPs: 11424.96M | Params: 11.16M
-[Iter 266] New Best Found! Energy: 113.7474 | FLOPs: 11374.74M | Params: 11.11M
-[Iter 271] New Best Found! Energy: 112.4118 | FLOPs: 11241.18M | Params: 10.98M
-[Iter 273] New Best Found! Energy: 112.3201 | FLOPs: 11232.01M | Params: 10.97M
-[Iter 276] New Best Found! Energy: 107.1008 | FLOPs: 10710.08M | Params: 10.46M
-[Iter 282] New Best Found! Energy: 106.8943 | FLOPs: 10689.43M | Params: 10.44M
-[Iter 284] New Best Found! Energy: 106.0420 | FLOPs: 10604.20M | Params: 10.36M
-[Iter 292] New Best Found! Energy: 102.6024 | FLOPs: 10260.24M | Params: 10.02M
-[Iter 294] New Best Found! Energy: 102.2249 | FLOPs: 10222.49M | Params: 9.98M
-[Iter 313] New Best Found! Energy: 101.9502 | FLOPs: 10195.02M | Params: 9.96M
-[Iter 315] New Best Found! Energy: 100.9534 | FLOPs: 10095.34M | Params: 9.86M
-[Iter 317] New Best Found! Energy: 100.7666 | FLOPs: 10076.66M | Params: 9.84M
-[Iter 318] New Best Found! Energy: 98.5646 | FLOPs: 9856.46M | Params: 9.63M
-[Iter 320] New Best Found! Energy: 97.6976 | FLOPs: 9769.76M | Params: 9.54M
-[Iter 322] New Best Found! Energy: 97.4051 | FLOPs: 9740.51M | Params: 9.51M
-[Iter 351] New Best Found! Energy: 97.1751 | FLOPs: 9717.51M | Params: 9.49M
-[Iter 378] New Best Found! Energy: 96.9891 | FLOPs: 9698.91M | Params: 9.47M
-[Iter 379] New Best Found! Energy: 96.8397 | FLOPs: 9683.97M | Params: 9.46M
-[Iter 385] New Best Found! Energy: 96.1565 | FLOPs: 9615.65M | Params: 9.39M
-[Iter 386] New Best Found! Energy: 94.8766 | FLOPs: 9487.66M | Params: 9.27M
-[Iter 387] New Best Found! Energy: 94.7832 | FLOPs: 9478.32M | Params: 9.26M
-[Iter 392] New Best Found! Energy: 94.7370 | FLOPs: 9473.70M | Params: 9.25M
-[Iter 419] New Best Found! Energy: 76.5339 | FLOPs: 7653.39M | Params: 7.47M
-[Iter 423] New Best Found! Energy: 76.5062 | FLOPs: 7650.62M | Params: 7.47M
-[Iter 427] New Best Found! Energy: 76.4066 | FLOPs: 7640.66M | Params: 7.46M
-[Iter 430] New Best Found! Energy: 76.3894 | FLOPs: 7638.94M | Params: 7.46M
-[Iter 436] New Best Found! Energy: 76.3202 | FLOPs: 7632.02M | Params: 7.45M
-[Iter 443] New Best Found! Energy: 75.9571 | FLOPs: 7595.71M | Params: 7.42M
-[Iter 444] New Best Found! Energy: 74.3602 | FLOPs: 7436.02M | Params: 7.26M
-[Iter 451] New Best Found! Energy: 74.3329 | FLOPs: 7433.29M | Params: 7.26M
-[Iter 467] New Best Found! Energy: 74.3273 | FLOPs: 7432.73M | Params: 7.26M
-[Iter 484] New Best Found! Energy: 66.8947 | FLOPs: 6689.47M | Params: 6.53M
-[Iter 485] New Best Found! Energy: 66.4228 | FLOPs: 6642.28M | Params: 6.49M
-[Iter 497] New Best Found! Energy: 65.5429 | FLOPs: 6554.29M | Params: 6.40M
-[Iter 519] New Best Found! Energy: 65.2168 | FLOPs: 6521.68M | Params: 6.37M
-[Iter 524] New Best Found! Energy: 65.0281 | FLOPs: 6502.81M | Params: 6.35M
-[Iter 531] New Best Found! Energy: 61.0242 | FLOPs: 6102.42M | Params: 5.96M
-[Iter 532] New Best Found! Energy: 59.8961 | FLOPs: 5989.61M | Params: 5.85M
-[Iter 537] New Best Found! Energy: 59.8055 | FLOPs: 5980.55M | Params: 5.84M
-[Iter 564] New Best Found! Energy: 58.0156 | FLOPs: 5801.56M | Params: 5.67M
-[Iter 570] New Best Found! Energy: 57.9999 | FLOPs: 5799.99M | Params: 5.66M
-[Iter 574] New Best Found! Energy: 57.6574 | FLOPs: 5765.74M | Params: 5.63M
-[Iter 577] New Best Found! Energy: 56.7804 | FLOPs: 5678.04M | Params: 5.54M
-[Iter 579] New Best Found! Energy: 53.5717 | FLOPs: 5357.17M | Params: 5.23M
-[Iter 580] New Best Found! Energy: 53.2072 | FLOPs: 5320.72M | Params: 5.20M
-[Iter 585] New Best Found! Energy: 52.9156 | FLOPs: 5291.56M | Params: 5.17M
-[Iter 587] New Best Found! Energy: 52.9122 | FLOPs: 5291.22M | Params: 5.17M
-[Iter 591] New Best Found! Energy: 52.8250 | FLOPs: 5282.50M | Params: 5.16M
-[Iter 607] New Best Found! Energy: 52.5312 | FLOPs: 5253.12M | Params: 5.13M
-[Iter 615] New Best Found! Energy: 52.5115 | FLOPs: 5251.15M | Params: 5.13M
-[Iter 616] New Best Found! Energy: 50.8023 | FLOPs: 5080.23M | Params: 4.96M
-[Iter 621] New Best Found! Energy: 49.2832 | FLOPs: 4928.32M | Params: 4.81M
-[Iter 622] New Best Found! Energy: 48.4234 | FLOPs: 4842.34M | Params: 4.73M
-[Iter 629] New Best Found! Energy: 47.9845 | FLOPs: 4798.45M | Params: 4.69M
-[Iter 631] New Best Found! Energy: 46.9749 | FLOPs: 4697.49M | Params: 4.59M
-[Iter 632] New Best Found! Energy: 46.3153 | FLOPs: 4631.53M | Params: 4.52M
-[Iter 671] New Best Found! Energy: 45.7523 | FLOPs: 4575.23M | Params: 4.47M
-[Iter 673] New Best Found! Energy: 45.5272 | FLOPs: 4552.72M | Params: 4.45M
-[resnet50] Training Optimized Model...
+Epoch 1/50, Loss: 1.4313
+Epoch 2/50, Loss: 0.8978
+Epoch 3/50, Loss: 0.6963
+Epoch 4/50, Loss: 0.5875
+Epoch 5/50, Loss: 0.5092
+Epoch 6/50, Loss: 0.4604
+Epoch 7/50, Loss: 0.4127
+Epoch 8/50, Loss: 0.3796
+Epoch 9/50, Loss: 0.3522
+Epoch 10/50, Loss: 0.3205
+Epoch 11/50, Loss: 0.3027
+Epoch 12/50, Loss: 0.2842
+Epoch 13/50, Loss: 0.2677
+Epoch 14/50, Loss: 0.2545
+Epoch 15/50, Loss: 0.2354
+Epoch 16/50, Loss: 0.2232
+Epoch 17/50, Loss: 0.2125
+Epoch 18/50, Loss: 0.2008
+Epoch 19/50, Loss: 0.1913
+Epoch 20/50, Loss: 0.1822
+Epoch 21/50, Loss: 0.1718
+Epoch 22/50, Loss: 0.1681
+Epoch 23/50, Loss: 0.1563
+Epoch 24/50, Loss: 0.1525
+Epoch 25/50, Loss: 0.1405
+Epoch 26/50, Loss: 0.1395
+Epoch 27/50, Loss: 0.1363
+Epoch 28/50, Loss: 0.1321
+Epoch 29/50, Loss: 0.1163
+Epoch 30/50, Loss: 0.1176
+Epoch 31/50, Loss: 0.1148
+Epoch 32/50, Loss: 0.1045
+Epoch 33/50, Loss: 0.1049
+Epoch 34/50, Loss: 0.1056
+Epoch 35/50, Loss: 0.0951
+Epoch 36/50, Loss: 0.0959
+Epoch 37/50, Loss: 0.0951
+Epoch 38/50, Loss: 0.0882
+Epoch 39/50, Loss: 0.0848
+Epoch 40/50, Loss: 0.0832
+Epoch 41/50, Loss: 0.0758
+Epoch 42/50, Loss: 0.0879
+Epoch 43/50, Loss: 0.0808
+Epoch 44/50, Loss: 0.0770
+Epoch 45/50, Loss: 0.0751
+Epoch 46/50, Loss: 0.0688
+Epoch 47/50, Loss: 0.0724
+Epoch 48/50, Loss: 0.0680
+Epoch 49/50, Loss: 0.0705
+Epoch 50/50, Loss: 0.0662
+[resnet18] Saved baseline weights to pth/
+[resnet18] Running C-DGOSA Optimization (lambda=0.5)...
+Start Searching... Initial Energy: 112.5089
+[Iter 11] New Best Found! Energy: 91.4640 | FLOPs: 9146.40M | Params: 8.93M
+[Iter 15] New Best Found! Energy: 91.1809 | FLOPs: 9118.09M | Params: 8.90M
+[Iter 22] New Best Found! Energy: 88.6800 | FLOPs: 8868.00M | Params: 8.66M
+[Iter 23] New Best Found! Energy: 85.6601 | FLOPs: 8566.01M | Params: 8.37M
+[Iter 28] New Best Found! Energy: 85.6130 | FLOPs: 8561.30M | Params: 8.36M
+[Iter 29] New Best Found! Energy: 67.4936 | FLOPs: 6749.36M | Params: 6.59M
+[Iter 30] New Best Found! Energy: 62.2087 | FLOPs: 6220.87M | Params: 6.08M
+[Iter 32] New Best Found! Energy: 60.8875 | FLOPs: 6088.75M | Params: 5.95M
+[Iter 33] New Best Found! Energy: 59.5427 | FLOPs: 5954.27M | Params: 5.81M
+[Iter 35] New Best Found! Energy: 56.7765 | FLOPs: 5677.65M | Params: 5.54M
+[Iter 37] New Best Found! Energy: 52.5769 | FLOPs: 5257.69M | Params: 5.13M
+[Iter 42] New Best Found! Energy: 51.7858 | FLOPs: 5178.58M | Params: 5.06M
+[Iter 45] New Best Found! Energy: 50.0702 | FLOPs: 5007.02M | Params: 4.89M
+[Iter 47] New Best Found! Energy: 28.9309 | FLOPs: 2893.09M | Params: 2.83M
+[Iter 48] New Best Found! Energy: 28.7421 | FLOPs: 2874.21M | Params: 2.81M
+[Iter 218] New Best Found! Energy: 25.6378 | FLOPs: 2563.78M | Params: 2.50M
+[Iter 222] New Best Found! Energy: 25.4520 | FLOPs: 2545.20M | Params: 2.49M
+[Iter 325] New Best Found! Energy: 25.4129 | FLOPs: 2541.29M | Params: 2.48M
+[Iter 335] New Best Found! Energy: 23.0076 | FLOPs: 2300.76M | Params: 2.25M
+[Iter 344] New Best Found! Energy: 21.9518 | FLOPs: 2195.18M | Params: 2.14M
+[Iter 345] New Best Found! Energy: 18.5544 | FLOPs: 1855.44M | Params: 1.81M
+[Iter 347] New Best Found! Energy: 18.2447 | FLOPs: 1824.47M | Params: 1.78M
+[Iter 372] New Best Found! Energy: 17.6003 | FLOPs: 1760.03M | Params: 1.72M
+[Iter 429] New Best Found! Energy: 17.1904 | FLOPs: 1719.04M | Params: 1.68M
+[Iter 446] New Best Found! Energy: 17.1506 | FLOPs: 1715.06M | Params: 1.67M
+[Iter 453] New Best Found! Energy: 17.0385 | FLOPs: 1703.85M | Params: 1.66M
+[Iter 455] New Best Found! Energy: 17.0220 | FLOPs: 1702.20M | Params: 1.66M
+[Iter 474] New Best Found! Energy: 16.9958 | FLOPs: 1699.58M | Params: 1.66M
+[Iter 476] New Best Found! Energy: 16.9781 | FLOPs: 1697.81M | Params: 1.66M
+[Iter 487] New Best Found! Energy: 12.5131 | FLOPs: 1251.31M | Params: 1.22M
+[Iter 505] New Best Found! Energy: 12.0324 | FLOPs: 1203.24M | Params: 1.18M
+[Iter 508] New Best Found! Energy: 11.9144 | FLOPs: 1191.44M | Params: 1.16M
+[Iter 510] New Best Found! Energy: 11.5679 | FLOPs: 1156.79M | Params: 1.13M
+[Iter 514] New Best Found! Energy: 11.5524 | FLOPs: 1155.24M | Params: 1.13M
+[Iter 526] New Best Found! Energy: 11.2266 | FLOPs: 1122.66M | Params: 1.10M
+[Iter 533] New Best Found! Energy: 11.1160 | FLOPs: 1111.60M | Params: 1.09M
+[Iter 537] New Best Found! Energy: 10.5586 | FLOPs: 1055.86M | Params: 1.03M
+[Iter 538] New Best Found! Energy: 10.1251 | FLOPs: 1012.51M | Params: 0.99M
+[Iter 541] New Best Found! Energy: 10.0926 | FLOPs: 1009.26M | Params: 0.99M
+[Iter 571] New Best Found! Energy: 9.9503 | FLOPs: 995.03M | Params: 0.97M
+[Iter 574] New Best Found! Energy: 9.5743 | FLOPs: 957.43M | Params: 0.93M
+[Iter 578] New Best Found! Energy: 9.2816 | FLOPs: 928.16M | Params: 0.91M
+[Iter 580] New Best Found! Energy: 8.8805 | FLOPs: 888.05M | Params: 0.87M
+[Iter 591] New Best Found! Energy: 8.8573 | FLOPs: 885.73M | Params: 0.86M
+[Iter 608] New Best Found! Energy: 8.6481 | FLOPs: 864.81M | Params: 0.84M
+[Iter 610] New Best Found! Energy: 8.5501 | FLOPs: 855.01M | Params: 0.83M
+[Iter 615] New Best Found! Energy: 8.4911 | FLOPs: 849.11M | Params: 0.83M
+[Iter 618] New Best Found! Energy: 8.3348 | FLOPs: 833.48M | Params: 0.81M
+[Iter 621] New Best Found! Energy: 8.1431 | FLOPs: 814.31M | Params: 0.80M
+[Iter 622] New Best Found! Energy: 7.9868 | FLOPs: 798.68M | Params: 0.78M
+[Iter 626] New Best Found! Energy: 7.9219 | FLOPs: 792.19M | Params: 0.77M
+[Iter 633] New Best Found! Energy: 7.8334 | FLOPs: 783.34M | Params: 0.76M
+[Iter 644] New Best Found! Energy: 7.8283 | FLOPs: 782.83M | Params: 0.76M
+[Iter 659] New Best Found! Energy: 7.7988 | FLOPs: 779.88M | Params: 0.76M
+[Iter 663] New Best Found! Energy: 7.7908 | FLOPs: 779.08M | Params: 0.76M
+[Iter 664] New Best Found! Energy: 7.7695 | FLOPs: 776.95M | Params: 0.76M
+[Iter 668] New Best Found! Energy: 7.6972 | FLOPs: 769.72M | Params: 0.75M
+[resnet18] Training Optimized Model...
 Training on cuda...
-Epoch 1/50, Loss: 2.4880
-Epoch 2/50, Loss: 1.4743
-Epoch 3/50, Loss: 1.1428
-Epoch 4/50, Loss: 0.9663
-Epoch 5/50, Loss: 0.8325
-Epoch 6/50, Loss: 0.7289
-Epoch 7/50, Loss: 0.6293
-Epoch 8/50, Loss: 0.5663
-Epoch 9/50, Loss: 0.5101
-Epoch 10/50, Loss: 0.4690
-Epoch 11/50, Loss: 0.4350
-Epoch 12/50, Loss: 0.4050
-Epoch 13/50, Loss: 0.3825
-Epoch 14/50, Loss: 0.3527
-Epoch 15/50, Loss: 0.3332
-Epoch 16/50, Loss: 0.3153
-Epoch 17/50, Loss: 0.2997
-Epoch 18/50, Loss: 0.2836
-Epoch 19/50, Loss: 0.2761
-Epoch 20/50, Loss: 0.2573
-Epoch 21/50, Loss: 0.2442
-Epoch 22/50, Loss: 0.2355
-Epoch 23/50, Loss: 0.2238
-Epoch 24/50, Loss: 0.2163
-Epoch 25/50, Loss: 0.2151
-Epoch 26/50, Loss: 0.2021
-Epoch 27/50, Loss: 0.1927
-Epoch 28/50, Loss: 0.1890
-Epoch 29/50, Loss: 0.1845
-Epoch 30/50, Loss: 0.1784
-Epoch 31/50, Loss: 0.1782
-Epoch 32/50, Loss: 0.1655
-Epoch 33/50, Loss: 0.1603
-Epoch 34/50, Loss: 0.1557
-Epoch 35/50, Loss: 0.1524
-Epoch 36/50, Loss: 0.1542
-Epoch 37/50, Loss: 0.1420
-Epoch 38/50, Loss: 0.1379
-Epoch 39/50, Loss: 0.1385
-Epoch 40/50, Loss: 0.1353
-Epoch 41/50, Loss: 0.1276
-Epoch 42/50, Loss: 0.1293
-Epoch 43/50, Loss: 0.1262
-Epoch 44/50, Loss: 0.1217
-Epoch 45/50, Loss: 0.1177
-Epoch 46/50, Loss: 0.1179
-Epoch 47/50, Loss: 0.1144
-Epoch 48/50, Loss: 0.1153
-Epoch 49/50, Loss: 0.1122
-Epoch 50/50, Loss: 0.1118
+Epoch 1/50, Loss: 1.4946
+Epoch 2/50, Loss: 1.0218
+Epoch 3/50, Loss: 0.8242
+Epoch 4/50, Loss: 0.7016
+Epoch 5/50, Loss: 0.6159
+Epoch 6/50, Loss: 0.5561
+Epoch 7/50, Loss: 0.5122
+Epoch 8/50, Loss: 0.4801
+Epoch 9/50, Loss: 0.4437
+Epoch 10/50, Loss: 0.4198
+Epoch 11/50, Loss: 0.3918
+Epoch 12/50, Loss: 0.3744
+Epoch 13/50, Loss: 0.3565
+Epoch 14/50, Loss: 0.3423
+Epoch 15/50, Loss: 0.3211
+Epoch 16/50, Loss: 0.3052
+Epoch 17/50, Loss: 0.2972
+Epoch 18/50, Loss: 0.2843
+Epoch 19/50, Loss: 0.2715
+Epoch 20/50, Loss: 0.2642
+Epoch 21/50, Loss: 0.2559
+Epoch 22/50, Loss: 0.2432
+Epoch 23/50, Loss: 0.2345
+Epoch 24/50, Loss: 0.2269
+Epoch 25/50, Loss: 0.2251
+Epoch 26/50, Loss: 0.2121
+Epoch 27/50, Loss: 0.2058
+Epoch 28/50, Loss: 0.2070
+Epoch 29/50, Loss: 0.1946
+Epoch 30/50, Loss: 0.1906
+Epoch 31/50, Loss: 0.1882
+Epoch 32/50, Loss: 0.1824
+Epoch 33/50, Loss: 0.1789
+Epoch 34/50, Loss: 0.1735
+Epoch 35/50, Loss: 0.1661
+Epoch 36/50, Loss: 0.1671
+Epoch 37/50, Loss: 0.1574
+Epoch 38/50, Loss: 0.1576
+Epoch 39/50, Loss: 0.1603
+Epoch 40/50, Loss: 0.1469
+Epoch 41/50, Loss: 0.1478
+Epoch 42/50, Loss: 0.1431
+Epoch 43/50, Loss: 0.1402
+Epoch 44/50, Loss: 0.1421
+Epoch 45/50, Loss: 0.1388
+Epoch 46/50, Loss: 0.1291
+Epoch 47/50, Loss: 0.1338
+Epoch 48/50, Loss: 0.1299
+Epoch 49/50, Loss: 0.1316
+Epoch 50/50, Loss: 0.1270
+[resnet18] Saved optimized weights to pth/
 
 --- Processing Model: resnext50 ---
 [resnext50] Evaluating Baseline...
 [resnext50] Training Baseline (50 epochs)...
 Training on cuda...
-Epoch 1/50, Loss: 1.7173
-Epoch 2/50, Loss: 1.1032
-Epoch 3/50, Loss: 0.8460
-Epoch 4/50, Loss: 0.7116
-Epoch 5/50, Loss: 0.6114
-Epoch 6/50, Loss: 0.5557
-Epoch 7/50, Loss: 0.5042
-Epoch 8/50, Loss: 0.4714
-Epoch 9/50, Loss: 0.4411
-Epoch 10/50, Loss: 0.4124
-Epoch 11/50, Loss: 0.3898
-Epoch 12/50, Loss: 0.3644
-Epoch 13/50, Loss: 0.3536
-Epoch 14/50, Loss: 0.3316
-Epoch 15/50, Loss: 0.3154
-Epoch 16/50, Loss: 0.3141
-Epoch 17/50, Loss: 0.2896
-Epoch 18/50, Loss: 0.2823
-Epoch 19/50, Loss: 0.2694
-Epoch 20/50, Loss: 0.2656
-Epoch 21/50, Loss: 0.2540
-Epoch 22/50, Loss: 0.2474
-Epoch 23/50, Loss: 0.2433
-Epoch 24/50, Loss: 0.2355
-Epoch 25/50, Loss: 0.2235
-Epoch 26/50, Loss: 0.2220
-Epoch 27/50, Loss: 0.2164
-Epoch 28/50, Loss: 0.2117
-Epoch 29/50, Loss: 0.2077
-Epoch 30/50, Loss: 0.1991
-Epoch 31/50, Loss: 0.1984
-Epoch 32/50, Loss: 0.1976
-Epoch 33/50, Loss: 0.1875
-Epoch 34/50, Loss: 0.1840
-Epoch 35/50, Loss: 0.1848
-Epoch 36/50, Loss: 0.1841
-Epoch 37/50, Loss: 0.1780
-Epoch 38/50, Loss: 0.1751
-Epoch 39/50, Loss: 0.1700
-Epoch 40/50, Loss: 0.1659
-Epoch 41/50, Loss: 0.1660
-Epoch 42/50, Loss: 0.1550
-Epoch 43/50, Loss: 0.1620
-Epoch 44/50, Loss: 0.1550
-Epoch 45/50, Loss: 0.1518
-Epoch 46/50, Loss: 0.1518
-Epoch 47/50, Loss: 0.1452
-Epoch 48/50, Loss: 0.1491
-Epoch 49/50, Loss: 0.1414
-Epoch 50/50, Loss: 0.1444
-[resnext50] Running C-DGOSA Optimization...
+Epoch 1/50, Loss: 1.8450
+Epoch 2/50, Loss: 1.1876
+Epoch 3/50, Loss: 0.9490
+Epoch 4/50, Loss: 0.7825
+Epoch 5/50, Loss: 0.6779
+Epoch 6/50, Loss: 0.5925
+Epoch 7/50, Loss: 0.5344
+Epoch 8/50, Loss: 0.4932
+Epoch 9/50, Loss: 0.4638
+Epoch 10/50, Loss: 0.4236
+Epoch 11/50, Loss: 0.3972
+Epoch 12/50, Loss: 0.3789
+Epoch 13/50, Loss: 0.3613
+Epoch 14/50, Loss: 0.3362
+Epoch 15/50, Loss: 0.3252
+Epoch 16/50, Loss: 0.3111
+Epoch 17/50, Loss: 0.2985
+Epoch 18/50, Loss: 0.2865
+Epoch 19/50, Loss: 0.2726
+Epoch 20/50, Loss: 0.2693
+Epoch 21/50, Loss: 0.2552
+Epoch 22/50, Loss: 0.2493
+Epoch 23/50, Loss: 0.2480
+Epoch 24/50, Loss: 0.2363
+Epoch 25/50, Loss: 0.2340
+Epoch 26/50, Loss: 0.2251
+Epoch 27/50, Loss: 0.2166
+Epoch 28/50, Loss: 0.2109
+Epoch 29/50, Loss: 0.2112
+Epoch 30/50, Loss: 0.1989
+Epoch 31/50, Loss: 0.1954
+Epoch 32/50, Loss: 0.1984
+Epoch 33/50, Loss: 0.1894
+Epoch 34/50, Loss: 0.1860
+Epoch 35/50, Loss: 0.1866
+Epoch 36/50, Loss: 0.1819
+Epoch 37/50, Loss: 0.1797
+Epoch 38/50, Loss: 0.1734
+Epoch 39/50, Loss: 0.1647
+Epoch 40/50, Loss: 0.1674
+Epoch 41/50, Loss: 0.1661
+Epoch 42/50, Loss: 0.1587
+Epoch 43/50, Loss: 0.1573
+Epoch 44/50, Loss: 0.1574
+Epoch 45/50, Loss: 0.1541
+Epoch 46/50, Loss: 0.1550
+Epoch 47/50, Loss: 0.1501
+Epoch 48/50, Loss: 0.1467
+Epoch 49/50, Loss: 0.1461
+Epoch 50/50, Loss: 0.1448
+[resnext50] Saved baseline weights to pth/
+[resnext50] Running C-DGOSA Optimization (lambda=0.5)...
 Start Searching... Initial Energy: 268.5295
-[Iter 0] New Best Found! Energy: 267.4518 | FLOPs: 21120.09M | Params: 20.63M
-[Iter 1] New Best Found! Energy: 263.4724 | FLOPs: 20918.76M | Params: 20.43M
-[Iter 2] New Best Found! Energy: 258.1666 | FLOPs: 20650.33M | Params: 20.17M
-[Iter 7] New Best Found! Energy: 254.3946 | FLOPs: 20459.49M | Params: 19.98M
-[Iter 9] New Best Found! Energy: 243.6172 | FLOPs: 19914.23M | Params: 19.45M
-[Iter 10] New Best Found! Energy: 239.8451 | FLOPs: 19723.39M | Params: 19.26M
-[Iter 13] New Best Found! Energy: 223.9277 | FLOPs: 18918.08M | Params: 18.47M
-[Iter 16] New Best Found! Energy: 216.4664 | FLOPs: 18540.59M | Params: 18.11M
-[Iter 17] New Best Found! Energy: 213.8550 | FLOPs: 18408.47M | Params: 17.98M
-[Iter 23] New Best Found! Energy: 212.3213 | FLOPs: 18330.88M | Params: 17.90M
-[Iter 24] New Best Found! Energy: 210.4015 | FLOPs: 18233.75M | Params: 17.81M
-[Iter 31] New Best Found! Energy: 208.5362 | FLOPs: 18139.38M | Params: 17.71M
-[Iter 32] New Best Found! Energy: 207.3756 | FLOPs: 18080.66M | Params: 17.66M
-[Iter 33] New Best Found! Energy: 206.2978 | FLOPs: 18026.14M | Params: 17.60M
-[Iter 34] New Best Found! Energy: 206.2716 | FLOPs: 18024.81M | Params: 17.60M
-[Iter 38] New Best Found! Energy: 198.1108 | FLOPs: 17611.93M | Params: 17.20M
-[Iter 55] New Best Found! Energy: 177.0794 | FLOPs: 16547.89M | Params: 16.16M
-[Iter 58] New Best Found! Energy: 166.6336 | FLOPs: 16019.41M | Params: 15.64M
-[Iter 72] New Best Found! Energy: 140.9193 | FLOPs: 14091.93M | Params: 13.76M
-[Iter 74] New Best Found! Energy: 137.8994 | FLOPs: 13789.94M | Params: 13.47M
-[Iter 76] New Best Found! Energy: 136.8298 | FLOPs: 13682.98M | Params: 13.36M
-[Iter 79] New Best Found! Energy: 136.4628 | FLOPs: 13646.28M | Params: 13.33M
-[Iter 81] New Best Found! Energy: 136.3265 | FLOPs: 13632.65M | Params: 13.31M
-[Iter 83] New Best Found! Energy: 136.1063 | FLOPs: 13610.63M | Params: 13.29M
-[Iter 84] New Best Found! Energy: 133.2486 | FLOPs: 13324.86M | Params: 13.01M
-[Iter 97] New Best Found! Energy: 133.0127 | FLOPs: 13301.27M | Params: 12.99M
-[Iter 99] New Best Found! Energy: 132.3678 | FLOPs: 13236.78M | Params: 12.93M
-[Iter 105] New Best Found! Energy: 131.8645 | FLOPs: 13186.45M | Params: 12.88M
-[Iter 106] New Best Found! Energy: 131.6941 | FLOPs: 13169.41M | Params: 12.86M
-[Iter 128] New Best Found! Energy: 130.6658 | FLOPs: 13066.58M | Params: 12.76M
-[Iter 130] New Best Found! Energy: 128.0654 | FLOPs: 12806.54M | Params: 12.51M
-[Iter 138] New Best Found! Energy: 121.1815 | FLOPs: 12118.15M | Params: 11.83M
-[Iter 146] New Best Found! Energy: 120.2794 | FLOPs: 12027.94M | Params: 11.75M
-[Iter 148] New Best Found! Energy: 118.4903 | FLOPs: 11849.03M | Params: 11.57M
-[Iter 153] New Best Found! Energy: 117.0280 | FLOPs: 11702.80M | Params: 11.43M
-[Iter 155] New Best Found! Energy: 116.5654 | FLOPs: 11656.54M | Params: 11.38M
-[Iter 179] New Best Found! Energy: 115.4972 | FLOPs: 11549.72M | Params: 11.28M
-[Iter 182] New Best Found! Energy: 114.9729 | FLOPs: 11497.29M | Params: 11.23M
-[Iter 185] New Best Found! Energy: 114.9385 | FLOPs: 11493.85M | Params: 11.22M
-[Iter 196] New Best Found! Energy: 114.6508 | FLOPs: 11465.08M | Params: 11.20M
-[Iter 197] New Best Found! Energy: 112.5956 | FLOPs: 11259.56M | Params: 11.00M
-[Iter 201] New Best Found! Energy: 112.4003 | FLOPs: 11240.03M | Params: 10.98M
-[Iter 202] New Best Found! Energy: 112.2543 | FLOPs: 11225.43M | Params: 10.96M
-[Iter 204] New Best Found! Energy: 110.7152 | FLOPs: 11071.52M | Params: 10.81M
-[Iter 216] New Best Found! Energy: 109.3294 | FLOPs: 10932.94M | Params: 10.68M
-[Iter 219] New Best Found! Energy: 103.1638 | FLOPs: 10316.38M | Params: 10.07M
-[Iter 221] New Best Found! Energy: 100.3563 | FLOPs: 10035.63M | Params: 9.80M
-[Iter 240] New Best Found! Energy: 100.0246 | FLOPs: 10002.46M | Params: 9.77M
-[Iter 243] New Best Found! Energy: 99.9827 | FLOPs: 9998.27M | Params: 9.76M
-[Iter 244] New Best Found! Energy: 99.9093 | FLOPs: 9990.93M | Params: 9.76M
-[Iter 248] New Best Found! Energy: 99.5918 | FLOPs: 9959.18M | Params: 9.73M
-[Iter 254] New Best Found! Energy: 99.5079 | FLOPs: 9950.79M | Params: 9.72M
-[Iter 255] New Best Found! Energy: 99.2484 | FLOPs: 9924.84M | Params: 9.69M
-[Iter 256] New Best Found! Energy: 98.7241 | FLOPs: 9872.41M | Params: 9.64M
-[Iter 262] New Best Found! Energy: 98.4675 | FLOPs: 9846.75M | Params: 9.62M
-[Iter 288] New Best Found! Energy: 90.8809 | FLOPs: 9088.09M | Params: 8.88M
-[Iter 289] New Best Found! Energy: 90.7128 | FLOPs: 9071.28M | Params: 8.86M
-[Iter 290] New Best Found! Energy: 89.1196 | FLOPs: 8911.96M | Params: 8.70M
-[Iter 291] New Best Found! Energy: 88.9558 | FLOPs: 8895.58M | Params: 8.69M
-[Iter 294] New Best Found! Energy: 88.9489 | FLOPs: 8894.89M | Params: 8.69M
-[Iter 297] New Best Found! Energy: 85.0782 | FLOPs: 8507.82M | Params: 8.31M
-[Iter 298] New Best Found! Energy: 84.4176 | FLOPs: 8441.76M | Params: 8.24M
-[Iter 300] New Best Found! Energy: 83.2183 | FLOPs: 8321.83M | Params: 8.13M
-[Iter 304] New Best Found! Energy: 82.6186 | FLOPs: 8261.86M | Params: 8.07M
-[Iter 307] New Best Found! Energy: 82.2092 | FLOPs: 8220.92M | Params: 8.03M
-[Iter 314] New Best Found! Energy: 80.8696 | FLOPs: 8086.96M | Params: 7.90M
-[Iter 315] New Best Found! Energy: 80.2798 | FLOPs: 8027.98M | Params: 7.84M
-[Iter 321] New Best Found! Energy: 79.3516 | FLOPs: 7935.16M | Params: 7.75M
-[Iter 324] New Best Found! Energy: 79.0600 | FLOPs: 7906.00M | Params: 7.72M
-[Iter 325] New Best Found! Energy: 78.9565 | FLOPs: 7895.65M | Params: 7.71M
-[Iter 327] New Best Found! Energy: 78.8039 | FLOPs: 7880.39M | Params: 7.70M
-[Iter 379] New Best Found! Energy: 65.5176 | FLOPs: 6551.76M | Params: 6.40M
-[Iter 380] New Best Found! Energy: 65.4114 | FLOPs: 6541.14M | Params: 6.39M
-[Iter 400] New Best Found! Energy: 56.6180 | FLOPs: 5661.80M | Params: 5.53M
-[Iter 402] New Best Found! Energy: 56.4573 | FLOPs: 5645.73M | Params: 5.51M
-[Iter 406] New Best Found! Energy: 56.3326 | FLOPs: 5633.26M | Params: 5.50M
-[Iter 408] New Best Found! Energy: 55.4426 | FLOPs: 5544.26M | Params: 5.41M
-[Iter 423] New Best Found! Energy: 54.5294 | FLOPs: 5452.94M | Params: 5.33M
-[Iter 428] New Best Found! Energy: 52.7683 | FLOPs: 5276.83M | Params: 5.15M
-[Iter 430] New Best Found! Energy: 48.6788 | FLOPs: 4867.88M | Params: 4.75M
-[Iter 432] New Best Found! Energy: 48.1464 | FLOPs: 4814.64M | Params: 4.70M
-[Iter 495] New Best Found! Energy: 46.7185 | FLOPs: 4671.85M | Params: 4.56M
-[Iter 525] New Best Found! Energy: 45.9943 | FLOPs: 4599.43M | Params: 4.49M
-[Iter 550] New Best Found! Energy: 45.2241 | FLOPs: 4522.41M | Params: 4.42M
-[Iter 556] New Best Found! Energy: 45.1766 | FLOPs: 4517.66M | Params: 4.41M
-[Iter 603] New Best Found! Energy: 44.6457 | FLOPs: 4464.57M | Params: 4.36M
-[Iter 619] New Best Found! Energy: 43.9169 | FLOPs: 4391.69M | Params: 4.29M
-[Iter 620] New Best Found! Energy: 43.5442 | FLOPs: 4354.42M | Params: 4.25M
-[Iter 621] New Best Found! Energy: 43.0094 | FLOPs: 4300.94M | Params: 4.20M
-[Iter 626] New Best Found! Energy: 42.9671 | FLOPs: 4296.71M | Params: 4.20M
-[Iter 628] New Best Found! Energy: 42.6997 | FLOPs: 4269.97M | Params: 4.17M
-[Iter 629] New Best Found! Energy: 42.2017 | FLOPs: 4220.17M | Params: 4.12M
-[Iter 630] New Best Found! Energy: 42.1879 | FLOPs: 4218.79M | Params: 4.12M
-[Iter 632] New Best Found! Energy: 41.8425 | FLOPs: 4184.25M | Params: 4.09M
-[Iter 635] New Best Found! Energy: 41.8068 | FLOPs: 4180.68M | Params: 4.08M
-[Iter 643] New Best Found! Energy: 41.8009 | FLOPs: 4180.09M | Params: 4.08M
-[Iter 650] New Best Found! Energy: 34.9351 | FLOPs: 3493.51M | Params: 3.41M
-[Iter 656] New Best Found! Energy: 34.8948 | FLOPs: 3489.48M | Params: 3.41M
-[Iter 661] New Best Found! Energy: 34.8761 | FLOPs: 3487.61M | Params: 3.41M
-[Iter 662] New Best Found! Energy: 34.7655 | FLOPs: 3476.55M | Params: 3.40M
+[Iter 0] New Best Found! Energy: 264.5502 | FLOPs: 20973.29M | Params: 20.48M
+[Iter 2] New Best Found! Energy: 255.5966 | FLOPs: 20520.30M | Params: 20.04M
+[Iter 3] New Best Found! Energy: 252.9437 | FLOPs: 20386.09M | Params: 19.91M
+[Iter 4] New Best Found! Energy: 246.9747 | FLOPs: 20084.10M | Params: 19.61M
+[Iter 8] New Best Found! Energy: 244.7571 | FLOPs: 19971.90M | Params: 19.50M
+[Iter 10] New Best Found! Energy: 241.5860 | FLOPs: 19811.47M | Params: 19.35M
+[Iter 16] New Best Found! Energy: 241.4202 | FLOPs: 19803.08M | Params: 19.34M
+[Iter 34] New Best Found! Energy: 239.4798 | FLOPs: 19704.91M | Params: 19.24M
+[Iter 36] New Best Found! Energy: 236.7038 | FLOPs: 19564.46M | Params: 19.11M
+[Iter 41] New Best Found! Energy: 234.0924 | FLOPs: 19432.34M | Params: 18.98M
+[Iter 43] New Best Found! Energy: 231.8397 | FLOPs: 19318.37M | Params: 18.87M
+[Iter 44] New Best Found! Energy: 224.8448 | FLOPs: 18964.48M | Params: 18.52M
+[Iter 49] New Best Found! Energy: 224.7541 | FLOPs: 18959.89M | Params: 18.52M
+[Iter 52] New Best Found! Energy: 200.8780 | FLOPs: 17751.93M | Params: 17.34M
+[Iter 58] New Best Found! Energy: 196.2899 | FLOPs: 17519.80M | Params: 17.11M
+[Iter 59] New Best Found! Energy: 195.2950 | FLOPs: 17469.47M | Params: 17.06M
+[Iter 61] New Best Found! Energy: 194.3002 | FLOPs: 17419.14M | Params: 17.01M
+[Iter 63] New Best Found! Energy: 187.7104 | FLOPs: 17085.74M | Params: 16.69M
+[Iter 64] New Best Found! Energy: 187.0472 | FLOPs: 17052.19M | Params: 16.65M
+[Iter 65] New Best Found! Energy: 184.8917 | FLOPs: 16943.14M | Params: 16.55M
+[Iter 68] New Best Found! Energy: 182.1335 | FLOPs: 16803.59M | Params: 16.41M
+[Iter 79] New Best Found! Energy: 181.3045 | FLOPs: 16761.65M | Params: 16.37M
+[Iter 80] New Best Found! Energy: 178.3530 | FLOPs: 16612.33M | Params: 16.22M
+[Iter 85] New Best Found! Energy: 169.7311 | FLOPs: 16176.12M | Params: 15.80M
+[Iter 86] New Best Found! Energy: 169.7049 | FLOPs: 16174.79M | Params: 15.80M
+[Iter 94] New Best Found! Energy: 169.6273 | FLOPs: 16170.87M | Params: 15.79M
+[Iter 95] New Best Found! Energy: 162.6324 | FLOPs: 15816.97M | Params: 15.45M
+[Iter 105] New Best Found! Energy: 162.5216 | FLOPs: 15811.37M | Params: 15.44M
+[Iter 107] New Best Found! Energy: 161.8882 | FLOPs: 15779.32M | Params: 15.41M
+[Iter 108] New Best Found! Energy: 161.6188 | FLOPs: 15765.69M | Params: 15.40M
+[Iter 112] New Best Found! Energy: 160.3305 | FLOPs: 15700.52M | Params: 15.33M
+[Iter 149] New Best Found! Energy: 157.2097 | FLOPs: 15542.62M | Params: 15.18M
+[Iter 158] New Best Found! Energy: 154.7906 | FLOPs: 15420.24M | Params: 15.06M
+[Iter 162] New Best Found! Energy: 153.3255 | FLOPs: 15332.55M | Params: 14.97M
+[Iter 163] New Best Found! Energy: 152.7153 | FLOPs: 15271.53M | Params: 14.91M
+[Iter 164] New Best Found! Energy: 152.6524 | FLOPs: 15265.24M | Params: 14.91M
+[Iter 169] New Best Found! Energy: 152.5843 | FLOPs: 15258.43M | Params: 14.90M
+[Iter 186] New Best Found! Energy: 149.1414 | FLOPs: 14914.14M | Params: 14.56M
+[Iter 187] New Best Found! Energy: 141.6185 | FLOPs: 14161.85M | Params: 13.83M
+[Iter 243] New Best Found! Energy: 135.2417 | FLOPs: 13524.17M | Params: 13.21M
+[Iter 244] New Best Found! Energy: 134.9114 | FLOPs: 13491.14M | Params: 13.17M
+[Iter 270] New Best Found! Energy: 134.8936 | FLOPs: 13489.36M | Params: 13.17M
+[Iter 271] New Best Found! Energy: 133.8040 | FLOPs: 13380.40M | Params: 13.07M
+[Iter 272] New Best Found! Energy: 133.3206 | FLOPs: 13332.06M | Params: 13.02M
+[Iter 273] New Best Found! Energy: 132.1026 | FLOPs: 13210.26M | Params: 12.90M
+[Iter 279] New Best Found! Energy: 130.4413 | FLOPs: 13044.13M | Params: 12.74M
+[Iter 283] New Best Found! Energy: 129.6377 | FLOPs: 12963.77M | Params: 12.66M
+[Iter 284] New Best Found! Energy: 128.8672 | FLOPs: 12886.72M | Params: 12.58M
+[Iter 285] New Best Found! Energy: 128.7414 | FLOPs: 12874.14M | Params: 12.57M
+[Iter 288] New Best Found! Energy: 127.9517 | FLOPs: 12795.17M | Params: 12.50M
+[Iter 293] New Best Found! Energy: 127.9468 | FLOPs: 12794.68M | Params: 12.49M
+[Iter 294] New Best Found! Energy: 127.8539 | FLOPs: 12785.39M | Params: 12.49M
+[Iter 299] New Best Found! Energy: 127.8104 | FLOPs: 12781.04M | Params: 12.48M
+[Iter 303] New Best Found! Energy: 127.7579 | FLOPs: 12775.79M | Params: 12.48M
+[Iter 307] New Best Found! Energy: 127.3336 | FLOPs: 12733.36M | Params: 12.43M
+[Iter 308] New Best Found! Energy: 126.2640 | FLOPs: 12626.40M | Params: 12.33M
+[Iter 309] New Best Found! Energy: 119.1075 | FLOPs: 11910.75M | Params: 11.63M
+[Iter 312] New Best Found! Energy: 114.6301 | FLOPs: 11463.01M | Params: 11.19M
+[Iter 316] New Best Found! Energy: 114.3647 | FLOPs: 11436.47M | Params: 11.17M
+[Iter 317] New Best Found! Energy: 113.7144 | FLOPs: 11371.44M | Params: 11.10M
+[Iter 327] New Best Found! Energy: 113.6041 | FLOPs: 11360.41M | Params: 11.09M
+[Iter 329] New Best Found! Energy: 113.0379 | FLOPs: 11303.79M | Params: 11.04M
+[Iter 333] New Best Found! Energy: 108.8036 | FLOPs: 10880.36M | Params: 10.63M
+[Iter 335] New Best Found! Energy: 107.3290 | FLOPs: 10732.90M | Params: 10.48M
+[Iter 342] New Best Found! Energy: 105.0791 | FLOPs: 10507.91M | Params: 10.26M
+[Iter 344] New Best Found! Energy: 105.0437 | FLOPs: 10504.37M | Params: 10.26M
+[Iter 346] New Best Found! Energy: 105.0398 | FLOPs: 10503.98M | Params: 10.26M
+[Iter 349] New Best Found! Energy: 104.9996 | FLOPs: 10499.96M | Params: 10.25M
+[Iter 373] New Best Found! Energy: 101.3364 | FLOPs: 10133.64M | Params: 9.90M
+[Iter 376] New Best Found! Energy: 98.0924 | FLOPs: 9809.24M | Params: 9.58M
+[Iter 382] New Best Found! Energy: 94.3434 | FLOPs: 9434.34M | Params: 9.21M
+[Iter 395] New Best Found! Energy: 94.2462 | FLOPs: 9424.62M | Params: 9.20M
+[Iter 399] New Best Found! Energy: 93.9886 | FLOPs: 9398.86M | Params: 9.18M
+[Iter 400] New Best Found! Energy: 93.6937 | FLOPs: 9369.37M | Params: 9.15M
+[Iter 401] New Best Found! Energy: 93.5676 | FLOPs: 9356.76M | Params: 9.14M
+[Iter 403] New Best Found! Energy: 93.3730 | FLOPs: 9337.30M | Params: 9.12M
+[Iter 408] New Best Found! Energy: 93.2300 | FLOPs: 9323.00M | Params: 9.10M
+[Iter 409] New Best Found! Energy: 89.5934 | FLOPs: 8959.34M | Params: 8.75M
+[Iter 414] New Best Found! Energy: 88.1225 | FLOPs: 8812.25M | Params: 8.61M
+[Iter 416] New Best Found! Energy: 88.0727 | FLOPs: 8807.27M | Params: 8.60M
+[Iter 417] New Best Found! Energy: 87.5484 | FLOPs: 8754.84M | Params: 8.55M
+[Iter 426] New Best Found! Energy: 87.4013 | FLOPs: 8740.13M | Params: 8.54M
+[Iter 428] New Best Found! Energy: 87.3726 | FLOPs: 8737.26M | Params: 8.53M
+[Iter 439] New Best Found! Energy: 83.2911 | FLOPs: 8329.11M | Params: 8.13M
+[Iter 442] New Best Found! Energy: 82.8750 | FLOPs: 8287.50M | Params: 8.09M
+[Iter 444] New Best Found! Energy: 82.7747 | FLOPs: 8277.47M | Params: 8.08M
+[Iter 452] New Best Found! Energy: 82.6088 | FLOPs: 8260.88M | Params: 8.07M
+[Iter 453] New Best Found! Energy: 82.5754 | FLOPs: 8257.54M | Params: 8.06M
+[Iter 456] New Best Found! Energy: 81.9436 | FLOPs: 8194.36M | Params: 8.00M
+[Iter 459] New Best Found! Energy: 78.9683 | FLOPs: 7896.83M | Params: 7.71M
+[Iter 462] New Best Found! Energy: 73.2175 | FLOPs: 7321.75M | Params: 7.15M
+[Iter 466] New Best Found! Energy: 73.2011 | FLOPs: 7320.11M | Params: 7.15M
+[Iter 470] New Best Found! Energy: 73.1390 | FLOPs: 7313.90M | Params: 7.14M
+[Iter 471] New Best Found! Energy: 56.2936 | FLOPs: 5629.36M | Params: 5.50M
+[Iter 473] New Best Found! Energy: 56.1824 | FLOPs: 5618.24M | Params: 5.49M
+[Iter 475] New Best Found! Energy: 56.0890 | FLOPs: 5608.90M | Params: 5.48M
+[Iter 476] New Best Found! Energy: 56.0556 | FLOPs: 5605.56M | Params: 5.47M
+[Iter 478] New Best Found! Energy: 55.9984 | FLOPs: 5599.84M | Params: 5.47M
+[Iter 480] New Best Found! Energy: 55.9820 | FLOPs: 5598.20M | Params: 5.47M
+[Iter 481] New Best Found! Energy: 55.9594 | FLOPs: 5595.94M | Params: 5.46M
+[Iter 488] New Best Found! Energy: 55.8960 | FLOPs: 5589.60M | Params: 5.46M
+[Iter 495] New Best Found! Energy: 55.8218 | FLOPs: 5582.18M | Params: 5.45M
+[Iter 498] New Best Found! Energy: 55.4024 | FLOPs: 5540.24M | Params: 5.41M
+[Iter 500] New Best Found! Energy: 55.2966 | FLOPs: 5529.66M | Params: 5.40M
+[Iter 501] New Best Found! Energy: 55.2887 | FLOPs: 5528.87M | Params: 5.40M
+[Iter 504] New Best Found! Energy: 55.2484 | FLOPs: 5524.84M | Params: 5.40M
+[Iter 510] New Best Found! Energy: 55.2329 | FLOPs: 5523.29M | Params: 5.39M
+[Iter 512] New Best Found! Energy: 54.9931 | FLOPs: 5499.31M | Params: 5.37M
+[Iter 516] New Best Found! Energy: 50.2631 | FLOPs: 5026.31M | Params: 4.91M
+[Iter 522] New Best Found! Energy: 48.7951 | FLOPs: 4879.51M | Params: 4.77M
+[Iter 543] New Best Found! Energy: 47.4819 | FLOPs: 4748.19M | Params: 4.64M
+[Iter 545] New Best Found! Energy: 47.4200 | FLOPs: 4742.00M | Params: 4.63M
+[Iter 560] New Best Found! Energy: 46.8160 | FLOPs: 4681.60M | Params: 4.57M
+[Iter 562] New Best Found! Energy: 46.7366 | FLOPs: 4673.66M | Params: 4.56M
+[Iter 569] New Best Found! Energy: 45.0995 | FLOPs: 4509.95M | Params: 4.40M
+[Iter 570] New Best Found! Energy: 44.2635 | FLOPs: 4426.35M | Params: 4.32M
+[Iter 571] New Best Found! Energy: 40.7246 | FLOPs: 4072.46M | Params: 3.98M
+[Iter 573] New Best Found! Energy: 40.4358 | FLOPs: 4043.58M | Params: 3.95M
+[Iter 574] New Best Found! Energy: 40.0334 | FLOPs: 4003.34M | Params: 3.91M
+[Iter 575] New Best Found! Energy: 38.9422 | FLOPs: 3894.22M | Params: 3.80M
+[Iter 580] New Best Found! Energy: 38.7063 | FLOPs: 3870.63M | Params: 3.78M
+[Iter 584] New Best Found! Energy: 38.6386 | FLOPs: 3863.86M | Params: 3.77M
+[Iter 585] New Best Found! Energy: 38.6091 | FLOPs: 3860.91M | Params: 3.77M
+[Iter 587] New Best Found! Energy: 38.5919 | FLOPs: 3859.19M | Params: 3.77M
+[Iter 588] New Best Found! Energy: 38.0807 | FLOPs: 3808.07M | Params: 3.72M
+[Iter 601] New Best Found! Energy: 37.8867 | FLOPs: 3788.67M | Params: 3.70M
+[Iter 602] New Best Found! Energy: 37.5669 | FLOPs: 3756.69M | Params: 3.67M
+[Iter 603] New Best Found! Energy: 37.5472 | FLOPs: 3754.72M | Params: 3.67M
+[Iter 622] New Best Found! Energy: 34.4862 | FLOPs: 3448.62M | Params: 3.37M
+[Iter 625] New Best Found! Energy: 34.2355 | FLOPs: 3423.55M | Params: 3.34M
+[Iter 635] New Best Found! Energy: 33.8980 | FLOPs: 3389.80M | Params: 3.31M
+[Iter 636] New Best Found! Energy: 33.6857 | FLOPs: 3368.57M | Params: 3.29M
+[Iter 638] New Best Found! Energy: 32.3890 | FLOPs: 3238.90M | Params: 3.16M
+[Iter 641] New Best Found! Energy: 32.2863 | FLOPs: 3228.63M | Params: 3.15M
+[Iter 647] New Best Found! Energy: 32.1494 | FLOPs: 3214.94M | Params: 3.14M
+[Iter 658] New Best Found! Energy: 30.5799 | FLOPs: 3057.99M | Params: 2.99M
+[Iter 664] New Best Found! Energy: 30.5383 | FLOPs: 3053.83M | Params: 2.98M
+[Iter 665] New Best Found! Energy: 30.4230 | FLOPs: 3042.30M | Params: 2.97M
+[Iter 667] New Best Found! Energy: 30.2696 | FLOPs: 3026.96M | Params: 2.96M
+[Iter 669] New Best Found! Energy: 29.8502 | FLOPs: 2985.02M | Params: 2.92M
+[Iter 673] New Best Found! Energy: 29.7938 | FLOPs: 2979.38M | Params: 2.91M
+[Iter 674] New Best Found! Energy: 29.6759 | FLOPs: 2967.59M | Params: 2.90M
 [resnext50] Training Optimized Model...
 Training on cuda...
-Epoch 1/50, Loss: 2.0194
-Epoch 2/50, Loss: 1.2527
-Epoch 3/50, Loss: 0.9824
-Epoch 4/50, Loss: 0.7829
-Epoch 5/50, Loss: 0.6582
-Epoch 6/50, Loss: 0.5771
-Epoch 7/50, Loss: 0.5105
-Epoch 8/50, Loss: 0.4704
-Epoch 9/50, Loss: 0.4295
-Epoch 10/50, Loss: 0.3891
-Epoch 11/50, Loss: 0.3655
-Epoch 12/50, Loss: 0.3495
-Epoch 13/50, Loss: 0.3212
-Epoch 14/50, Loss: 0.3029
-Epoch 15/50, Loss: 0.2889
-Epoch 16/50, Loss: 0.2721
-Epoch 17/50, Loss: 0.2554
-Epoch 18/50, Loss: 0.2483
-Epoch 19/50, Loss: 0.2375
-Epoch 20/50, Loss: 0.2234
-Epoch 21/50, Loss: 0.2204
-Epoch 22/50, Loss: 0.2079
-Epoch 23/50, Loss: 0.2000
-Epoch 24/50, Loss: 0.1906
-Epoch 25/50, Loss: 0.1899
-Epoch 26/50, Loss: 0.1824
-Epoch 27/50, Loss: 0.1759
-Epoch 28/50, Loss: 0.1703
-Epoch 29/50, Loss: 0.1672
-Epoch 30/50, Loss: 0.1609
-Epoch 31/50, Loss: 0.1532
-Epoch 32/50, Loss: 0.1583
-Epoch 33/50, Loss: 0.1514
-Epoch 34/50, Loss: 0.1496
-Epoch 35/50, Loss: 0.1401
-Epoch 36/50, Loss: 0.1410
-Epoch 37/50, Loss: 0.1327
-Epoch 38/50, Loss: 0.1364
-Epoch 39/50, Loss: 0.1267
-Epoch 40/50, Loss: 0.1309
-Epoch 41/50, Loss: 0.1196
-Epoch 42/50, Loss: 0.1266
-Epoch 43/50, Loss: 0.1210
-Epoch 44/50, Loss: 0.1159
-Epoch 45/50, Loss: 0.1171
-Epoch 46/50, Loss: 0.1130
-Epoch 47/50, Loss: 0.1164
-Epoch 48/50, Loss: 0.1089
-Epoch 49/50, Loss: 0.1099
-Epoch 50/50, Loss: 0.1091
+Epoch 1/50, Loss: 2.8254
+Epoch 2/50, Loss: 1.7277
+Epoch 3/50, Loss: 1.3704
+Epoch 4/50, Loss: 1.1087
+Epoch 5/50, Loss: 0.9258
+Epoch 6/50, Loss: 0.8114
+Epoch 7/50, Loss: 0.7137
+Epoch 8/50, Loss: 0.6286
+Epoch 9/50, Loss: 0.5593
+Epoch 10/50, Loss: 0.5063
+Epoch 11/50, Loss: 0.4616
+Epoch 12/50, Loss: 0.4296
+Epoch 13/50, Loss: 0.4015
+Epoch 14/50, Loss: 0.3746
+Epoch 15/50, Loss: 0.3556
+Epoch 16/50, Loss: 0.3301
+Epoch 17/50, Loss: 0.3157
+Epoch 18/50, Loss: 0.2987
+Epoch 19/50, Loss: 0.2859
+Epoch 20/50, Loss: 0.2717
+Epoch 21/50, Loss: 0.2564
+Epoch 22/50, Loss: 0.2521
+Epoch 23/50, Loss: 0.2403
+Epoch 24/50, Loss: 0.2272
+Epoch 25/50, Loss: 0.2188
+Epoch 26/50, Loss: 0.2119
+Epoch 27/50, Loss: 0.2075
+Epoch 28/50, Loss: 0.1962
+Epoch 29/50, Loss: 0.1915
+Epoch 30/50, Loss: 0.1834
+Epoch 31/50, Loss: 0.1792
+Epoch 32/50, Loss: 0.1768
+Epoch 33/50, Loss: 0.1711
+Epoch 34/50, Loss: 0.1651
+Epoch 35/50, Loss: 0.1589
+Epoch 36/50, Loss: 0.1559
+Epoch 37/50, Loss: 0.1559
+Epoch 38/50, Loss: 0.1498
+Epoch 39/50, Loss: 0.1480
+Epoch 40/50, Loss: 0.1454
+Epoch 41/50, Loss: 0.1338
+Epoch 42/50, Loss: 0.1321
+Epoch 43/50, Loss: 0.1386
+Epoch 44/50, Loss: 0.1338
+Epoch 45/50, Loss: 0.1285
+Epoch 46/50, Loss: 0.1242
+Epoch 47/50, Loss: 0.1256
+Epoch 48/50, Loss: 0.1247
+Epoch 49/50, Loss: 0.1226
+Epoch 50/50, Loss: 0.1164
+[resnext50] Saved optimized weights to pth/
 
 --- Processing Model: googlenet ---
 [googlenet] Evaluating Baseline...
 [googlenet] Training Baseline (50 epochs)...
 Training on cuda...
-Epoch 1/50, Loss: 1.3540
-Epoch 2/50, Loss: 0.9736
-Epoch 3/50, Loss: 0.8220
-Epoch 4/50, Loss: 0.7143
-Epoch 5/50, Loss: 0.6442
-Epoch 6/50, Loss: 0.5951
-Epoch 7/50, Loss: 0.5515
-Epoch 8/50, Loss: 0.5173
-Epoch 9/50, Loss: 0.4845
-Epoch 10/50, Loss: 0.4591
-Epoch 11/50, Loss: 0.4318
-Epoch 12/50, Loss: 0.4108
-Epoch 13/50, Loss: 0.3947
-Epoch 14/50, Loss: 0.3730
-Epoch 15/50, Loss: 0.3570
-Epoch 16/50, Loss: 0.3512
-Epoch 17/50, Loss: 0.3404
-Epoch 18/50, Loss: 0.3239
-Epoch 19/50, Loss: 0.3105
-Epoch 20/50, Loss: 0.2968
-Epoch 21/50, Loss: 0.2896
-Epoch 22/50, Loss: 0.2769
-Epoch 23/50, Loss: 0.2698
-Epoch 24/50, Loss: 0.2582
-Epoch 25/50, Loss: 0.2549
-Epoch 26/50, Loss: 0.2535
-Epoch 27/50, Loss: 0.2403
-Epoch 28/50, Loss: 0.2356
-Epoch 29/50, Loss: 0.2282
-Epoch 30/50, Loss: 0.2195
-Epoch 31/50, Loss: 0.2142
-Epoch 32/50, Loss: 0.2087
-Epoch 33/50, Loss: 0.2038
-Epoch 34/50, Loss: 0.2050
-Epoch 35/50, Loss: 0.2004
-Epoch 36/50, Loss: 0.1893
+Epoch 1/50, Loss: 1.3526
+Epoch 2/50, Loss: 0.9682
+Epoch 3/50, Loss: 0.8102
+Epoch 4/50, Loss: 0.7098
+Epoch 5/50, Loss: 0.6426
+Epoch 6/50, Loss: 0.5883
+Epoch 7/50, Loss: 0.5507
+Epoch 8/50, Loss: 0.5147
+Epoch 9/50, Loss: 0.4797
+Epoch 10/50, Loss: 0.4518
+Epoch 11/50, Loss: 0.4309
+Epoch 12/50, Loss: 0.4092
+Epoch 13/50, Loss: 0.3888
+Epoch 14/50, Loss: 0.3788
+Epoch 15/50, Loss: 0.3626
+Epoch 16/50, Loss: 0.3366
+Epoch 17/50, Loss: 0.3371
+Epoch 18/50, Loss: 0.3209
+Epoch 19/50, Loss: 0.3135
+Epoch 20/50, Loss: 0.2918
+Epoch 21/50, Loss: 0.2872
+Epoch 22/50, Loss: 0.2802
+Epoch 23/50, Loss: 0.2699
+Epoch 24/50, Loss: 0.2557
+Epoch 25/50, Loss: 0.2550
+Epoch 26/50, Loss: 0.2475
+Epoch 27/50, Loss: 0.2394
+Epoch 28/50, Loss: 0.2339
+Epoch 29/50, Loss: 0.2257
+Epoch 30/50, Loss: 0.2202
+Epoch 31/50, Loss: 0.2212
+Epoch 32/50, Loss: 0.2116
+Epoch 33/50, Loss: 0.2004
+Epoch 34/50, Loss: 0.2013
+Epoch 35/50, Loss: 0.1981
+Epoch 36/50, Loss: 0.1929
 Epoch 37/50, Loss: 0.1826
-Epoch 38/50, Loss: 0.1851
-Epoch 39/50, Loss: 0.1851
-Epoch 40/50, Loss: 0.1787
-Epoch 41/50, Loss: 0.1715
-Epoch 42/50, Loss: 0.1737
-Epoch 43/50, Loss: 0.1617
-Epoch 44/50, Loss: 0.1577
-Epoch 45/50, Loss: 0.1625
-Epoch 46/50, Loss: 0.1553
-Epoch 47/50, Loss: 0.1601
-Epoch 48/50, Loss: 0.1602
-Epoch 49/50, Loss: 0.1482
-Epoch 50/50, Loss: 0.1398
-[googlenet] Running C-DGOSA Optimization...
+Epoch 38/50, Loss: 0.1755
+Epoch 39/50, Loss: 0.1849
+Epoch 40/50, Loss: 0.1785
+Epoch 41/50, Loss: 0.1685
+Epoch 42/50, Loss: 0.1689
+Epoch 43/50, Loss: 0.1655
+Epoch 44/50, Loss: 0.1694
+Epoch 45/50, Loss: 0.1525
+Epoch 46/50, Loss: 0.1579
+Epoch 47/50, Loss: 0.1579
+Epoch 48/50, Loss: 0.1608
+Epoch 49/50, Loss: 0.1548
+Epoch 50/50, Loss: 0.1466
+[googlenet] Saved baseline weights to pth/
+[googlenet] Running C-DGOSA Optimization (lambda=0.5)...
 Start Searching... Initial Energy: 38.4257
-[Iter 4] New Best Found! Energy: 35.8554 | FLOPs: 3585.54M | Params: 3.50M
-[Iter 6] New Best Found! Energy: 35.8187 | FLOPs: 3581.87M | Params: 3.50M
-[Iter 8] New Best Found! Energy: 35.6719 | FLOPs: 3567.19M | Params: 3.48M
-[Iter 11] New Best Found! Energy: 35.6444 | FLOPs: 3564.44M | Params: 3.48M
-[Iter 76] New Best Found! Energy: 34.9985 | FLOPs: 3499.85M | Params: 3.42M
-[Iter 78] New Best Found! Energy: 34.9366 | FLOPs: 3493.66M | Params: 3.41M
-[Iter 80] New Best Found! Energy: 34.8265 | FLOPs: 3482.65M | Params: 3.40M
-[Iter 91] New Best Found! Energy: 34.7026 | FLOPs: 3470.26M | Params: 3.39M
-[Iter 95] New Best Found! Energy: 32.6795 | FLOPs: 3267.95M | Params: 3.19M
-[Iter 140] New Best Found! Energy: 32.5919 | FLOPs: 3259.19M | Params: 3.18M
-[Iter 141] New Best Found! Energy: 32.5683 | FLOPs: 3256.83M | Params: 3.18M
-[Iter 148] New Best Found! Energy: 32.4844 | FLOPs: 3248.44M | Params: 3.17M
-[Iter 150] New Best Found! Energy: 32.4097 | FLOPs: 3240.97M | Params: 3.17M
-[Iter 152] New Best Found! Energy: 32.3153 | FLOPs: 3231.53M | Params: 3.16M
-[Iter 153] New Best Found! Energy: 32.2983 | FLOPs: 3229.83M | Params: 3.15M
-[Iter 156] New Best Found! Energy: 32.2753 | FLOPs: 3227.53M | Params: 3.15M
-[Iter 166] New Best Found! Energy: 32.2642 | FLOPs: 3226.42M | Params: 3.15M
-[Iter 168] New Best Found! Energy: 32.2406 | FLOPs: 3224.06M | Params: 3.15M
-[Iter 170] New Best Found! Energy: 31.7429 | FLOPs: 3174.29M | Params: 3.10M
-[Iter 171] New Best Found! Energy: 31.7311 | FLOPs: 3173.11M | Params: 3.10M
-[Iter 172] New Best Found! Energy: 31.4794 | FLOPs: 3147.94M | Params: 3.07M
-[Iter 174] New Best Found! Energy: 31.4008 | FLOPs: 3140.08M | Params: 3.07M
-[Iter 179] New Best Found! Energy: 31.3831 | FLOPs: 3138.31M | Params: 3.06M
-[Iter 180] New Best Found! Energy: 31.3254 | FLOPs: 3132.54M | Params: 3.06M
-[Iter 182] New Best Found! Energy: 31.2772 | FLOPs: 3127.72M | Params: 3.05M
-[Iter 192] New Best Found! Energy: 27.8455 | FLOPs: 2784.55M | Params: 2.72M
-[Iter 193] New Best Found! Energy: 27.8101 | FLOPs: 2781.01M | Params: 2.72M
-[Iter 199] New Best Found! Energy: 24.5622 | FLOPs: 2456.22M | Params: 2.40M
-[Iter 200] New Best Found! Energy: 23.7783 | FLOPs: 2377.83M | Params: 2.32M
-[Iter 209] New Best Found! Energy: 23.7207 | FLOPs: 2372.07M | Params: 2.32M
-[Iter 211] New Best Found! Energy: 23.2580 | FLOPs: 2325.80M | Params: 2.27M
-[Iter 212] New Best Found! Energy: 19.0113 | FLOPs: 1901.13M | Params: 1.86M
-[Iter 324] New Best Found! Energy: 18.8640 | FLOPs: 1886.40M | Params: 1.84M
-[Iter 327] New Best Found! Energy: 18.8277 | FLOPs: 1882.77M | Params: 1.84M
-[Iter 332] New Best Found! Energy: 18.7533 | FLOPs: 1875.33M | Params: 1.83M
-[Iter 333] New Best Found! Energy: 18.6845 | FLOPs: 1868.45M | Params: 1.82M
-[Iter 349] New Best Found! Energy: 18.3386 | FLOPs: 1833.86M | Params: 1.79M
-[Iter 353] New Best Found! Energy: 18.2737 | FLOPs: 1827.37M | Params: 1.78M
-[Iter 362] New Best Found! Energy: 17.7485 | FLOPs: 1774.85M | Params: 1.73M
-[Iter 363] New Best Found! Energy: 17.7131 | FLOPs: 1771.31M | Params: 1.73M
-[Iter 370] New Best Found! Energy: 17.6770 | FLOPs: 1767.70M | Params: 1.73M
-[Iter 379] New Best Found! Energy: 17.4444 | FLOPs: 1744.44M | Params: 1.70M
-[Iter 383] New Best Found! Energy: 15.8518 | FLOPs: 1585.18M | Params: 1.55M
-[Iter 388] New Best Found! Energy: 15.8452 | FLOPs: 1584.52M | Params: 1.55M
-[Iter 392] New Best Found! Energy: 15.7515 | FLOPs: 1575.15M | Params: 1.54M
-[Iter 394] New Best Found! Energy: 15.3766 | FLOPs: 1537.66M | Params: 1.50M
-[Iter 395] New Best Found! Energy: 15.3511 | FLOPs: 1535.11M | Params: 1.50M
-[Iter 396] New Best Found! Energy: 15.2095 | FLOPs: 1520.95M | Params: 1.49M
-[Iter 400] New Best Found! Energy: 15.2056 | FLOPs: 1520.56M | Params: 1.48M
-[Iter 403] New Best Found! Energy: 14.0377 | FLOPs: 1403.77M | Params: 1.37M
-[Iter 405] New Best Found! Energy: 13.7271 | FLOPs: 1372.71M | Params: 1.34M
-[Iter 434] New Best Found! Energy: 13.4693 | FLOPs: 1346.93M | Params: 1.32M
-[Iter 437] New Best Found! Energy: 13.2268 | FLOPs: 1322.68M | Params: 1.29M
-[Iter 438] New Best Found! Energy: 12.8808 | FLOPs: 1288.08M | Params: 1.26M
-[Iter 465] New Best Found! Energy: 12.0355 | FLOPs: 1203.55M | Params: 1.18M
-[Iter 472] New Best Found! Energy: 12.0094 | FLOPs: 1200.94M | Params: 1.17M
-[Iter 479] New Best Found! Energy: 11.2928 | FLOPs: 1129.28M | Params: 1.10M
-[Iter 516] New Best Found! Energy: 10.5764 | FLOPs: 1057.64M | Params: 1.03M
-[Iter 525] New Best Found! Energy: 10.2994 | FLOPs: 1029.94M | Params: 1.01M
-[Iter 526] New Best Found! Energy: 10.2778 | FLOPs: 1027.78M | Params: 1.00M
-[Iter 533] New Best Found! Energy: 10.2665 | FLOPs: 1026.65M | Params: 1.00M
-[Iter 534] New Best Found! Energy: 10.1669 | FLOPs: 1016.69M | Params: 0.99M
-[Iter 555] New Best Found! Energy: 9.6211 | FLOPs: 962.11M | Params: 0.94M
-[Iter 579] New Best Found! Energy: 9.2285 | FLOPs: 922.85M | Params: 0.90M
-[Iter 580] New Best Found! Energy: 9.1695 | FLOPs: 916.95M | Params: 0.90M
-[Iter 584] New Best Found! Energy: 9.1659 | FLOPs: 916.59M | Params: 0.90M
-[Iter 586] New Best Found! Energy: 9.1098 | FLOPs: 910.98M | Params: 0.89M
-[Iter 588] New Best Found! Energy: 7.3404 | FLOPs: 734.04M | Params: 0.72M
-[Iter 606] New Best Found! Energy: 7.2730 | FLOPs: 727.30M | Params: 0.71M
-[Iter 610] New Best Found! Energy: 7.2140 | FLOPs: 721.40M | Params: 0.70M
-[Iter 631] New Best Found! Energy: 7.1034 | FLOPs: 710.34M | Params: 0.69M
-[Iter 634] New Best Found! Energy: 7.0193 | FLOPs: 701.93M | Params: 0.69M
-[Iter 637] New Best Found! Energy: 6.9766 | FLOPs: 697.66M | Params: 0.68M
-[Iter 640] New Best Found! Energy: 6.7996 | FLOPs: 679.96M | Params: 0.66M
-[Iter 643] New Best Found! Energy: 6.7810 | FLOPs: 678.10M | Params: 0.66M
-[Iter 647] New Best Found! Energy: 6.7679 | FLOPs: 676.79M | Params: 0.66M
-[Iter 649] New Best Found! Energy: 6.7616 | FLOPs: 676.16M | Params: 0.66M
-[Iter 650] New Best Found! Energy: 6.7341 | FLOPs: 673.41M | Params: 0.66M
-[Iter 665] New Best Found! Energy: 6.6924 | FLOPs: 669.24M | Params: 0.65M
+[Iter 1] New Best Found! Energy: 38.3890 | FLOPs: 3838.90M | Params: 3.75M
+[Iter 3] New Best Found! Energy: 38.3366 | FLOPs: 3833.66M | Params: 3.74M
+[Iter 37] New Best Found! Energy: 38.2258 | FLOPs: 3822.58M | Params: 3.73M
+[Iter 40] New Best Found! Energy: 38.1000 | FLOPs: 3810.00M | Params: 3.72M
+[Iter 43] New Best Found! Energy: 38.0161 | FLOPs: 3801.61M | Params: 3.71M
+[Iter 44] New Best Found! Energy: 37.5312 | FLOPs: 3753.12M | Params: 3.67M
+[Iter 45] New Best Found! Energy: 37.4840 | FLOPs: 3748.40M | Params: 3.66M
+[Iter 46] New Best Found! Energy: 37.4086 | FLOPs: 3740.86M | Params: 3.65M
+[Iter 51] New Best Found! Energy: 37.3693 | FLOPs: 3736.93M | Params: 3.65M
+[Iter 53] New Best Found! Energy: 37.2959 | FLOPs: 3729.59M | Params: 3.64M
+[Iter 54] New Best Found! Energy: 37.2684 | FLOPs: 3726.84M | Params: 3.64M
+[Iter 55] New Best Found! Energy: 37.1290 | FLOPs: 3712.90M | Params: 3.63M
+[Iter 59] New Best Found! Energy: 37.1080 | FLOPs: 3710.80M | Params: 3.62M
+[Iter 61] New Best Found! Energy: 36.3196 | FLOPs: 3631.96M | Params: 3.55M
+[Iter 63] New Best Found! Energy: 36.2410 | FLOPs: 3624.10M | Params: 3.54M
+[Iter 65] New Best Found! Energy: 35.9893 | FLOPs: 3598.93M | Params: 3.51M
+[Iter 66] New Best Found! Energy: 35.9159 | FLOPs: 3591.59M | Params: 3.51M
+[Iter 70] New Best Found! Energy: 35.8337 | FLOPs: 3583.37M | Params: 3.50M
+[Iter 71] New Best Found! Energy: 35.7917 | FLOPs: 3579.17M | Params: 3.50M
+[Iter 72] New Best Found! Energy: 34.5859 | FLOPs: 3458.59M | Params: 3.38M
+[Iter 75] New Best Found! Energy: 34.4689 | FLOPs: 3446.89M | Params: 3.37M
+[Iter 81] New Best Found! Energy: 34.4093 | FLOPs: 3440.93M | Params: 3.36M
+[Iter 82] New Best Found! Energy: 32.3862 | FLOPs: 3238.62M | Params: 3.16M
+[Iter 83] New Best Found! Energy: 31.8907 | FLOPs: 3189.07M | Params: 3.11M
+[Iter 88] New Best Found! Energy: 31.8638 | FLOPs: 3186.38M | Params: 3.11M
+[Iter 89] New Best Found! Energy: 29.5989 | FLOPs: 2959.89M | Params: 2.89M
+[Iter 95] New Best Found! Energy: 29.5986 | FLOPs: 2959.86M | Params: 2.89M
+[Iter 99] New Best Found! Energy: 29.5239 | FLOPs: 2952.39M | Params: 2.88M
+[Iter 101] New Best Found! Energy: 28.1290 | FLOPs: 2812.90M | Params: 2.75M
+[Iter 103] New Best Found! Energy: 28.0189 | FLOPs: 2801.89M | Params: 2.74M
+[Iter 113] New Best Found! Energy: 26.2671 | FLOPs: 2626.71M | Params: 2.57M
+[Iter 116] New Best Found! Energy: 26.2341 | FLOPs: 2623.41M | Params: 2.56M
+[Iter 170] New Best Found! Energy: 25.3021 | FLOPs: 2530.21M | Params: 2.47M
+[Iter 185] New Best Found! Energy: 24.0280 | FLOPs: 2402.80M | Params: 2.35M
+[Iter 187] New Best Found! Energy: 23.5876 | FLOPs: 2358.76M | Params: 2.30M
+[Iter 190] New Best Found! Energy: 23.5509 | FLOPs: 2355.09M | Params: 2.30M
+[Iter 192] New Best Found! Energy: 17.6258 | FLOPs: 1762.58M | Params: 1.72M
+[Iter 203] New Best Found! Energy: 17.6145 | FLOPs: 1761.45M | Params: 1.72M
+[Iter 256] New Best Found! Energy: 16.1771 | FLOPs: 1617.71M | Params: 1.58M
+[Iter 258] New Best Found! Energy: 16.1017 | FLOPs: 1610.17M | Params: 1.57M
+[Iter 259] New Best Found! Energy: 15.9339 | FLOPs: 1593.39M | Params: 1.56M
+[Iter 265] New Best Found! Energy: 15.8938 | FLOPs: 1589.38M | Params: 1.55M
+[Iter 266] New Best Found! Energy: 15.8571 | FLOPs: 1585.71M | Params: 1.55M
+[Iter 268] New Best Found! Energy: 15.7470 | FLOPs: 1574.70M | Params: 1.54M
+[Iter 269] New Best Found! Energy: 15.6919 | FLOPs: 1569.19M | Params: 1.53M
+[Iter 274] New Best Found! Energy: 15.6785 | FLOPs: 1567.85M | Params: 1.53M
+[Iter 275] New Best Found! Energy: 15.6294 | FLOPs: 1562.94M | Params: 1.53M
+[Iter 278] New Best Found! Energy: 15.5124 | FLOPs: 1551.24M | Params: 1.51M
+[Iter 279] New Best Found! Energy: 15.4888 | FLOPs: 1548.88M | Params: 1.51M
+[Iter 281] New Best Found! Energy: 12.1268 | FLOPs: 1212.68M | Params: 1.18M
+[Iter 282] New Best Found! Energy: 11.9066 | FLOPs: 1190.66M | Params: 1.16M
+[Iter 292] New Best Found! Energy: 11.7159 | FLOPs: 1171.59M | Params: 1.14M
+[Iter 307] New Best Found! Energy: 11.7081 | FLOPs: 1170.81M | Params: 1.14M
+[Iter 308] New Best Found! Energy: 11.5556 | FLOPs: 1155.56M | Params: 1.13M
+[Iter 310] New Best Found! Energy: 11.5438 | FLOPs: 1154.38M | Params: 1.13M
+[Iter 311] New Best Found! Energy: 11.5283 | FLOPs: 1152.83M | Params: 1.13M
+[Iter 319] New Best Found! Energy: 11.1164 | FLOPs: 1111.64M | Params: 1.09M
+[Iter 324] New Best Found! Energy: 11.0141 | FLOPs: 1101.41M | Params: 1.08M
+[Iter 326] New Best Found! Energy: 10.8831 | FLOPs: 1088.31M | Params: 1.06M
+[Iter 337] New Best Found! Energy: 9.1293 | FLOPs: 912.93M | Params: 0.89M
+[Iter 338] New Best Found! Energy: 9.1028 | FLOPs: 910.28M | Params: 0.89M
+[Iter 339] New Best Found! Energy: 9.0487 | FLOPs: 904.87M | Params: 0.88M
+[Iter 364] New Best Found! Energy: 8.7757 | FLOPs: 877.57M | Params: 0.86M
+[Iter 366] New Best Found! Energy: 8.7196 | FLOPs: 871.96M | Params: 0.85M
+[Iter 397] New Best Found! Energy: 8.7034 | FLOPs: 870.34M | Params: 0.85M
+[Iter 398] New Best Found! Energy: 8.6698 | FLOPs: 866.98M | Params: 0.85M
+[Iter 401] New Best Found! Energy: 7.9806 | FLOPs: 798.06M | Params: 0.78M
+[Iter 545] New Best Found! Energy: 7.9548 | FLOPs: 795.48M | Params: 0.78M
+[Iter 581] New Best Found! Energy: 7.9406 | FLOPs: 794.06M | Params: 0.78M
 [googlenet] Training Optimized Model...
 Training on cuda...
-Epoch 1/50, Loss: 1.2133
-Epoch 2/50, Loss: 0.7654
-Epoch 3/50, Loss: 0.5980
-Epoch 4/50, Loss: 0.5156
-Epoch 5/50, Loss: 0.4413
-Epoch 6/50, Loss: 0.3932
-Epoch 7/50, Loss: 0.3646
-Epoch 8/50, Loss: 0.3360
-Epoch 9/50, Loss: 0.3061
-Epoch 10/50, Loss: 0.2861
-Epoch 11/50, Loss: 0.2658
-Epoch 12/50, Loss: 0.2511
-Epoch 13/50, Loss: 0.2323
-Epoch 14/50, Loss: 0.2273
-Epoch 15/50, Loss: 0.2131
-Epoch 16/50, Loss: 0.2021
-Epoch 17/50, Loss: 0.1881
-Epoch 18/50, Loss: 0.1839
-Epoch 19/50, Loss: 0.1730
-Epoch 20/50, Loss: 0.1677
-Epoch 21/50, Loss: 0.1588
-Epoch 22/50, Loss: 0.1564
-Epoch 23/50, Loss: 0.1473
-Epoch 24/50, Loss: 0.1483
-Epoch 25/50, Loss: 0.1438
-Epoch 26/50, Loss: 0.1380
-Epoch 27/50, Loss: 0.1315
-Epoch 28/50, Loss: 0.1219
-Epoch 29/50, Loss: 0.1231
-Epoch 30/50, Loss: 0.1228
-Epoch 31/50, Loss: 0.1168
-Epoch 32/50, Loss: 0.1136
-Epoch 33/50, Loss: 0.1109
-Epoch 34/50, Loss: 0.1166
-Epoch 35/50, Loss: 0.1060
-Epoch 36/50, Loss: 0.1000
-Epoch 37/50, Loss: 0.0966
-Epoch 38/50, Loss: 0.1037
-Epoch 39/50, Loss: 0.0953
-Epoch 40/50, Loss: 0.0984
-Epoch 41/50, Loss: 0.0997
-Epoch 42/50, Loss: 0.0948
-Epoch 43/50, Loss: 0.0936
-Epoch 44/50, Loss: 0.1012
-Epoch 45/50, Loss: 0.0914
-Epoch 46/50, Loss: 0.0904
-Epoch 47/50, Loss: 0.0896
-Epoch 48/50, Loss: 0.0872
-Epoch 49/50, Loss: 0.0833
-Epoch 50/50, Loss: 0.0840
+Epoch 1/50, Loss: 1.2311
+Epoch 2/50, Loss: 0.8021
+Epoch 3/50, Loss: 0.6368
+Epoch 4/50, Loss: 0.5375
+Epoch 5/50, Loss: 0.4716
+Epoch 6/50, Loss: 0.4289
+Epoch 7/50, Loss: 0.3836
+Epoch 8/50, Loss: 0.3610
+Epoch 9/50, Loss: 0.3298
+Epoch 10/50, Loss: 0.3111
+Epoch 11/50, Loss: 0.2850
+Epoch 12/50, Loss: 0.2707
+Epoch 13/50, Loss: 0.2552
+Epoch 14/50, Loss: 0.2442
+Epoch 15/50, Loss: 0.2301
+Epoch 16/50, Loss: 0.2172
+Epoch 17/50, Loss: 0.2075
+Epoch 18/50, Loss: 0.1978
+Epoch 19/50, Loss: 0.1876
+Epoch 20/50, Loss: 0.1803
+Epoch 21/50, Loss: 0.1743
+Epoch 22/50, Loss: 0.1628
+Epoch 23/50, Loss: 0.1621
+Epoch 24/50, Loss: 0.1506
+Epoch 25/50, Loss: 0.1451
+Epoch 26/50, Loss: 0.1433
+Epoch 27/50, Loss: 0.1402
+Epoch 28/50, Loss: 0.1425
+Epoch 29/50, Loss: 0.1281
+Epoch 30/50, Loss: 0.1257
+Epoch 31/50, Loss: 0.1254
+Epoch 32/50, Loss: 0.1212
+Epoch 33/50, Loss: 0.1175
+Epoch 34/50, Loss: 0.1121
+Epoch 35/50, Loss: 0.1121
+Epoch 36/50, Loss: 0.1061
+Epoch 37/50, Loss: 0.1049
+Epoch 38/50, Loss: 0.1021
+Epoch 39/50, Loss: 0.1028
+Epoch 40/50, Loss: 0.1037
+Epoch 41/50, Loss: 0.0973
+Epoch 42/50, Loss: 0.0918
+Epoch 43/50, Loss: 0.0969
+Epoch 44/50, Loss: 0.0969
+Epoch 45/50, Loss: 0.0943
+Epoch 46/50, Loss: 0.0905
+Epoch 47/50, Loss: 0.0881
+Epoch 48/50, Loss: 0.0937
+Epoch 49/50, Loss: 0.0873
+Epoch 50/50, Loss: 0.0830
+[googlenet] Saved optimized weights to pth/
 
->>> Results saved to results/Table_1_Performance_Comparison.csv
+--- Processing Model: mobilenetv2 ---
+[mobilenetv2] Evaluating Baseline...
+[mobilenetv2] Training Baseline (50 epochs)...
+Training on cuda...
+Epoch 1/50, Loss: 1.6754
+Epoch 2/50, Loss: 1.1821
+Epoch 3/50, Loss: 0.9286
+Epoch 4/50, Loss: 0.7831
+Epoch 5/50, Loss: 0.6825
+Epoch 6/50, Loss: 0.6157
+Epoch 7/50, Loss: 0.5673
+Epoch 8/50, Loss: 0.5264
+Epoch 9/50, Loss: 0.4888
+Epoch 10/50, Loss: 0.4614
+Epoch 11/50, Loss: 0.4351
+Epoch 12/50, Loss: 0.4158
+Epoch 13/50, Loss: 0.3978
+Epoch 14/50, Loss: 0.3811
+Epoch 15/50, Loss: 0.3615
+Epoch 16/50, Loss: 0.3518
+Epoch 17/50, Loss: 0.3365
+Epoch 18/50, Loss: 0.3278
+Epoch 19/50, Loss: 0.3121
+Epoch 20/50, Loss: 0.3034
+Epoch 21/50, Loss: 0.2953
+Epoch 22/50, Loss: 0.2858
+Epoch 23/50, Loss: 0.2742
+Epoch 24/50, Loss: 0.2737
+Epoch 25/50, Loss: 0.2663
+Epoch 26/50, Loss: 0.2545
+Epoch 27/50, Loss: 0.2507
+Epoch 28/50, Loss: 0.2453
+Epoch 29/50, Loss: 0.2440
+Epoch 30/50, Loss: 0.2371
+Epoch 31/50, Loss: 0.2278
+Epoch 32/50, Loss: 0.2256
+Epoch 33/50, Loss: 0.2215
+Epoch 34/50, Loss: 0.2151
+Epoch 35/50, Loss: 0.2122
+Epoch 36/50, Loss: 0.2043
+Epoch 37/50, Loss: 0.2040
+Epoch 38/50, Loss: 0.2041
+Epoch 39/50, Loss: 0.1971
+Epoch 40/50, Loss: 0.1931
+Epoch 41/50, Loss: 0.1966
+Epoch 42/50, Loss: 0.1852
+Epoch 43/50, Loss: 0.1918
+Epoch 44/50, Loss: 0.1846
+Epoch 45/50, Loss: 0.1825
+Epoch 46/50, Loss: 0.1762
+Epoch 47/50, Loss: 0.1758
+Epoch 48/50, Loss: 0.1748
+Epoch 49/50, Loss: 0.1704
+Epoch 50/50, Loss: 0.1704
+[mobilenetv2] Saved baseline weights to pth/
+[mobilenetv2] Running C-DGOSA Optimization (lambda=0.5)...
+Start Searching... Initial Energy: 22.4231
+[Iter 0] New Best Found! Energy: 21.9985 | FLOPs: 2199.85M | Params: 2.15M
+[Iter 1] New Best Found! Energy: 21.9675 | FLOPs: 2196.75M | Params: 2.15M
+[Iter 2] New Best Found! Energy: 21.7906 | FLOPs: 2179.06M | Params: 2.13M
+[Iter 3] New Best Found! Energy: 21.5074 | FLOPs: 2150.74M | Params: 2.10M
+[Iter 4] New Best Found! Energy: 21.1889 | FLOPs: 2118.89M | Params: 2.07M
+[Iter 655] New Best Found! Energy: 20.4008 | FLOPs: 2040.08M | Params: 1.99M
+[Iter 664] New Best Found! Energy: 20.3679 | FLOPs: 2036.79M | Params: 1.99M
+[Iter 665] New Best Found! Energy: 20.3155 | FLOPs: 2031.55M | Params: 1.98M
+[Iter 668] New Best Found! Energy: 20.2578 | FLOPs: 2025.78M | Params: 1.98M
+[mobilenetv2] Training Optimized Model...
+Training on cuda...
+Epoch 1/50, Loss: 1.6226
+Epoch 2/50, Loss: 1.1441
+Epoch 3/50, Loss: 0.8849
+Epoch 4/50, Loss: 0.7592
+Epoch 5/50, Loss: 0.6689
+Epoch 6/50, Loss: 0.6130
+Epoch 7/50, Loss: 0.5653
+Epoch 8/50, Loss: 0.5256
+Epoch 9/50, Loss: 0.4970
+Epoch 10/50, Loss: 0.4696
+Epoch 11/50, Loss: 0.4483
+Epoch 12/50, Loss: 0.4308
+Epoch 13/50, Loss: 0.4135
+Epoch 14/50, Loss: 0.3971
+Epoch 15/50, Loss: 0.3819
+Epoch 16/50, Loss: 0.3732
+Epoch 17/50, Loss: 0.3592
+Epoch 18/50, Loss: 0.3438
+Epoch 19/50, Loss: 0.3461
+Epoch 20/50, Loss: 0.3252
+Epoch 21/50, Loss: 0.3238
+Epoch 22/50, Loss: 0.3124
+Epoch 23/50, Loss: 0.3023
+Epoch 24/50, Loss: 0.2992
+Epoch 25/50, Loss: 0.2930
+Epoch 26/50, Loss: 0.2903
+Epoch 27/50, Loss: 0.2772
+Epoch 28/50, Loss: 0.2796
+Epoch 29/50, Loss: 0.2710
+Epoch 30/50, Loss: 0.2696
+Epoch 31/50, Loss: 0.2652
+Epoch 32/50, Loss: 0.2562
+Epoch 33/50, Loss: 0.2571
+Epoch 34/50, Loss: 0.2462
+Epoch 35/50, Loss: 0.2474
+Epoch 36/50, Loss: 0.2435
+Epoch 37/50, Loss: 0.2379
+Epoch 38/50, Loss: 0.2346
+Epoch 39/50, Loss: 0.2348
+Epoch 40/50, Loss: 0.2289
+Epoch 41/50, Loss: 0.2286
+Epoch 42/50, Loss: 0.2294
+Epoch 43/50, Loss: 0.2211
+Epoch 44/50, Loss: 0.2193
+Epoch 45/50, Loss: 0.2202
+Epoch 46/50, Loss: 0.2156
+Epoch 47/50, Loss: 0.2164
+Epoch 48/50, Loss: 0.2089
+Epoch 49/50, Loss: 0.2082
+Epoch 50/50, Loss: 0.2088
+[mobilenetv2] Saved optimized weights to pth/
+
+>>> Results saved to results_50epochs_V2/Table_1_Performance_Comparison.csv
 
 --- Table 1 Comparison ---
-   Models             Method  Top-1 Accuracy(%)  Latency(ms)  Peak Memory(MB) Latency Reduction Memory Reduction
-    vgg16 PyTorch (Baseline)              88.01         7.18           110.61                 -                -
-    vgg16     C-DGOSA (Ours)              81.16         6.88            10.33              4.2%            90.7%
- resnet50 PyTorch (Baseline)              89.34        22.05           248.14                 -                -
- resnet50     C-DGOSA (Ours)              88.25        21.40            53.35              2.9%            78.5%
-resnext50 PyTorch (Baseline)              89.88        21.81           248.14                 -                -
-resnext50     C-DGOSA (Ours)              89.61        21.33            40.74              2.2%            83.6%
-googlenet PyTorch (Baseline)              84.85        20.61            45.03                 -                -
-googlenet     C-DGOSA (Ours)              88.62        19.37             7.84              6.0%            82.6%
-Table 1 Visualization saved.
+     Models             Method  Top-1 Accuracy(%)  Latency(ms)  Peak Memory(MB) Latency Reduction Memory Reduction
+      vgg16 PyTorch (Baseline)              85.78         6.63           110.61                 -                -
+      vgg16     C-DGOSA (Ours)              80.74         6.63            25.81              0.1%            76.7%
+   resnet18 PyTorch (Baseline)              90.12         7.83           131.85                 -                -
+   resnet18     C-DGOSA (Ours)              88.58         6.66             9.02             14.8%            93.2%
+  resnext50 PyTorch (Baseline)              90.65        21.99           248.14                 -                -
+  resnext50     C-DGOSA (Ours)              88.60        24.07            34.78             -9.5%            86.0%
+  googlenet PyTorch (Baseline)              81.32        20.35            45.03                 -                -
+  googlenet     C-DGOSA (Ours)              87.43        19.69             9.31              3.3%            79.3%
+mobilenetv2 PyTorch (Baseline)              89.37         8.38            26.28                 -                -
+mobilenetv2     C-DGOSA (Ours)              88.56        12.05            23.74            -43.7%             9.7%
 
 ============================================================
->> Running Experiment 2: Ablation Study (Table 2 - ResNet50)
+>> Running Experiment 2: Ablation Study (Table 2 - ResNet18)
 ============================================================
 Files already downloaded and verified
 Files already downloaded and verified
->>> Running Variant: C-DGOSA (Full)...
-Start Searching... Initial Energy: 268.5295
-[Iter 1] New Best Found! Energy: 245.6483 | FLOPs: 20016.99M | Params: 19.55M
-[Iter 3] New Best Found! Energy: 241.8762 | FLOPs: 19826.15M | Params: 19.36M
-[Iter 6] New Best Found! Energy: 225.1298 | FLOPs: 18978.90M | Params: 18.53M
-[Iter 11] New Best Found! Energy: 221.3577 | FLOPs: 18788.06M | Params: 18.35M
-[Iter 12] New Best Found! Energy: 216.7151 | FLOPs: 18553.18M | Params: 18.12M
-[Iter 13] New Best Found! Energy: 214.4767 | FLOPs: 18439.93M | Params: 18.01M
-[Iter 14] New Best Found! Energy: 211.8653 | FLOPs: 18307.81M | Params: 17.88M
-[Iter 15] New Best Found! Energy: 203.2434 | FLOPs: 17871.60M | Params: 17.45M
-[Iter 22] New Best Found! Energy: 200.5905 | FLOPs: 17737.38M | Params: 17.32M
-[Iter 23] New Best Found! Energy: 161.4188 | FLOPs: 15755.58M | Params: 15.39M
-[Iter 24] New Best Found! Energy: 156.3203 | FLOPs: 15497.63M | Params: 15.13M
-[Iter 33] New Best Found! Energy: 152.8241 | FLOPs: 15282.41M | Params: 14.92M
-[Iter 35] New Best Found! Energy: 152.3627 | FLOPs: 15236.27M | Params: 14.88M
-[Iter 39] New Best Found! Energy: 147.3957 | FLOPs: 14739.57M | Params: 14.39M
-[Iter 40] New Best Found! Energy: 147.2594 | FLOPs: 14725.94M | Params: 14.38M
-[Iter 44] New Best Found! Energy: 146.4205 | FLOPs: 14642.05M | Params: 14.30M
-[Iter 46] New Best Found! Energy: 140.9050 | FLOPs: 14090.50M | Params: 13.76M
-[Iter 47] New Best Found! Energy: 140.7949 | FLOPs: 14079.49M | Params: 13.75M
-[Iter 63] New Best Found! Energy: 139.5320 | FLOPs: 13953.20M | Params: 13.63M
-[Iter 66] New Best Found! Energy: 134.1528 | FLOPs: 13415.28M | Params: 13.10M
-[Iter 70] New Best Found! Energy: 134.1214 | FLOPs: 13412.14M | Params: 13.10M
-[Iter 85] New Best Found! Energy: 133.8592 | FLOPs: 13385.92M | Params: 13.07M
-[Iter 95] New Best Found! Energy: 133.1134 | FLOPs: 13311.34M | Params: 13.00M
-[Iter 96] New Best Found! Energy: 132.3165 | FLOPs: 13231.65M | Params: 12.92M
-[Iter 178] New Best Found! Energy: 128.5096 | FLOPs: 12850.96M | Params: 12.55M
-[Iter 180] New Best Found! Energy: 126.5907 | FLOPs: 12659.07M | Params: 12.36M
-[Iter 186] New Best Found! Energy: 125.0906 | FLOPs: 12509.06M | Params: 12.22M
-[Iter 198] New Best Found! Energy: 124.5293 | FLOPs: 12452.93M | Params: 12.16M
-[Iter 200] New Best Found! Energy: 122.6861 | FLOPs: 12268.61M | Params: 11.98M
-[Iter 203] New Best Found! Energy: 122.3768 | FLOPs: 12237.68M | Params: 11.95M
-[Iter 204] New Best Found! Energy: 122.1916 | FLOPs: 12219.16M | Params: 11.93M
-[Iter 206] New Best Found! Energy: 120.2865 | FLOPs: 12028.65M | Params: 11.75M
-[Iter 219] New Best Found! Energy: 119.3506 | FLOPs: 11935.06M | Params: 11.66M
-[Iter 222] New Best Found! Energy: 118.7382 | FLOPs: 11873.82M | Params: 11.60M
-[Iter 227] New Best Found! Energy: 117.7971 | FLOPs: 11779.71M | Params: 11.50M
-[Iter 242] New Best Found! Energy: 117.5572 | FLOPs: 11755.72M | Params: 11.48M
-[Iter 257] New Best Found! Energy: 117.0832 | FLOPs: 11708.32M | Params: 11.43M
-[Iter 260] New Best Found! Energy: 116.1395 | FLOPs: 11613.95M | Params: 11.34M
-[Iter 263] New Best Found! Energy: 115.9950 | FLOPs: 11599.50M | Params: 11.33M
-[Iter 266] New Best Found! Energy: 114.4221 | FLOPs: 11442.21M | Params: 11.17M
-[Iter 269] New Best Found! Energy: 114.0473 | FLOPs: 11404.73M | Params: 11.14M
-[Iter 272] New Best Found! Energy: 113.3317 | FLOPs: 11333.17M | Params: 11.07M
-[Iter 273] New Best Found! Energy: 113.0485 | FLOPs: 11304.85M | Params: 11.04M
-[Iter 277] New Best Found! Energy: 112.2464 | FLOPs: 11224.64M | Params: 10.96M
-[Iter 280] New Best Found! Energy: 111.7139 | FLOPs: 11171.39M | Params: 10.91M
-[Iter 281] New Best Found! Energy: 111.5671 | FLOPs: 11156.71M | Params: 10.90M
-[Iter 282] New Best Found! Energy: 110.5107 | FLOPs: 11051.07M | Params: 10.79M
-[Iter 288] New Best Found! Energy: 109.0951 | FLOPs: 10909.51M | Params: 10.65M
-[Iter 301] New Best Found! Energy: 102.2127 | FLOPs: 10221.27M | Params: 9.98M
-[Iter 315] New Best Found! Energy: 101.2239 | FLOPs: 10122.39M | Params: 9.89M
-[Iter 319] New Best Found! Energy: 96.1586 | FLOPs: 9615.86M | Params: 9.39M
-[Iter 326] New Best Found! Energy: 95.7916 | FLOPs: 9579.16M | Params: 9.35M
-[Iter 334] New Best Found! Energy: 95.2713 | FLOPs: 9527.13M | Params: 9.30M
-[Iter 335] New Best Found! Energy: 94.2018 | FLOPs: 9420.18M | Params: 9.20M
-[Iter 336] New Best Found! Energy: 94.1717 | FLOPs: 9417.17M | Params: 9.20M
-[Iter 337] New Best Found! Energy: 93.9574 | FLOPs: 9395.74M | Params: 9.18M
-[Iter 339] New Best Found! Energy: 93.0687 | FLOPs: 9306.87M | Params: 9.09M
-[Iter 341] New Best Found! Energy: 93.0032 | FLOPs: 9300.32M | Params: 9.08M
-[Iter 346] New Best Found! Energy: 92.9133 | FLOPs: 9291.33M | Params: 9.07M
-[Iter 347] New Best Found! Energy: 92.7953 | FLOPs: 9279.53M | Params: 9.06M
-[Iter 359] New Best Found! Energy: 90.8818 | FLOPs: 9088.18M | Params: 8.88M
-[Iter 374] New Best Found! Energy: 90.6704 | FLOPs: 9067.04M | Params: 8.85M
-[Iter 376] New Best Found! Energy: 87.2514 | FLOPs: 8725.14M | Params: 8.52M
-[Iter 382] New Best Found! Energy: 78.2139 | FLOPs: 7821.39M | Params: 7.64M
-[Iter 383] New Best Found! Energy: 78.1970 | FLOPs: 7819.70M | Params: 7.64M
-[Iter 387] New Best Found! Energy: 77.9964 | FLOPs: 7799.64M | Params: 7.62M
-[Iter 408] New Best Found! Energy: 76.7195 | FLOPs: 7671.95M | Params: 7.49M
-[Iter 410] New Best Found! Energy: 76.1955 | FLOPs: 7619.55M | Params: 7.44M
-[Iter 418] New Best Found! Energy: 76.0699 | FLOPs: 7606.99M | Params: 7.43M
-[Iter 420] New Best Found! Energy: 76.0326 | FLOPs: 7603.26M | Params: 7.43M
-[Iter 421] New Best Found! Energy: 75.9294 | FLOPs: 7592.94M | Params: 7.41M
-[Iter 422] New Best Found! Energy: 75.8982 | FLOPs: 7589.82M | Params: 7.41M
-[Iter 450] New Best Found! Energy: 74.0218 | FLOPs: 7402.18M | Params: 7.23M
-[Iter 475] New Best Found! Energy: 72.6727 | FLOPs: 7267.27M | Params: 7.10M
-[Iter 477] New Best Found! Energy: 71.8248 | FLOPs: 7182.48M | Params: 7.01M
-[Iter 511] New Best Found! Energy: 69.7992 | FLOPs: 6979.92M | Params: 6.82M
-[Iter 512] New Best Found! Energy: 68.9997 | FLOPs: 6899.97M | Params: 6.74M
-[Iter 517] New Best Found! Energy: 68.7709 | FLOPs: 6877.09M | Params: 6.72M
-[Iter 518] New Best Found! Energy: 68.5210 | FLOPs: 6852.10M | Params: 6.69M
-[Iter 528] New Best Found! Energy: 68.4768 | FLOPs: 6847.68M | Params: 6.69M
-[Iter 529] New Best Found! Energy: 68.1419 | FLOPs: 6814.19M | Params: 6.65M
-[Iter 530] New Best Found! Energy: 67.7084 | FLOPs: 6770.84M | Params: 6.61M
-[Iter 531] New Best Found! Energy: 67.5942 | FLOPs: 6759.42M | Params: 6.60M
-[Iter 535] New Best Found! Energy: 63.6686 | FLOPs: 6366.86M | Params: 6.22M
-[Iter 566] New Best Found! Energy: 63.5791 | FLOPs: 6357.91M | Params: 6.21M
-[Iter 605] New Best Found! Energy: 61.8149 | FLOPs: 6181.49M | Params: 6.04M
-[Iter 613] New Best Found! Energy: 61.7589 | FLOPs: 6175.89M | Params: 6.03M
-[Iter 616] New Best Found! Energy: 61.4161 | FLOPs: 6141.61M | Params: 6.00M
-[Iter 620] New Best Found! Energy: 61.0799 | FLOPs: 6107.99M | Params: 5.96M
-[Iter 629] New Best Found! Energy: 61.0553 | FLOPs: 6105.53M | Params: 5.96M
-[Iter 633] New Best Found! Energy: 60.7080 | FLOPs: 6070.80M | Params: 5.93M
-[Iter 636] New Best Found! Energy: 59.2148 | FLOPs: 5921.48M | Params: 5.78M
-[Iter 637] New Best Found! Energy: 59.1204 | FLOPs: 5912.04M | Params: 5.77M
-[Iter 651] New Best Found! Energy: 59.0577 | FLOPs: 5905.77M | Params: 5.77M
-[Iter 666] New Best Found! Energy: 59.0441 | FLOPs: 5904.41M | Params: 5.77M
-[Iter 670] New Best Found! Energy: 58.9792 | FLOPs: 5897.92M | Params: 5.76M
-[Iter 673] New Best Found! Energy: 58.9527 | FLOPs: 5895.27M | Params: 5.76M
+>>> Variant: C-DGOSA (Full, lambda=0.5)...
+Start Searching... Initial Energy: 112.5089
+[Iter 0] New Best Found! Energy: 112.2258 | FLOPs: 11222.58M | Params: 10.96M
+[Iter 4] New Best Found! Energy: 93.3514 | FLOPs: 9335.14M | Params: 9.12M
+[Iter 29] New Best Found! Energy: 83.3775 | FLOPs: 8337.75M | Params: 8.14M
+[Iter 50] New Best Found! Energy: 61.9337 | FLOPs: 6193.37M | Params: 6.05M
+[Iter 54] New Best Found! Energy: 58.5415 | FLOPs: 5854.15M | Params: 5.72M
+[Iter 55] New Best Found! Energy: 57.1222 | FLOPs: 5712.22M | Params: 5.58M
+[Iter 61] New Best Found! Energy: 54.8227 | FLOPs: 5482.27M | Params: 5.35M
+[Iter 63] New Best Found! Energy: 51.9856 | FLOPs: 5198.56M | Params: 5.08M
+[Iter 67] New Best Found! Energy: 49.1766 | FLOPs: 4917.66M | Params: 4.80M
+[Iter 68] New Best Found! Energy: 49.1600 | FLOPs: 4916.00M | Params: 4.80M
+[Iter 98] New Best Found! Energy: 42.4397 | FLOPs: 4243.97M | Params: 4.14M
+[Iter 108] New Best Found! Energy: 42.4297 | FLOPs: 4242.97M | Params: 4.14M
+[Iter 153] New Best Found! Energy: 42.2004 | FLOPs: 4220.04M | Params: 4.12M
+[Iter 157] New Best Found! Energy: 38.1071 | FLOPs: 3810.71M | Params: 3.72M
+[Iter 160] New Best Found! Energy: 33.9046 | FLOPs: 3390.46M | Params: 3.31M
+[Iter 351] New Best Found! Energy: 31.9803 | FLOPs: 3198.03M | Params: 3.12M
+[Iter 378] New Best Found! Energy: 31.6477 | FLOPs: 3164.77M | Params: 3.09M
+[Iter 390] New Best Found! Energy: 31.2083 | FLOPs: 3120.83M | Params: 3.05M
+[Iter 424] New Best Found! Energy: 29.7640 | FLOPs: 2976.40M | Params: 2.91M
+[Iter 427] New Best Found! Energy: 29.5310 | FLOPs: 2953.10M | Params: 2.88M
+[Iter 433] New Best Found! Energy: 26.0673 | FLOPs: 2606.73M | Params: 2.55M
+[Iter 438] New Best Found! Energy: 25.5851 | FLOPs: 2558.51M | Params: 2.50M
+[Iter 499] New Best Found! Energy: 25.0852 | FLOPs: 2508.52M | Params: 2.45M
+[Iter 503] New Best Found! Energy: 24.6487 | FLOPs: 2464.87M | Params: 2.41M
+[Iter 513] New Best Found! Energy: 23.7876 | FLOPs: 2378.76M | Params: 2.32M
+[Iter 528] New Best Found! Energy: 23.3408 | FLOPs: 2334.08M | Params: 2.28M
+[Iter 531] New Best Found! Energy: 21.6156 | FLOPs: 2161.56M | Params: 2.11M
+[Iter 532] New Best Found! Energy: 21.4740 | FLOPs: 2147.40M | Params: 2.10M
+[Iter 536] New Best Found! Energy: 21.3597 | FLOPs: 2135.97M | Params: 2.09M
+[Iter 537] New Best Found! Energy: 21.1592 | FLOPs: 2115.92M | Params: 2.07M
+[Iter 549] New Best Found! Energy: 21.0855 | FLOPs: 2108.55M | Params: 2.06M
+[Iter 553] New Best Found! Energy: 20.7404 | FLOPs: 2074.04M | Params: 2.03M
+[Iter 555] New Best Found! Energy: 18.1526 | FLOPs: 1815.26M | Params: 1.77M
+[Iter 562] New Best Found! Energy: 17.7721 | FLOPs: 1777.21M | Params: 1.74M
+[Iter 574] New Best Found! Energy: 17.4271 | FLOPs: 1742.71M | Params: 1.70M
+[Iter 587] New Best Found! Energy: 17.0326 | FLOPs: 1703.26M | Params: 1.66M
+[Iter 590] New Best Found! Energy: 16.9191 | FLOPs: 1691.91M | Params: 1.65M
+[Iter 592] New Best Found! Energy: 16.9150 | FLOPs: 1691.50M | Params: 1.65M
+[Iter 597] New Best Found! Energy: 16.9106 | FLOPs: 1691.06M | Params: 1.65M
+[Iter 599] New Best Found! Energy: 16.5597 | FLOPs: 1655.97M | Params: 1.62M
+[Iter 606] New Best Found! Energy: 15.8718 | FLOPs: 1587.18M | Params: 1.55M
+[Iter 609] New Best Found! Energy: 15.5651 | FLOPs: 1556.51M | Params: 1.52M
+[Iter 613] New Best Found! Energy: 15.2230 | FLOPs: 1522.30M | Params: 1.49M
+[Iter 614] New Best Found! Energy: 15.1279 | FLOPs: 1512.79M | Params: 1.48M
+[Iter 635] New Best Found! Energy: 14.7828 | FLOPs: 1478.28M | Params: 1.44M
+[Iter 637] New Best Found! Energy: 14.7803 | FLOPs: 1478.03M | Params: 1.44M
+[Iter 642] New Best Found! Energy: 9.7373 | FLOPs: 973.73M | Params: 0.95M
+[Iter 645] New Best Found! Energy: 9.7356 | FLOPs: 973.56M | Params: 0.95M
+[Iter 649] New Best Found! Energy: 9.4768 | FLOPs: 947.68M | Params: 0.93M
+[Iter 655] New Best Found! Energy: 9.4355 | FLOPs: 943.55M | Params: 0.92M
 Training on cuda...
-Epoch 1/10, Loss: 2.2451
-Epoch 2/10, Loss: 1.3471
-Epoch 3/10, Loss: 1.0054
-Epoch 4/10, Loss: 0.8297
-Epoch 5/10, Loss: 0.7000
-Epoch 6/10, Loss: 0.5981
-Epoch 7/10, Loss: 0.5347
-Epoch 8/10, Loss: 0.4806
-Epoch 9/10, Loss: 0.4377
-Epoch 10/10, Loss: 0.3975
->>> Running Variant: w/o Split...
+Epoch 1/10, Loss: 1.4818
+Epoch 2/10, Loss: 0.9954
+Epoch 3/10, Loss: 0.7882
+Epoch 4/10, Loss: 0.6717
+Epoch 5/10, Loss: 0.5994
+Epoch 6/10, Loss: 0.5440
+Epoch 7/10, Loss: 0.4918
+Epoch 8/10, Loss: 0.4550
+Epoch 9/10, Loss: 0.4309
+Epoch 10/10, Loss: 0.4013
+>>> Variant: w/o Split...
 Training on cuda...
-Epoch 1/10, Loss: 2.1317
-Epoch 2/10, Loss: 1.4083
-Epoch 3/10, Loss: 1.0913
-Epoch 4/10, Loss: 0.8708
-Epoch 5/10, Loss: 0.7199
-Epoch 6/10, Loss: 0.6030
-Epoch 7/10, Loss: 0.5361
-Epoch 8/10, Loss: 0.4775
-Epoch 9/10, Loss: 0.4386
-Epoch 10/10, Loss: 0.3981
->>> Running Variant: w/o Constraint...
-Start Searching... Initial Energy: 268.5295
-[Iter 1] New Best Found! Energy: 252.6121 | FLOPs: 20369.31M | Params: 19.89M
-[Iter 3] New Best Found! Energy: 251.5344 | FLOPs: 20314.78M | Params: 19.84M
-[Iter 5] New Best Found! Energy: 248.9230 | FLOPs: 20182.66M | Params: 19.71M
-[Iter 9] New Best Found! Energy: 248.3634 | FLOPs: 20154.35M | Params: 19.68M
-[Iter 12] New Best Found! Energy: 248.0939 | FLOPs: 20140.72M | Params: 19.67M
-[Iter 13] New Best Found! Energy: 244.1146 | FLOPs: 19939.39M | Params: 19.47M
-[Iter 14] New Best Found! Energy: 243.8659 | FLOPs: 19926.81M | Params: 19.46M
-[Iter 15] New Best Found! Energy: 243.5757 | FLOPs: 19912.13M | Params: 19.45M
-[Iter 16] New Best Found! Energy: 243.5462 | FLOPs: 19910.64M | Params: 19.44M
-[Iter 18] New Best Found! Energy: 243.3804 | FLOPs: 19902.25M | Params: 19.44M
-[Iter 19] New Best Found! Energy: 243.0074 | FLOPs: 19883.38M | Params: 19.42M
-[Iter 23] New Best Found! Energy: 242.5877 | FLOPs: 19862.14M | Params: 19.40M
-[Iter 25] New Best Found! Energy: 241.0954 | FLOPs: 19786.65M | Params: 19.32M
-[Iter 29] New Best Found! Energy: 217.2193 | FLOPs: 18578.69M | Params: 18.14M
-[Iter 37] New Best Found! Energy: 207.5611 | FLOPs: 18090.05M | Params: 17.67M
-[Iter 38] New Best Found! Energy: 206.4005 | FLOPs: 18031.33M | Params: 17.61M
-[Iter 41] New Best Found! Energy: 195.9547 | FLOPs: 17502.85M | Params: 17.09M
-[Iter 42] New Best Found! Energy: 191.3121 | FLOPs: 17267.97M | Params: 16.86M
-[Iter 44] New Best Found! Energy: 185.3431 | FLOPs: 16965.98M | Params: 16.57M
-[Iter 47] New Best Found! Energy: 176.3896 | FLOPs: 16512.99M | Params: 16.13M
-[Iter 49] New Best Found! Energy: 173.9232 | FLOPs: 16388.21M | Params: 16.00M
-[Iter 52] New Best Found! Energy: 172.7626 | FLOPs: 16329.49M | Params: 15.95M
-[Iter 54] New Best Found! Energy: 164.1407 | FLOPs: 15893.28M | Params: 15.52M
-[Iter 55] New Best Found! Energy: 144.4939 | FLOPs: 14449.39M | Params: 14.11M
-[Iter 64] New Best Found! Energy: 142.0141 | FLOPs: 14201.41M | Params: 13.87M
-[Iter 71] New Best Found! Energy: 140.9583 | FLOPs: 14095.83M | Params: 13.77M
-[Iter 73] New Best Found! Energy: 137.9199 | FLOPs: 13791.99M | Params: 13.47M
-[Iter 74] New Best Found! Energy: 137.8859 | FLOPs: 13788.59M | Params: 13.47M
-[Iter 83] New Best Found! Energy: 125.8254 | FLOPs: 12582.54M | Params: 12.29M
-[Iter 87] New Best Found! Energy: 125.1359 | FLOPs: 12513.59M | Params: 12.22M
-[Iter 89] New Best Found! Energy: 116.1811 | FLOPs: 11618.11M | Params: 11.35M
-[Iter 104] New Best Found! Energy: 115.1092 | FLOPs: 11510.92M | Params: 11.24M
-[Iter 105] New Best Found! Energy: 114.7317 | FLOPs: 11473.17M | Params: 11.20M
-[Iter 107] New Best Found! Energy: 114.6374 | FLOPs: 11463.74M | Params: 11.20M
-[Iter 206] New Best Found! Energy: 97.7757 | FLOPs: 9777.57M | Params: 9.55M
-[Iter 213] New Best Found! Energy: 97.1301 | FLOPs: 9713.01M | Params: 9.49M
-[Iter 214] New Best Found! Energy: 96.8312 | FLOPs: 9683.12M | Params: 9.46M
-[Iter 218] New Best Found! Energy: 96.8196 | FLOPs: 9681.96M | Params: 9.46M
-[Iter 220] New Best Found! Energy: 94.8064 | FLOPs: 9480.64M | Params: 9.26M
-[Iter 225] New Best Found! Energy: 94.3247 | FLOPs: 9432.47M | Params: 9.21M
-[Iter 247] New Best Found! Energy: 93.8596 | FLOPs: 9385.96M | Params: 9.17M
-[Iter 253] New Best Found! Energy: 90.7976 | FLOPs: 9079.76M | Params: 8.87M
-[Iter 256] New Best Found! Energy: 90.5528 | FLOPs: 9055.28M | Params: 8.84M
-[Iter 310] New Best Found! Energy: 83.8916 | FLOPs: 8389.16M | Params: 8.19M
-[Iter 337] New Best Found! Energy: 83.7290 | FLOPs: 8372.90M | Params: 8.18M
-[Iter 338] New Best Found! Energy: 83.6923 | FLOPs: 8369.23M | Params: 8.17M
-[Iter 339] New Best Found! Energy: 82.5599 | FLOPs: 8255.99M | Params: 8.06M
-[Iter 341] New Best Found! Energy: 82.2243 | FLOPs: 8222.43M | Params: 8.03M
-[Iter 345] New Best Found! Energy: 79.9644 | FLOPs: 7996.44M | Params: 7.81M
-[Iter 347] New Best Found! Energy: 79.4439 | FLOPs: 7944.39M | Params: 7.76M
-[Iter 350] New Best Found! Energy: 77.0951 | FLOPs: 7709.51M | Params: 7.53M
-[Iter 351] New Best Found! Energy: 74.2644 | FLOPs: 7426.44M | Params: 7.25M
-[Iter 352] New Best Found! Energy: 74.1153 | FLOPs: 7411.53M | Params: 7.24M
-[Iter 354] New Best Found! Energy: 74.1134 | FLOPs: 7411.34M | Params: 7.24M
-[Iter 362] New Best Found! Energy: 71.9600 | FLOPs: 7196.00M | Params: 7.03M
-[Iter 364] New Best Found! Energy: 71.8774 | FLOPs: 7187.74M | Params: 7.02M
-[Iter 369] New Best Found! Energy: 70.9734 | FLOPs: 7097.34M | Params: 6.93M
-[Iter 370] New Best Found! Energy: 68.0852 | FLOPs: 6808.52M | Params: 6.65M
-[Iter 380] New Best Found! Energy: 67.7202 | FLOPs: 6772.02M | Params: 6.61M
-[Iter 383] New Best Found! Energy: 67.4120 | FLOPs: 6741.20M | Params: 6.58M
-[Iter 394] New Best Found! Energy: 65.0002 | FLOPs: 6500.02M | Params: 6.35M
-[Iter 399] New Best Found! Energy: 64.7997 | FLOPs: 6479.97M | Params: 6.33M
-[Iter 401] New Best Found! Energy: 61.7729 | FLOPs: 6177.29M | Params: 6.03M
-[Iter 403] New Best Found! Energy: 61.7156 | FLOPs: 6171.56M | Params: 6.03M
-[Iter 404] New Best Found! Energy: 61.2769 | FLOPs: 6127.69M | Params: 5.98M
-[Iter 408] New Best Found! Energy: 60.3804 | FLOPs: 6038.04M | Params: 5.90M
-[Iter 422] New Best Found! Energy: 55.6759 | FLOPs: 5567.59M | Params: 5.44M
-[Iter 425] New Best Found! Energy: 55.6483 | FLOPs: 5564.83M | Params: 5.43M
-[Iter 429] New Best Found! Energy: 55.6434 | FLOPs: 5564.34M | Params: 5.43M
-[Iter 433] New Best Found! Energy: 55.2973 | FLOPs: 5529.73M | Params: 5.40M
-[Iter 435] New Best Found! Energy: 55.0278 | FLOPs: 5502.78M | Params: 5.37M
-[Iter 440] New Best Found! Energy: 54.8738 | FLOPs: 5487.38M | Params: 5.36M
-[Iter 528] New Best Found! Energy: 54.5460 | FLOPs: 5454.60M | Params: 5.33M
-[Iter 532] New Best Found! Energy: 54.4685 | FLOPs: 5446.85M | Params: 5.32M
-[Iter 538] New Best Found! Energy: 53.5913 | FLOPs: 5359.13M | Params: 5.23M
-[Iter 545] New Best Found! Energy: 53.5622 | FLOPs: 5356.22M | Params: 5.23M
-[Iter 549] New Best Found! Energy: 52.7376 | FLOPs: 5273.76M | Params: 5.15M
-[Iter 553] New Best Found! Energy: 52.2658 | FLOPs: 5226.58M | Params: 5.10M
-[Iter 555] New Best Found! Energy: 51.4584 | FLOPs: 5145.84M | Params: 5.03M
-[Iter 561] New Best Found! Energy: 50.7898 | FLOPs: 5078.98M | Params: 4.96M
-[Iter 568] New Best Found! Energy: 50.5854 | FLOPs: 5058.54M | Params: 4.94M
-[Iter 570] New Best Found! Energy: 50.0014 | FLOPs: 5000.14M | Params: 4.88M
-[Iter 579] New Best Found! Energy: 49.7412 | FLOPs: 4974.12M | Params: 4.86M
-[Iter 589] New Best Found! Energy: 49.6661 | FLOPs: 4966.61M | Params: 4.85M
-[Iter 592] New Best Found! Energy: 49.6320 | FLOPs: 4963.20M | Params: 4.85M
-[Iter 593] New Best Found! Energy: 48.5507 | FLOPs: 4855.07M | Params: 4.74M
-[Iter 594] New Best Found! Energy: 48.2217 | FLOPs: 4822.17M | Params: 4.71M
-[Iter 596] New Best Found! Energy: 48.1725 | FLOPs: 4817.25M | Params: 4.70M
-[Iter 597] New Best Found! Energy: 48.1493 | FLOPs: 4814.93M | Params: 4.70M
-[Iter 600] New Best Found! Energy: 48.0668 | FLOPs: 4806.68M | Params: 4.69M
-[Iter 606] New Best Found! Energy: 47.4150 | FLOPs: 4741.50M | Params: 4.63M
-[Iter 645] New Best Found! Energy: 46.4041 | FLOPs: 4640.41M | Params: 4.53M
-[Iter 655] New Best Found! Energy: 46.2999 | FLOPs: 4629.99M | Params: 4.52M
-[Iter 659] New Best Found! Energy: 44.9590 | FLOPs: 4495.90M | Params: 4.39M
-[Iter 663] New Best Found! Energy: 44.8676 | FLOPs: 4486.76M | Params: 4.38M
-[Iter 664] New Best Found! Energy: 44.6952 | FLOPs: 4469.52M | Params: 4.36M
-[Iter 668] New Best Found! Energy: 44.5746 | FLOPs: 4457.46M | Params: 4.35M
-[Iter 670] New Best Found! Energy: 44.1913 | FLOPs: 4419.13M | Params: 4.32M
+Epoch 1/10, Loss: 1.4399
+Epoch 2/10, Loss: 0.9378
+Epoch 3/10, Loss: 0.7346
+Epoch 4/10, Loss: 0.6305
+Epoch 5/10, Loss: 0.5612
+Epoch 6/10, Loss: 0.5068
+Epoch 7/10, Loss: 0.4670
+Epoch 8/10, Loss: 0.4377
+Epoch 9/10, Loss: 0.4090
+Epoch 10/10, Loss: 0.3771
+>>> Variant: w/o Constraint (lambda=0)...
+Start Searching... Initial Energy: 112.5089
+[Iter 2] New Best Found! Energy: 111.7540 | FLOPs: 11175.40M | Params: 10.91M
+[Iter 3] New Best Found! Energy: 111.1877 | FLOPs: 11118.77M | Params: 10.86M
+[Iter 6] New Best Found! Energy: 100.6181 | FLOPs: 10061.81M | Params: 9.83M
+[Iter 8] New Best Found! Energy: 88.5385 | FLOPs: 8853.85M | Params: 8.65M
+[Iter 10] New Best Found! Energy: 85.8371 | FLOPs: 8583.71M | Params: 8.38M
+[Iter 11] New Best Found! Energy: 82.8172 | FLOPs: 8281.72M | Params: 8.09M
+[Iter 13] New Best Found! Energy: 65.8303 | FLOPs: 6583.03M | Params: 6.43M
+[Iter 16] New Best Found! Energy: 65.2640 | FLOPs: 6526.40M | Params: 6.37M
+[Iter 23] New Best Found! Energy: 56.2987 | FLOPs: 5629.87M | Params: 5.50M
+[Iter 26] New Best Found! Energy: 54.4584 | FLOPs: 5445.84M | Params: 5.32M
+[Iter 29] New Best Found! Energy: 54.2697 | FLOPs: 5426.97M | Params: 5.30M
+[Iter 30] New Best Found! Energy: 54.0810 | FLOPs: 5408.10M | Params: 5.28M
+[Iter 31] New Best Found! Energy: 35.9616 | FLOPs: 3596.16M | Params: 3.51M
+[Iter 32] New Best Found! Energy: 35.8200 | FLOPs: 3582.00M | Params: 3.50M
+[Iter 36] New Best Found! Energy: 34.4752 | FLOPs: 3447.52M | Params: 3.37M
+[Iter 37] New Best Found! Energy: 34.3808 | FLOPs: 3438.08M | Params: 3.36M
+[Iter 38] New Best Found! Energy: 33.9326 | FLOPs: 3393.26M | Params: 3.31M
+[Iter 49] New Best Found! Energy: 32.6246 | FLOPs: 3262.46M | Params: 3.19M
+[Iter 51] New Best Found! Energy: 28.4959 | FLOPs: 2849.59M | Params: 2.78M
+[Iter 59] New Best Found! Energy: 27.4158 | FLOPs: 2741.58M | Params: 2.68M
+[Iter 60] New Best Found! Energy: 26.4072 | FLOPs: 2640.72M | Params: 2.58M
+[Iter 66] New Best Found! Energy: 25.8129 | FLOPs: 2581.29M | Params: 2.52M
+[Iter 67] New Best Found! Energy: 24.9872 | FLOPs: 2498.72M | Params: 2.44M
+[Iter 79] New Best Found! Energy: 23.4979 | FLOPs: 2349.79M | Params: 2.29M
+[Iter 81] New Best Found! Energy: 21.7638 | FLOPs: 2176.38M | Params: 2.13M
+[Iter 84] New Best Found! Energy: 20.2538 | FLOPs: 2025.38M | Params: 1.98M
+[Iter 127] New Best Found! Energy: 20.1418 | FLOPs: 2014.18M | Params: 1.97M
+[Iter 372] New Best Found! Energy: 12.6561 | FLOPs: 1265.61M | Params: 1.24M
+[Iter 597] New Best Found! Energy: 12.2189 | FLOPs: 1221.89M | Params: 1.19M
+[Iter 603] New Best Found! Energy: 12.1924 | FLOPs: 1219.24M | Params: 1.19M
+[Iter 606] New Best Found! Energy: 11.6158 | FLOPs: 1161.58M | Params: 1.13M
+[Iter 613] New Best Found! Energy: 11.5008 | FLOPs: 1150.08M | Params: 1.12M
+[Iter 615] New Best Found! Energy: 11.3917 | FLOPs: 1139.17M | Params: 1.11M
+[Iter 617] New Best Found! Energy: 10.7186 | FLOPs: 1071.86M | Params: 1.05M
+[Iter 629] New Best Found! Energy: 10.6979 | FLOPs: 1069.79M | Params: 1.04M
+[Iter 633] New Best Found! Energy: 9.9238 | FLOPs: 992.38M | Params: 0.97M
+[Iter 634] New Best Found! Energy: 9.9064 | FLOPs: 990.64M | Params: 0.97M
+[Iter 638] New Best Found! Energy: 9.7338 | FLOPs: 973.38M | Params: 0.95M
+[Iter 639] New Best Found! Energy: 9.7132 | FLOPs: 971.32M | Params: 0.95M
+[Iter 640] New Best Found! Energy: 9.4212 | FLOPs: 942.12M | Params: 0.92M
+[Iter 658] New Best Found! Energy: 9.2332 | FLOPs: 923.32M | Params: 0.90M
+[Iter 660] New Best Found! Energy: 9.2283 | FLOPs: 922.83M | Params: 0.90M
+[Iter 671] New Best Found! Energy: 8.8817 | FLOPs: 888.17M | Params: 0.87M
 Training on cuda...
-Epoch 1/10, Loss: 1.9877
-Epoch 2/10, Loss: 1.2477
-Epoch 3/10, Loss: 0.9693
-Epoch 4/10, Loss: 0.8005
-Epoch 5/10, Loss: 0.6755
-Epoch 6/10, Loss: 0.5950
-Epoch 7/10, Loss: 0.5248
-Epoch 8/10, Loss: 0.4783
-Epoch 9/10, Loss: 0.4412
-Epoch 10/10, Loss: 0.3989
->>> Running Variant: C-DGOSA-Greedy (Simulated)...
+Epoch 1/10, Loss: 1.4864
+Epoch 2/10, Loss: 0.9939
+Epoch 3/10, Loss: 0.8024
+Epoch 4/10, Loss: 0.6848
+Epoch 5/10, Loss: 0.6102
+Epoch 6/10, Loss: 0.5506
+Epoch 7/10, Loss: 0.5103
+Epoch 8/10, Loss: 0.4716
+Epoch 9/10, Loss: 0.4444
+Epoch 10/10, Loss: 0.4122
 
->>> Results saved to results/Table_2_Ablation_Study.csv
+>>> Results saved to results_50epochs_V2/Table_2_Ablation_Study.csv
 
 --- Table 2 Ablation ---
                Variant  Latency (ms)  Peak Memory (MB)  Top-1 Acc (%)
-        C-DGOSA (Full)         27.29             69.09          84.37
-     C-DGOSA w/o Split         23.05            163.88          84.63
-C-DGOSA w/o Constraint         23.10             51.79          84.34
-        C-DGOSA-Greedy         31.39             75.99          83.87
+        C-DGOSA (Full)          6.55             11.06          84.22
+     C-DGOSA w/o Split          7.80             49.11          82.72
+C-DGOSA w/o Constraint          6.72             10.41          82.99
+        C-DGOSA-Greedy          7.54             12.16          83.72
 
 ============================================================
 >> Running Experiment 3: Sensitivity Analysis (Table 3)
@@ -1029,606 +1033,381 @@ C-DGOSA w/o Constraint         23.10             51.79          84.34
 Files already downloaded and verified
 Files already downloaded and verified
 Testing Lambda = 0...
-Start Searching... Initial Energy: 268.5295
-[Iter 12] New Best Found! Energy: 267.7419 | FLOPs: 21134.77M | Params: 20.64M
-[Iter 13] New Best Found! Energy: 263.0994 | FLOPs: 20899.89M | Params: 20.41M
-[Iter 15] New Best Found! Energy: 259.3273 | FLOPs: 20709.05M | Params: 20.22M
-[Iter 16] New Best Found! Energy: 259.1200 | FLOPs: 20698.56M | Params: 20.21M
-[Iter 20] New Best Found! Energy: 247.8812 | FLOPs: 20129.96M | Params: 19.66M
-[Iter 22] New Best Found! Energy: 232.6270 | FLOPs: 19358.20M | Params: 18.90M
-[Iter 27] New Best Found! Energy: 232.3783 | FLOPs: 19345.62M | Params: 18.89M
-[Iter 30] New Best Found! Energy: 228.6062 | FLOPs: 19154.78M | Params: 18.71M
-[Iter 31] New Best Found! Energy: 228.3989 | FLOPs: 19144.29M | Params: 18.70M
-[Iter 34] New Best Found! Energy: 228.0259 | FLOPs: 19125.42M | Params: 18.68M
-[Iter 37] New Best Found! Energy: 227.3627 | FLOPs: 19091.87M | Params: 18.64M
-[Iter 43] New Best Found! Energy: 216.5853 | FLOPs: 18546.61M | Params: 18.11M
-[Iter 44] New Best Found! Energy: 215.9220 | FLOPs: 18513.05M | Params: 18.08M
-[Iter 46] New Best Found! Energy: 212.1914 | FLOPs: 18324.31M | Params: 17.89M
-[Iter 50] New Best Found! Energy: 207.5488 | FLOPs: 18089.43M | Params: 17.67M
-[Iter 60] New Best Found! Energy: 198.6484 | FLOPs: 17639.13M | Params: 17.23M
-[Iter 61] New Best Found! Energy: 194.8763 | FLOPs: 17448.29M | Params: 17.04M
-[Iter 62] New Best Found! Energy: 194.0887 | FLOPs: 17408.44M | Params: 17.00M
-[Iter 63] New Best Found! Energy: 192.8763 | FLOPs: 17347.10M | Params: 16.94M
-[Iter 64] New Best Found! Energy: 192.3374 | FLOPs: 17319.84M | Params: 16.91M
-[Iter 68] New Best Found! Energy: 191.2597 | FLOPs: 17265.31M | Params: 16.86M
-[Iter 70] New Best Found! Energy: 187.7233 | FLOPs: 17086.40M | Params: 16.69M
-[Iter 84] New Best Found! Energy: 187.5187 | FLOPs: 17076.04M | Params: 16.68M
-[Iter 85] New Best Found! Energy: 187.4928 | FLOPs: 17074.73M | Params: 16.67M
-[Iter 89] New Best Found! Energy: 182.8295 | FLOPs: 16838.80M | Params: 16.44M
-[Iter 95] New Best Found! Energy: 182.6637 | FLOPs: 16830.41M | Params: 16.44M
-[Iter 100] New Best Found! Energy: 170.4964 | FLOPs: 16214.84M | Params: 15.83M
-[Iter 102] New Best Found! Energy: 154.5790 | FLOPs: 15409.53M | Params: 15.05M
-[Iter 113] New Best Found! Energy: 153.6576 | FLOPs: 15362.92M | Params: 15.00M
-[Iter 116] New Best Found! Energy: 153.2110 | FLOPs: 15321.10M | Params: 14.96M
-[Iter 137] New Best Found! Energy: 134.0672 | FLOPs: 13406.72M | Params: 13.09M
-[Iter 138] New Best Found! Energy: 124.4413 | FLOPs: 12444.13M | Params: 12.15M
-[Iter 149] New Best Found! Energy: 124.1267 | FLOPs: 12412.67M | Params: 12.12M
-[Iter 153] New Best Found! Energy: 122.4202 | FLOPs: 12242.02M | Params: 11.96M
-[Iter 158] New Best Found! Energy: 122.2524 | FLOPs: 12225.24M | Params: 11.94M
-[Iter 160] New Best Found! Energy: 121.5551 | FLOPs: 12155.51M | Params: 11.87M
-[Iter 201] New Best Found! Energy: 120.7500 | FLOPs: 12075.00M | Params: 11.79M
-[Iter 207] New Best Found! Energy: 115.6195 | FLOPs: 11561.95M | Params: 11.29M
-[Iter 209] New Best Found! Energy: 108.0698 | FLOPs: 10806.98M | Params: 10.55M
-[Iter 210] New Best Found! Energy: 107.2637 | FLOPs: 10726.37M | Params: 10.47M
-[Iter 220] New Best Found! Energy: 106.4403 | FLOPs: 10644.03M | Params: 10.39M
-[Iter 226] New Best Found! Energy: 104.3209 | FLOPs: 10432.09M | Params: 10.19M
-[Iter 227] New Best Found! Energy: 103.6760 | FLOPs: 10367.60M | Params: 10.12M
-[Iter 229] New Best Found! Energy: 102.5081 | FLOPs: 10250.81M | Params: 10.01M
-[Iter 230] New Best Found! Energy: 100.9038 | FLOPs: 10090.38M | Params: 9.85M
-[Iter 231] New Best Found! Energy: 100.7069 | FLOPs: 10070.69M | Params: 9.83M
-[Iter 232] New Best Found! Energy: 100.6980 | FLOPs: 10069.80M | Params: 9.83M
-[Iter 243] New Best Found! Energy: 93.2974 | FLOPs: 9329.74M | Params: 9.11M
-[Iter 245] New Best Found! Energy: 90.0782 | FLOPs: 9007.82M | Params: 8.80M
-[Iter 246] New Best Found! Energy: 88.7361 | FLOPs: 8873.61M | Params: 8.67M
-[Iter 260] New Best Found! Energy: 87.1689 | FLOPs: 8716.89M | Params: 8.51M
-[Iter 261] New Best Found! Energy: 86.5840 | FLOPs: 8658.40M | Params: 8.46M
-[Iter 264] New Best Found! Energy: 86.0473 | FLOPs: 8604.73M | Params: 8.40M
-[Iter 266] New Best Found! Energy: 81.7180 | FLOPs: 8171.80M | Params: 7.98M
-[Iter 278] New Best Found! Energy: 81.6429 | FLOPs: 8164.29M | Params: 7.97M
-[Iter 279] New Best Found! Energy: 81.4482 | FLOPs: 8144.82M | Params: 7.95M
-[Iter 280] New Best Found! Energy: 80.1060 | FLOPs: 8010.60M | Params: 7.82M
-[Iter 281] New Best Found! Energy: 78.9117 | FLOPs: 7891.17M | Params: 7.71M
-[Iter 327] New Best Found! Energy: 78.7668 | FLOPs: 7876.68M | Params: 7.69M
-[Iter 342] New Best Found! Energy: 78.5039 | FLOPs: 7850.39M | Params: 7.67M
-[Iter 345] New Best Found! Energy: 78.4514 | FLOPs: 7845.14M | Params: 7.66M
-[Iter 346] New Best Found! Energy: 75.2664 | FLOPs: 7526.64M | Params: 7.35M
-[Iter 348] New Best Found! Energy: 73.4940 | FLOPs: 7349.40M | Params: 7.18M
-[Iter 350] New Best Found! Energy: 73.0260 | FLOPs: 7302.60M | Params: 7.13M
-[Iter 357] New Best Found! Energy: 72.8448 | FLOPs: 7284.48M | Params: 7.11M
-[Iter 358] New Best Found! Energy: 71.4253 | FLOPs: 7142.53M | Params: 6.98M
-[Iter 364] New Best Found! Energy: 70.6232 | FLOPs: 7062.32M | Params: 6.90M
-[Iter 413] New Best Found! Energy: 70.0940 | FLOPs: 7009.40M | Params: 6.85M
-[Iter 415] New Best Found! Energy: 68.9827 | FLOPs: 6898.27M | Params: 6.74M
-[Iter 423] New Best Found! Energy: 67.9733 | FLOPs: 6797.33M | Params: 6.64M
-[Iter 441] New Best Found! Energy: 67.8979 | FLOPs: 6789.79M | Params: 6.63M
-[Iter 442] New Best Found! Energy: 66.3880 | FLOPs: 6638.80M | Params: 6.48M
-[Iter 448] New Best Found! Energy: 65.9895 | FLOPs: 6598.95M | Params: 6.44M
-[Iter 473] New Best Found! Energy: 65.8090 | FLOPs: 6580.90M | Params: 6.43M
-[Iter 478] New Best Found! Energy: 62.7514 | FLOPs: 6275.14M | Params: 6.13M
-[Iter 483] New Best Found! Energy: 62.6585 | FLOPs: 6265.85M | Params: 6.12M
-[Iter 485] New Best Found! Energy: 62.5823 | FLOPs: 6258.23M | Params: 6.11M
-[Iter 488] New Best Found! Energy: 61.7664 | FLOPs: 6176.64M | Params: 6.03M
-[Iter 491] New Best Found! Energy: 61.6877 | FLOPs: 6168.77M | Params: 6.02M
-[Iter 492] New Best Found! Energy: 57.0854 | FLOPs: 5708.54M | Params: 5.57M
-[Iter 499] New Best Found! Energy: 56.1836 | FLOPs: 5618.36M | Params: 5.49M
-[Iter 507] New Best Found! Energy: 56.0260 | FLOPs: 5602.60M | Params: 5.47M
-[Iter 550] New Best Found! Energy: 54.6523 | FLOPs: 5465.23M | Params: 5.34M
-[Iter 584] New Best Found! Energy: 54.6147 | FLOPs: 5461.47M | Params: 5.33M
-[Iter 585] New Best Found! Energy: 54.3011 | FLOPs: 5430.11M | Params: 5.30M
-[Iter 587] New Best Found! Energy: 54.2722 | FLOPs: 5427.22M | Params: 5.30M
-[Iter 593] New Best Found! Energy: 54.1720 | FLOPs: 5417.20M | Params: 5.29M
-[Iter 599] New Best Found! Energy: 52.7018 | FLOPs: 5270.18M | Params: 5.15M
-[Iter 602] New Best Found! Energy: 50.6581 | FLOPs: 5065.81M | Params: 4.95M
-[Iter 609] New Best Found! Energy: 48.9044 | FLOPs: 4890.44M | Params: 4.78M
-[Iter 615] New Best Found! Energy: 48.4287 | FLOPs: 4842.87M | Params: 4.73M
-[Iter 618] New Best Found! Energy: 48.1830 | FLOPs: 4818.30M | Params: 4.71M
-[Iter 644] New Best Found! Energy: 46.6153 | FLOPs: 4661.53M | Params: 4.55M
-[Iter 646] New Best Found! Energy: 45.6553 | FLOPs: 4565.53M | Params: 4.46M
-[Iter 647] New Best Found! Energy: 45.6352 | FLOPs: 4563.52M | Params: 4.46M
-[Iter 666] New Best Found! Energy: 44.8092 | FLOPs: 4480.92M | Params: 4.38M
-[Iter 671] New Best Found! Energy: 44.7207 | FLOPs: 4472.07M | Params: 4.37M
+Start Searching... Initial Energy: 112.5089
+[Iter 0] New Best Found! Energy: 112.1314 | FLOPs: 11213.14M | Params: 10.95M
+[Iter 1] New Best Found! Energy: 104.7704 | FLOPs: 10477.04M | Params: 10.23M
+[Iter 3] New Best Found! Energy: 99.4856 | FLOPs: 9948.56M | Params: 9.72M
+[Iter 4] New Best Found! Energy: 98.1644 | FLOPs: 9816.44M | Params: 9.59M
+[Iter 6] New Best Found! Energy: 95.5220 | FLOPs: 9552.20M | Params: 9.33M
+[Iter 8] New Best Found! Energy: 90.6147 | FLOPs: 9061.47M | Params: 8.85M
+[Iter 9] New Best Found! Energy: 90.1428 | FLOPs: 9014.28M | Params: 8.80M
+[Iter 13] New Best Found! Energy: 89.7181 | FLOPs: 8971.81M | Params: 8.76M
+[Iter 14] New Best Found! Energy: 88.7272 | FLOPs: 8872.72M | Params: 8.66M
+[Iter 26] New Best Found! Energy: 80.4299 | FLOPs: 8042.99M | Params: 7.85M
+[Iter 38] New Best Found! Energy: 78.3183 | FLOPs: 7831.83M | Params: 7.65M
+[Iter 42] New Best Found! Energy: 73.7885 | FLOPs: 7378.85M | Params: 7.21M
+[Iter 45] New Best Found! Energy: 73.6233 | FLOPs: 7362.33M | Params: 7.19M
+[Iter 46] New Best Found! Energy: 73.3166 | FLOPs: 7331.66M | Params: 7.16M
+[Iter 77] New Best Found! Energy: 53.9895 | FLOPs: 5398.95M | Params: 5.27M
+[Iter 93] New Best Found! Energy: 49.8136 | FLOPs: 4981.36M | Params: 4.86M
+[Iter 98] New Best Found! Energy: 46.8409 | FLOPs: 4684.09M | Params: 4.57M
+[Iter 100] New Best Found! Energy: 46.6197 | FLOPs: 4661.97M | Params: 4.55M
+[Iter 110] New Best Found! Energy: 42.6915 | FLOPs: 4269.15M | Params: 4.17M
+[Iter 111] New Best Found! Energy: 42.5934 | FLOPs: 4259.34M | Params: 4.16M
+[Iter 115] New Best Found! Energy: 42.5868 | FLOPs: 4258.68M | Params: 4.16M
+[Iter 117] New Best Found! Energy: 38.1012 | FLOPs: 3810.12M | Params: 3.72M
+[Iter 118] New Best Found! Energy: 37.7760 | FLOPs: 3777.60M | Params: 3.69M
+[Iter 119] New Best Found! Energy: 36.5875 | FLOPs: 3658.75M | Params: 3.57M
+[Iter 148] New Best Found! Energy: 32.5767 | FLOPs: 3257.67M | Params: 3.18M
+[Iter 152] New Best Found! Energy: 32.3703 | FLOPs: 3237.03M | Params: 3.16M
+[Iter 156] New Best Found! Energy: 29.0945 | FLOPs: 2909.45M | Params: 2.84M
+[Iter 157] New Best Found! Energy: 29.0912 | FLOPs: 2909.12M | Params: 2.84M
+[Iter 158] New Best Found! Energy: 28.8848 | FLOPs: 2888.48M | Params: 2.82M
+[Iter 163] New Best Found! Energy: 28.7698 | FLOPs: 2876.98M | Params: 2.81M
+[Iter 202] New Best Found! Energy: 28.1549 | FLOPs: 2815.49M | Params: 2.75M
+[Iter 205] New Best Found! Energy: 23.8683 | FLOPs: 2386.83M | Params: 2.33M
+[Iter 208] New Best Found! Energy: 23.8418 | FLOPs: 2384.18M | Params: 2.33M
+[Iter 209] New Best Found! Energy: 23.4038 | FLOPs: 2340.38M | Params: 2.29M
+[Iter 353] New Best Found! Energy: 21.6473 | FLOPs: 2164.73M | Params: 2.11M
+[Iter 360] New Best Found! Energy: 19.8793 | FLOPs: 1987.93M | Params: 1.94M
+[Iter 362] New Best Found! Energy: 19.7908 | FLOPs: 1979.08M | Params: 1.93M
+[Iter 369] New Best Found! Energy: 19.7245 | FLOPs: 1972.45M | Params: 1.93M
+[Iter 465] New Best Found! Energy: 18.4766 | FLOPs: 1847.66M | Params: 1.80M
+[Iter 470] New Best Found! Energy: 17.5683 | FLOPs: 1756.83M | Params: 1.72M
+[Iter 479] New Best Found! Energy: 17.2277 | FLOPs: 1722.77M | Params: 1.68M
+[Iter 564] New Best Found! Energy: 16.8697 | FLOPs: 1686.97M | Params: 1.65M
+[Iter 565] New Best Found! Energy: 16.4052 | FLOPs: 1640.52M | Params: 1.60M
+[Iter 569] New Best Found! Energy: 16.0403 | FLOPs: 1604.03M | Params: 1.57M
+[Iter 574] New Best Found! Energy: 16.0005 | FLOPs: 1600.05M | Params: 1.56M
+[Iter 576] New Best Found! Energy: 15.3900 | FLOPs: 1539.00M | Params: 1.50M
+[Iter 578] New Best Found! Energy: 15.3590 | FLOPs: 1535.90M | Params: 1.50M
+[Iter 579] New Best Found! Energy: 12.9437 | FLOPs: 1294.37M | Params: 1.26M
+[Iter 582] New Best Found! Energy: 10.2541 | FLOPs: 1025.41M | Params: 1.00M
+[Iter 583] New Best Found! Energy: 9.8427 | FLOPs: 984.27M | Params: 0.96M
+[Iter 591] New Best Found! Energy: 9.6038 | FLOPs: 960.38M | Params: 0.94M
+[Iter 646] New Best Found! Energy: 8.9262 | FLOPs: 892.62M | Params: 0.87M
+[Iter 654] New Best Found! Energy: 8.8437 | FLOPs: 884.37M | Params: 0.86M
+[Iter 658] New Best Found! Energy: 8.4721 | FLOPs: 847.21M | Params: 0.83M
+[Iter 660] New Best Found! Energy: 8.4455 | FLOPs: 844.55M | Params: 0.82M
+[Iter 664] New Best Found! Energy: 8.1551 | FLOPs: 815.51M | Params: 0.80M
+[Iter 665] New Best Found! Energy: 8.1167 | FLOPs: 811.67M | Params: 0.79M
+[Iter 666] New Best Found! Energy: 7.7496 | FLOPs: 774.96M | Params: 0.76M
+[Iter 670] New Best Found! Energy: 7.5173 | FLOPs: 751.73M | Params: 0.73M
+[Iter 674] New Best Found! Energy: 7.4937 | FLOPs: 749.37M | Params: 0.73M
 Testing Lambda = 0.1...
-Start Searching... Initial Energy: 268.5295
-[Iter 1] New Best Found! Energy: 268.2394 | FLOPs: 21159.94M | Params: 20.66M
-[Iter 25] New Best Found! Energy: 267.4518 | FLOPs: 21120.09M | Params: 20.63M
-[Iter 26] New Best Found! Energy: 263.4724 | FLOPs: 20918.76M | Params: 20.43M
-[Iter 28] New Best Found! Energy: 249.4618 | FLOPs: 20209.93M | Params: 19.74M
-[Iter 29] New Best Found! Energy: 248.9722 | FLOPs: 20185.15M | Params: 19.71M
-[Iter 35] New Best Found! Energy: 248.6768 | FLOPs: 20170.21M | Params: 19.70M
-[Iter 39] New Best Found! Energy: 248.4074 | FLOPs: 20156.58M | Params: 19.68M
-[Iter 40] New Best Found! Energy: 248.2915 | FLOPs: 20150.71M | Params: 19.68M
-[Iter 43] New Best Found! Energy: 247.5756 | FLOPs: 20114.50M | Params: 19.64M
-[Iter 48] New Best Found! Energy: 247.2440 | FLOPs: 20097.72M | Params: 19.63M
-[Iter 49] New Best Found! Energy: 247.1281 | FLOPs: 20091.85M | Params: 19.62M
-[Iter 50] New Best Found! Energy: 246.7913 | FLOPs: 20074.82M | Params: 19.60M
-[Iter 52] New Best Found! Energy: 240.8223 | FLOPs: 19772.83M | Params: 19.31M
-[Iter 53] New Best Found! Energy: 240.8026 | FLOPs: 19771.83M | Params: 19.31M
-[Iter 66] New Best Found! Energy: 216.8853 | FLOPs: 18561.79M | Params: 18.13M
-[Iter 70] New Best Found! Energy: 216.5537 | FLOPs: 18545.01M | Params: 18.11M
-[Iter 73] New Best Found! Energy: 211.8282 | FLOPs: 18305.93M | Params: 17.88M
-[Iter 74] New Best Found! Energy: 211.4344 | FLOPs: 18286.01M | Params: 17.86M
-[Iter 77] New Best Found! Energy: 206.7919 | FLOPs: 18051.13M | Params: 17.63M
-[Iter 78] New Best Found! Energy: 206.2944 | FLOPs: 18025.96M | Params: 17.60M
-[Iter 85] New Best Found! Energy: 192.8849 | FLOPs: 17347.53M | Params: 16.94M
-[Iter 86] New Best Found! Energy: 182.4391 | FLOPs: 16819.05M | Params: 16.42M
-[Iter 89] New Best Found! Energy: 179.7862 | FLOPs: 16684.83M | Params: 16.29M
-[Iter 91] New Best Found! Energy: 179.6579 | FLOPs: 16678.35M | Params: 16.29M
-[Iter 203] New Best Found! Energy: 177.6012 | FLOPs: 16574.29M | Params: 16.19M
-[Iter 204] New Best Found! Energy: 177.0727 | FLOPs: 16547.55M | Params: 16.16M
-[Iter 205] New Best Found! Energy: 173.0468 | FLOPs: 16343.87M | Params: 15.96M
-[Iter 209] New Best Found! Energy: 171.3472 | FLOPs: 16257.88M | Params: 15.88M
-[Iter 210] New Best Found! Energy: 171.2294 | FLOPs: 16251.92M | Params: 15.87M
-[Iter 214] New Best Found! Energy: 159.3742 | FLOPs: 15652.13M | Params: 15.29M
-[Iter 215] New Best Found! Energy: 159.3354 | FLOPs: 15650.17M | Params: 15.28M
-[Iter 216] New Best Found! Energy: 159.2790 | FLOPs: 15647.32M | Params: 15.28M
-[Iter 217] New Best Found! Energy: 150.0978 | FLOPs: 15009.78M | Params: 14.66M
-[Iter 244] New Best Found! Energy: 149.5757 | FLOPs: 14957.57M | Params: 14.61M
-[Iter 247] New Best Found! Energy: 147.5706 | FLOPs: 14757.06M | Params: 14.41M
-[Iter 269] New Best Found! Energy: 138.5473 | FLOPs: 13854.73M | Params: 13.53M
-[Iter 274] New Best Found! Energy: 137.5460 | FLOPs: 13754.60M | Params: 13.43M
-[Iter 277] New Best Found! Energy: 137.4641 | FLOPs: 13746.41M | Params: 13.42M
-[Iter 278] New Best Found! Energy: 137.2164 | FLOPs: 13721.64M | Params: 13.40M
-[Iter 286] New Best Found! Energy: 136.6099 | FLOPs: 13660.99M | Params: 13.34M
-[Iter 289] New Best Found! Energy: 135.4551 | FLOPs: 13545.51M | Params: 13.23M
-[Iter 290] New Best Found! Energy: 135.0629 | FLOPs: 13506.29M | Params: 13.19M
-[Iter 295] New Best Found! Energy: 134.9326 | FLOPs: 13493.26M | Params: 13.18M
-[Iter 304] New Best Found! Energy: 134.4830 | FLOPs: 13448.30M | Params: 13.13M
-[Iter 306] New Best Found! Energy: 130.8969 | FLOPs: 13089.69M | Params: 12.78M
-[Iter 310] New Best Found! Energy: 130.7546 | FLOPs: 13075.46M | Params: 12.77M
-[Iter 314] New Best Found! Energy: 129.6851 | FLOPs: 12968.51M | Params: 12.66M
-[Iter 316] New Best Found! Energy: 128.9261 | FLOPs: 12892.61M | Params: 12.59M
-[Iter 318] New Best Found! Energy: 128.7187 | FLOPs: 12871.87M | Params: 12.57M
-[Iter 320] New Best Found! Energy: 128.3078 | FLOPs: 12830.78M | Params: 12.53M
-[Iter 337] New Best Found! Energy: 116.2602 | FLOPs: 11626.02M | Params: 11.35M
-[Iter 340] New Best Found! Energy: 112.0108 | FLOPs: 11201.08M | Params: 10.94M
-[Iter 348] New Best Found! Energy: 111.9690 | FLOPs: 11196.90M | Params: 10.93M
-[Iter 352] New Best Found! Energy: 110.4606 | FLOPs: 11046.06M | Params: 10.79M
-[Iter 353] New Best Found! Energy: 110.4006 | FLOPs: 11040.06M | Params: 10.78M
-[Iter 355] New Best Found! Energy: 110.3752 | FLOPs: 11037.52M | Params: 10.78M
-[Iter 358] New Best Found! Energy: 110.3064 | FLOPs: 11030.64M | Params: 10.77M
-[Iter 360] New Best Found! Energy: 109.8969 | FLOPs: 10989.69M | Params: 10.73M
-[Iter 368] New Best Found! Energy: 106.7384 | FLOPs: 10673.84M | Params: 10.42M
-[Iter 379] New Best Found! Energy: 99.6918 | FLOPs: 9969.18M | Params: 9.74M
-[Iter 380] New Best Found! Energy: 95.8816 | FLOPs: 9588.16M | Params: 9.36M
-[Iter 384] New Best Found! Energy: 95.8627 | FLOPs: 9586.27M | Params: 9.36M
-[Iter 385] New Best Found! Energy: 95.4469 | FLOPs: 9544.69M | Params: 9.32M
-[Iter 387] New Best Found! Energy: 95.4115 | FLOPs: 9541.15M | Params: 9.32M
-[Iter 389] New Best Found! Energy: 95.2018 | FLOPs: 9520.18M | Params: 9.30M
-[Iter 397] New Best Found! Energy: 94.8083 | FLOPs: 9480.83M | Params: 9.26M
-[Iter 398] New Best Found! Energy: 93.8351 | FLOPs: 9383.51M | Params: 9.16M
-[Iter 399] New Best Found! Energy: 93.7601 | FLOPs: 9376.01M | Params: 9.16M
-[Iter 400] New Best Found! Energy: 89.6497 | FLOPs: 8964.97M | Params: 8.75M
-[Iter 401] New Best Found! Energy: 89.6344 | FLOPs: 8963.44M | Params: 8.75M
-[Iter 402] New Best Found! Energy: 89.3469 | FLOPs: 8934.69M | Params: 8.73M
-[Iter 408] New Best Found! Energy: 89.3195 | FLOPs: 8931.95M | Params: 8.72M
-[Iter 409] New Best Found! Energy: 89.2753 | FLOPs: 8927.53M | Params: 8.72M
-[Iter 410] New Best Found! Energy: 80.1507 | FLOPs: 8015.07M | Params: 7.83M
-[Iter 411] New Best Found! Energy: 80.1311 | FLOPs: 8013.11M | Params: 7.83M
-[Iter 413] New Best Found! Energy: 76.1203 | FLOPs: 7612.03M | Params: 7.43M
-[Iter 416] New Best Found! Energy: 76.0212 | FLOPs: 7602.12M | Params: 7.42M
-[Iter 417] New Best Found! Energy: 74.6056 | FLOPs: 7460.56M | Params: 7.29M
-[Iter 422] New Best Found! Energy: 74.5639 | FLOPs: 7456.39M | Params: 7.28M
-[Iter 426] New Best Found! Energy: 74.1392 | FLOPs: 7413.92M | Params: 7.24M
-[Iter 427] New Best Found! Energy: 74.1237 | FLOPs: 7412.37M | Params: 7.24M
-[Iter 432] New Best Found! Energy: 72.9392 | FLOPs: 7293.92M | Params: 7.12M
-[Iter 442] New Best Found! Energy: 71.2844 | FLOPs: 7128.44M | Params: 6.96M
-[Iter 444] New Best Found! Energy: 71.2314 | FLOPs: 7123.14M | Params: 6.96M
-[Iter 448] New Best Found! Energy: 70.7831 | FLOPs: 7078.31M | Params: 6.91M
-[Iter 450] New Best Found! Energy: 70.3404 | FLOPs: 7034.04M | Params: 6.87M
-[Iter 465] New Best Found! Energy: 69.3905 | FLOPs: 6939.05M | Params: 6.78M
-[Iter 466] New Best Found! Energy: 69.3822 | FLOPs: 6938.22M | Params: 6.78M
-[Iter 485] New Best Found! Energy: 69.3263 | FLOPs: 6932.63M | Params: 6.77M
-[Iter 487] New Best Found! Energy: 66.2277 | FLOPs: 6622.77M | Params: 6.47M
-[Iter 499] New Best Found! Energy: 66.1989 | FLOPs: 6619.89M | Params: 6.46M
-[Iter 503] New Best Found! Energy: 61.0998 | FLOPs: 6109.98M | Params: 5.97M
-[Iter 504] New Best Found! Energy: 59.9755 | FLOPs: 5997.55M | Params: 5.86M
-[Iter 507] New Best Found! Energy: 59.9674 | FLOPs: 5996.74M | Params: 5.86M
-[Iter 508] New Best Found! Energy: 57.7949 | FLOPs: 5779.49M | Params: 5.64M
-[Iter 528] New Best Found! Energy: 56.5165 | FLOPs: 5651.65M | Params: 5.52M
-[Iter 529] New Best Found! Energy: 56.3653 | FLOPs: 5636.53M | Params: 5.50M
-[Iter 530] New Best Found! Energy: 54.1093 | FLOPs: 5410.93M | Params: 5.28M
-[Iter 535] New Best Found! Energy: 54.0942 | FLOPs: 5409.42M | Params: 5.28M
-[Iter 536] New Best Found! Energy: 53.9938 | FLOPs: 5399.38M | Params: 5.27M
-[Iter 537] New Best Found! Energy: 53.4709 | FLOPs: 5347.09M | Params: 5.22M
-[Iter 539] New Best Found! Energy: 53.3993 | FLOPs: 5339.93M | Params: 5.21M
-[Iter 540] New Best Found! Energy: 53.0953 | FLOPs: 5309.53M | Params: 5.19M
-[Iter 546] New Best Found! Energy: 53.0035 | FLOPs: 5300.35M | Params: 5.18M
-[Iter 550] New Best Found! Energy: 52.9270 | FLOPs: 5292.70M | Params: 5.17M
-[Iter 561] New Best Found! Energy: 47.2768 | FLOPs: 4727.68M | Params: 4.62M
-[Iter 567] New Best Found! Energy: 46.9955 | FLOPs: 4699.55M | Params: 4.59M
-[Iter 568] New Best Found! Energy: 46.3388 | FLOPs: 4633.88M | Params: 4.53M
-[Iter 572] New Best Found! Energy: 46.1557 | FLOPs: 4615.57M | Params: 4.51M
-[Iter 587] New Best Found! Energy: 44.9050 | FLOPs: 4490.50M | Params: 4.39M
-[Iter 590] New Best Found! Energy: 44.6949 | FLOPs: 4469.49M | Params: 4.36M
-[Iter 591] New Best Found! Energy: 43.6303 | FLOPs: 4363.03M | Params: 4.26M
-[Iter 596] New Best Found! Energy: 43.2282 | FLOPs: 4322.82M | Params: 4.22M
-[Iter 612] New Best Found! Energy: 41.6902 | FLOPs: 4169.02M | Params: 4.07M
-[Iter 620] New Best Found! Energy: 41.3724 | FLOPs: 4137.24M | Params: 4.04M
-[Iter 621] New Best Found! Energy: 37.1257 | FLOPs: 3712.57M | Params: 3.63M
-[Iter 642] New Best Found! Energy: 36.6423 | FLOPs: 3664.23M | Params: 3.58M
-[Iter 645] New Best Found! Energy: 36.6276 | FLOPs: 3662.76M | Params: 3.58M
-[Iter 647] New Best Found! Energy: 36.6079 | FLOPs: 3660.79M | Params: 3.57M
+Start Searching... Initial Energy: 112.5089
+[Iter 1] New Best Found! Energy: 107.9791 | FLOPs: 10797.91M | Params: 10.54M
+[Iter 2] New Best Found! Energy: 107.2241 | FLOPs: 10722.41M | Params: 10.47M
+[Iter 3] New Best Found! Energy: 102.6943 | FLOPs: 10269.43M | Params: 10.03M
+[Iter 4] New Best Found! Energy: 97.7869 | FLOPs: 9778.69M | Params: 9.55M
+[Iter 5] New Best Found! Energy: 96.6545 | FLOPs: 9665.45M | Params: 9.44M
+[Iter 10] New Best Found! Energy: 79.6203 | FLOPs: 7962.03M | Params: 7.78M
+[Iter 11] New Best Found! Energy: 77.7329 | FLOPs: 7773.29M | Params: 7.59M
+[Iter 18] New Best Found! Energy: 70.8674 | FLOPs: 7086.74M | Params: 6.92M
+[Iter 32] New Best Found! Energy: 66.7268 | FLOPs: 6672.68M | Params: 6.52M
+[Iter 35] New Best Found! Energy: 65.0281 | FLOPs: 6502.81M | Params: 6.35M
+[Iter 36] New Best Found! Energy: 64.8276 | FLOPs: 6482.76M | Params: 6.33M
+[Iter 49] New Best Found! Energy: 62.9578 | FLOPs: 6295.78M | Params: 6.15M
+[Iter 50] New Best Found! Energy: 62.9018 | FLOPs: 6290.18M | Params: 6.14M
+[Iter 53] New Best Found! Energy: 62.7071 | FLOPs: 6270.71M | Params: 6.12M
+[Iter 54] New Best Found! Energy: 61.9227 | FLOPs: 6192.27M | Params: 6.05M
+[Iter 56] New Best Found! Energy: 61.8165 | FLOPs: 6181.65M | Params: 6.04M
+[Iter 57] New Best Found! Energy: 58.8320 | FLOPs: 5883.20M | Params: 5.75M
+[Iter 60] New Best Found! Energy: 57.2675 | FLOPs: 5726.75M | Params: 5.59M
+[Iter 61] New Best Found! Energy: 56.8753 | FLOPs: 5687.53M | Params: 5.55M
+[Iter 62] New Best Found! Energy: 54.7047 | FLOPs: 5470.47M | Params: 5.34M
+[Iter 65] New Best Found! Energy: 51.6022 | FLOPs: 5160.22M | Params: 5.04M
+[Iter 66] New Best Found! Energy: 50.9092 | FLOPs: 5090.92M | Params: 4.97M
+[Iter 86] New Best Found! Energy: 50.6703 | FLOPs: 5067.03M | Params: 4.95M
+[Iter 89] New Best Found! Energy: 50.5066 | FLOPs: 5050.66M | Params: 4.93M
+[Iter 90] New Best Found! Energy: 50.0834 | FLOPs: 5008.34M | Params: 4.89M
+[Iter 93] New Best Found! Energy: 50.0488 | FLOPs: 5004.88M | Params: 4.89M
+[Iter 95] New Best Found! Energy: 50.0090 | FLOPs: 5000.90M | Params: 4.88M
+[Iter 96] New Best Found! Energy: 44.2523 | FLOPs: 4425.23M | Params: 4.32M
+[Iter 185] New Best Found! Energy: 42.3195 | FLOPs: 4231.95M | Params: 4.13M
+[Iter 187] New Best Found! Energy: 42.0762 | FLOPs: 4207.62M | Params: 4.11M
+[Iter 202] New Best Found! Energy: 41.8476 | FLOPs: 4184.76M | Params: 4.09M
+[Iter 237] New Best Found! Energy: 36.9049 | FLOPs: 3690.49M | Params: 3.60M
+[Iter 239] New Best Found! Energy: 36.8916 | FLOPs: 3689.16M | Params: 3.60M
+[Iter 248] New Best Found! Energy: 36.4095 | FLOPs: 3640.95M | Params: 3.56M
+[Iter 254] New Best Found! Energy: 35.4716 | FLOPs: 3547.16M | Params: 3.46M
+[Iter 283] New Best Found! Energy: 34.8708 | FLOPs: 3487.08M | Params: 3.41M
+[Iter 306] New Best Found! Energy: 34.8702 | FLOPs: 3487.02M | Params: 3.41M
+[Iter 307] New Best Found! Energy: 34.2155 | FLOPs: 3421.55M | Params: 3.34M
+[Iter 309] New Best Found! Energy: 34.1949 | FLOPs: 3419.49M | Params: 3.34M
+[Iter 311] New Best Found! Energy: 34.1757 | FLOPs: 3417.57M | Params: 3.34M
+[Iter 314] New Best Found! Energy: 16.8371 | FLOPs: 1683.71M | Params: 1.64M
+[Iter 317] New Best Found! Energy: 15.9037 | FLOPs: 1590.37M | Params: 1.55M
+[Iter 318] New Best Found! Energy: 15.8617 | FLOPs: 1586.17M | Params: 1.55M
+[Iter 320] New Best Found! Energy: 14.2514 | FLOPs: 1425.14M | Params: 1.39M
+[Iter 322] New Best Found! Energy: 14.2102 | FLOPs: 1421.02M | Params: 1.39M
+[Iter 323] New Best Found! Energy: 12.2350 | FLOPs: 1223.50M | Params: 1.19M
+[Iter 327] New Best Found! Energy: 11.6864 | FLOPs: 1168.64M | Params: 1.14M
+[Iter 329] New Best Found! Energy: 11.4837 | FLOPs: 1148.37M | Params: 1.12M
+[Iter 330] New Best Found! Energy: 11.4630 | FLOPs: 1146.30M | Params: 1.12M
+[Iter 332] New Best Found! Energy: 11.4490 | FLOPs: 1144.90M | Params: 1.12M
+[Iter 346] New Best Found! Energy: 10.7081 | FLOPs: 1070.81M | Params: 1.05M
+[Iter 347] New Best Found! Energy: 10.4825 | FLOPs: 1048.25M | Params: 1.02M
+[Iter 353] New Best Found! Energy: 9.5417 | FLOPs: 954.17M | Params: 0.93M
+[Iter 374] New Best Found! Energy: 8.8040 | FLOPs: 880.40M | Params: 0.86M
+[Iter 376] New Best Found! Energy: 8.8021 | FLOPs: 880.21M | Params: 0.86M
+[Iter 380] New Best Found! Energy: 8.5524 | FLOPs: 855.24M | Params: 0.84M
+[Iter 381] New Best Found! Energy: 8.5134 | FLOPs: 851.34M | Params: 0.83M
+[Iter 382] New Best Found! Energy: 8.4264 | FLOPs: 842.64M | Params: 0.82M
+[Iter 407] New Best Found! Energy: 7.1037 | FLOPs: 710.37M | Params: 0.69M
+[Iter 409] New Best Found! Energy: 7.0418 | FLOPs: 704.18M | Params: 0.69M
+[Iter 525] New Best Found! Energy: 6.3649 | FLOPs: 636.49M | Params: 0.62M
+[Iter 530] New Best Found! Energy: 6.3266 | FLOPs: 632.66M | Params: 0.62M
+[Iter 534] New Best Found! Energy: 6.1438 | FLOPs: 614.38M | Params: 0.60M
+[Iter 544] New Best Found! Energy: 6.1246 | FLOPs: 612.46M | Params: 0.60M
+[Iter 547] New Best Found! Energy: 5.9027 | FLOPs: 590.27M | Params: 0.58M
+[Iter 549] New Best Found! Energy: 5.4382 | FLOPs: 543.82M | Params: 0.53M
+[Iter 560] New Best Found! Energy: 5.3748 | FLOPs: 537.48M | Params: 0.52M
+[Iter 603] New Best Found! Energy: 5.0892 | FLOPs: 508.92M | Params: 0.50M
+[Iter 605] New Best Found! Energy: 4.9122 | FLOPs: 491.22M | Params: 0.48M
+[Iter 610] New Best Found! Energy: 4.9034 | FLOPs: 490.34M | Params: 0.48M
 Testing Lambda = 0.5...
-Start Searching... Initial Energy: 268.5295
-[Iter 0] New Best Found! Energy: 268.3637 | FLOPs: 21166.23M | Params: 20.67M
-[Iter 2] New Best Found! Energy: 267.2031 | FLOPs: 21107.51M | Params: 20.61M
-[Iter 21] New Best Found! Energy: 266.8222 | FLOPs: 21088.24M | Params: 20.59M
-[Iter 25] New Best Found! Energy: 265.6616 | FLOPs: 21029.52M | Params: 20.54M
-[Iter 26] New Best Found! Energy: 255.0500 | FLOPs: 20492.65M | Params: 20.01M
-[Iter 27] New Best Found! Energy: 254.3868 | FLOPs: 20459.09M | Params: 19.98M
-[Iter 41] New Best Found! Energy: 247.8659 | FLOPs: 20129.19M | Params: 19.66M
-[Iter 44] New Best Found! Energy: 245.0550 | FLOPs: 19986.97M | Params: 19.52M
-[Iter 45] New Best Found! Energy: 232.6506 | FLOPs: 19359.40M | Params: 18.91M
-[Iter 48] New Best Found! Energy: 231.3035 | FLOPs: 19291.24M | Params: 18.84M
-[Iter 51] New Best Found! Energy: 227.5314 | FLOPs: 19100.40M | Params: 18.65M
-[Iter 63] New Best Found! Energy: 225.6259 | FLOPs: 19004.00M | Params: 18.56M
-[Iter 64] New Best Found! Energy: 222.5248 | FLOPs: 18847.11M | Params: 18.41M
-[Iter 66] New Best Found! Energy: 203.4986 | FLOPs: 17884.51M | Params: 17.47M
-[Iter 67] New Best Found! Energy: 203.1048 | FLOPs: 17864.59M | Params: 17.45M
-[Iter 69] New Best Found! Energy: 202.8561 | FLOPs: 17852.01M | Params: 17.43M
-[Iter 70] New Best Found! Energy: 202.7745 | FLOPs: 17847.88M | Params: 17.43M
-[Iter 71] New Best Found! Energy: 202.4014 | FLOPs: 17829.00M | Params: 17.41M
-[Iter 72] New Best Found! Energy: 199.7070 | FLOPs: 17692.69M | Params: 17.28M
-[Iter 79] New Best Found! Energy: 198.0490 | FLOPs: 17608.80M | Params: 17.20M
-[Iter 81] New Best Found! Energy: 197.8547 | FLOPs: 17598.97M | Params: 17.19M
-[Iter 84] New Best Found! Energy: 188.9084 | FLOPs: 17146.36M | Params: 16.74M
-[Iter 118] New Best Found! Energy: 178.7722 | FLOPs: 16633.54M | Params: 16.24M
-[Iter 125] New Best Found! Energy: 177.3150 | FLOPs: 16559.81M | Params: 16.17M
-[Iter 126] New Best Found! Energy: 176.8953 | FLOPs: 16538.57M | Params: 16.15M
-[Iter 127] New Best Found! Energy: 175.7346 | FLOPs: 16479.85M | Params: 16.09M
-[Iter 138] New Best Found! Energy: 153.5976 | FLOPs: 15359.76M | Params: 15.00M
-[Iter 139] New Best Found! Energy: 153.4089 | FLOPs: 15340.89M | Params: 14.98M
-[Iter 140] New Best Found! Energy: 149.1307 | FLOPs: 14913.07M | Params: 14.56M
-[Iter 141] New Best Found! Energy: 149.1086 | FLOPs: 14910.86M | Params: 14.56M
-[Iter 142] New Best Found! Energy: 147.9617 | FLOPs: 14796.17M | Params: 14.45M
-[Iter 147] New Best Found! Energy: 134.5822 | FLOPs: 13458.22M | Params: 13.14M
-[Iter 158] New Best Found! Energy: 132.2163 | FLOPs: 13221.63M | Params: 12.91M
-[Iter 166] New Best Found! Energy: 132.1272 | FLOPs: 13212.72M | Params: 12.90M
-[Iter 172] New Best Found! Energy: 130.4816 | FLOPs: 13048.16M | Params: 12.74M
-[Iter 175] New Best Found! Energy: 130.1814 | FLOPs: 13018.14M | Params: 12.71M
-[Iter 176] New Best Found! Energy: 126.9728 | FLOPs: 12697.28M | Params: 12.40M
-[Iter 179] New Best Found! Energy: 126.8136 | FLOPs: 12681.36M | Params: 12.38M
-[Iter 180] New Best Found! Energy: 125.2407 | FLOPs: 12524.07M | Params: 12.23M
-[Iter 184] New Best Found! Energy: 123.3218 | FLOPs: 12332.18M | Params: 12.04M
-[Iter 185] New Best Found! Energy: 123.2327 | FLOPs: 12323.27M | Params: 12.03M
-[Iter 186] New Best Found! Energy: 122.4357 | FLOPs: 12243.57M | Params: 11.96M
-[Iter 188] New Best Found! Energy: 121.8984 | FLOPs: 12189.84M | Params: 11.90M
-[Iter 190] New Best Found! Energy: 121.5785 | FLOPs: 12157.85M | Params: 11.87M
-[Iter 192] New Best Found! Energy: 121.4778 | FLOPs: 12147.78M | Params: 11.86M
-[Iter 199] New Best Found! Energy: 118.3865 | FLOPs: 11838.65M | Params: 11.56M
-[Iter 201] New Best Found! Energy: 118.1735 | FLOPs: 11817.35M | Params: 11.54M
-[Iter 205] New Best Found! Energy: 116.1447 | FLOPs: 11614.47M | Params: 11.34M
-[Iter 210] New Best Found! Energy: 112.7564 | FLOPs: 11275.64M | Params: 11.01M
-[Iter 211] New Best Found! Energy: 105.2696 | FLOPs: 10526.96M | Params: 10.28M
-[Iter 215] New Best Found! Energy: 103.4896 | FLOPs: 10348.96M | Params: 10.11M
-[Iter 216] New Best Found! Energy: 102.9215 | FLOPs: 10292.15M | Params: 10.05M
-[Iter 217] New Best Found! Energy: 102.5151 | FLOPs: 10251.51M | Params: 10.01M
-[Iter 218] New Best Found! Energy: 102.3972 | FLOPs: 10239.72M | Params: 10.00M
-[Iter 223] New Best Found! Energy: 100.4625 | FLOPs: 10046.25M | Params: 9.81M
-[Iter 225] New Best Found! Energy: 98.6275 | FLOPs: 9862.75M | Params: 9.63M
-[Iter 235] New Best Found! Energy: 98.3765 | FLOPs: 9837.65M | Params: 9.61M
-[Iter 241] New Best Found! Energy: 98.2251 | FLOPs: 9822.51M | Params: 9.59M
-[Iter 246] New Best Found! Energy: 97.9499 | FLOPs: 9794.99M | Params: 9.57M
-[Iter 249] New Best Found! Energy: 96.3770 | FLOPs: 9637.70M | Params: 9.41M
-[Iter 255] New Best Found! Energy: 95.3075 | FLOPs: 9530.75M | Params: 9.31M
-[Iter 266] New Best Found! Energy: 91.8920 | FLOPs: 9189.20M | Params: 8.97M
-[Iter 291] New Best Found! Energy: 89.8337 | FLOPs: 8983.37M | Params: 8.77M
-[Iter 294] New Best Found! Energy: 87.8990 | FLOPs: 8789.90M | Params: 8.58M
-[Iter 296] New Best Found! Energy: 87.5196 | FLOPs: 8751.96M | Params: 8.55M
-[Iter 301] New Best Found! Energy: 87.1605 | FLOPs: 8716.05M | Params: 8.51M
-[Iter 306] New Best Found! Energy: 85.6161 | FLOPs: 8561.61M | Params: 8.36M
-[Iter 310] New Best Found! Energy: 85.2366 | FLOPs: 8523.66M | Params: 8.32M
-[Iter 311] New Best Found! Energy: 84.9521 | FLOPs: 8495.21M | Params: 8.30M
-[Iter 320] New Best Found! Energy: 83.7357 | FLOPs: 8373.57M | Params: 8.18M
-[Iter 322] New Best Found! Energy: 83.0299 | FLOPs: 8302.99M | Params: 8.11M
-[Iter 323] New Best Found! Energy: 82.5580 | FLOPs: 8255.80M | Params: 8.06M
-[Iter 331] New Best Found! Energy: 82.3712 | FLOPs: 8237.12M | Params: 8.04M
-[Iter 339] New Best Found! Energy: 82.3646 | FLOPs: 8236.46M | Params: 8.04M
-[Iter 349] New Best Found! Energy: 82.3562 | FLOPs: 8235.62M | Params: 8.04M
-[Iter 351] New Best Found! Energy: 79.4071 | FLOPs: 7940.71M | Params: 7.75M
-[Iter 360] New Best Found! Energy: 59.6047 | FLOPs: 5960.47M | Params: 5.82M
-[Iter 363] New Best Found! Energy: 59.5334 | FLOPs: 5953.34M | Params: 5.81M
-[Iter 364] New Best Found! Energy: 59.4179 | FLOPs: 5941.79M | Params: 5.80M
-[Iter 383] New Best Found! Energy: 56.5161 | FLOPs: 5651.61M | Params: 5.52M
-[Iter 396] New Best Found! Energy: 55.5352 | FLOPs: 5553.52M | Params: 5.42M
-[Iter 415] New Best Found! Energy: 55.1463 | FLOPs: 5514.63M | Params: 5.39M
-[Iter 416] New Best Found! Energy: 54.9968 | FLOPs: 5499.68M | Params: 5.37M
-[Iter 420] New Best Found! Energy: 54.7583 | FLOPs: 5475.83M | Params: 5.35M
-[Iter 435] New Best Found! Energy: 54.6485 | FLOPs: 5464.85M | Params: 5.34M
-[Iter 436] New Best Found! Energy: 54.3487 | FLOPs: 5434.87M | Params: 5.31M
-[Iter 438] New Best Found! Energy: 54.1245 | FLOPs: 5412.45M | Params: 5.29M
-[Iter 441] New Best Found! Energy: 53.8008 | FLOPs: 5380.08M | Params: 5.25M
-[Iter 442] New Best Found! Energy: 53.5668 | FLOPs: 5356.68M | Params: 5.23M
-[Iter 443] New Best Found! Energy: 53.4980 | FLOPs: 5349.80M | Params: 5.22M
-[Iter 445] New Best Found! Energy: 53.4373 | FLOPs: 5343.73M | Params: 5.22M
-[Iter 446] New Best Found! Energy: 53.3862 | FLOPs: 5338.62M | Params: 5.21M
-[Iter 453] New Best Found! Energy: 53.1511 | FLOPs: 5315.11M | Params: 5.19M
-[Iter 456] New Best Found! Energy: 53.0665 | FLOPs: 5306.65M | Params: 5.18M
-[Iter 459] New Best Found! Energy: 52.5298 | FLOPs: 5252.98M | Params: 5.13M
-[Iter 461] New Best Found! Energy: 52.4679 | FLOPs: 5246.79M | Params: 5.12M
-[Iter 463] New Best Found! Energy: 52.0275 | FLOPs: 5202.75M | Params: 5.08M
-[Iter 466] New Best Found! Energy: 51.7684 | FLOPs: 5176.84M | Params: 5.06M
-[Iter 472] New Best Found! Energy: 51.7503 | FLOPs: 5175.03M | Params: 5.05M
-[Iter 475] New Best Found! Energy: 51.2654 | FLOPs: 5126.54M | Params: 5.01M
-[Iter 477] New Best Found! Energy: 51.1867 | FLOPs: 5118.67M | Params: 5.00M
-[Iter 479] New Best Found! Energy: 50.8879 | FLOPs: 5088.79M | Params: 4.97M
-[Iter 482] New Best Found! Energy: 50.5841 | FLOPs: 5058.41M | Params: 4.94M
-[Iter 483] New Best Found! Energy: 50.5068 | FLOPs: 5050.68M | Params: 4.93M
-[Iter 488] New Best Found! Energy: 50.4704 | FLOPs: 5047.04M | Params: 4.93M
-[Iter 490] New Best Found! Energy: 49.6683 | FLOPs: 4966.83M | Params: 4.85M
-[Iter 491] New Best Found! Energy: 49.6339 | FLOPs: 4963.39M | Params: 4.85M
-[Iter 492] New Best Found! Energy: 49.5788 | FLOPs: 4957.88M | Params: 4.84M
-[Iter 494] New Best Found! Energy: 49.5028 | FLOPs: 4950.28M | Params: 4.83M
-[Iter 496] New Best Found! Energy: 48.8546 | FLOPs: 4885.46M | Params: 4.77M
-[Iter 498] New Best Found! Energy: 48.4573 | FLOPs: 4845.73M | Params: 4.73M
-[Iter 512] New Best Found! Energy: 48.4250 | FLOPs: 4842.50M | Params: 4.73M
-[Iter 516] New Best Found! Energy: 48.3339 | FLOPs: 4833.39M | Params: 4.72M
-[Iter 517] New Best Found! Energy: 45.6502 | FLOPs: 4565.02M | Params: 4.46M
-[Iter 522] New Best Found! Energy: 45.6219 | FLOPs: 4562.19M | Params: 4.46M
-[Iter 523] New Best Found! Energy: 45.5909 | FLOPs: 4559.09M | Params: 4.45M
-[Iter 563] New Best Found! Energy: 44.1123 | FLOPs: 4411.23M | Params: 4.31M
-[Iter 580] New Best Found! Energy: 44.0372 | FLOPs: 4403.72M | Params: 4.30M
-[Iter 595] New Best Found! Energy: 42.5088 | FLOPs: 4250.88M | Params: 4.15M
-[Iter 600] New Best Found! Energy: 42.4508 | FLOPs: 4245.08M | Params: 4.15M
-[Iter 602] New Best Found! Energy: 42.3250 | FLOPs: 4232.50M | Params: 4.13M
-[Iter 624] New Best Found! Energy: 41.8708 | FLOPs: 4187.08M | Params: 4.09M
-[Iter 626] New Best Found! Energy: 41.6693 | FLOPs: 4166.93M | Params: 4.07M
-[Iter 631] New Best Found! Energy: 41.5218 | FLOPs: 4152.18M | Params: 4.05M
-[Iter 640] New Best Found! Energy: 41.3875 | FLOPs: 4138.75M | Params: 4.04M
-[Iter 643] New Best Found! Energy: 41.2813 | FLOPs: 4128.13M | Params: 4.03M
-[Iter 647] New Best Found! Energy: 40.6040 | FLOPs: 4060.40M | Params: 3.97M
-[Iter 654] New Best Found! Energy: 40.5334 | FLOPs: 4053.34M | Params: 3.96M
-[Iter 658] New Best Found! Energy: 40.3932 | FLOPs: 4039.32M | Params: 3.94M
-[Iter 660] New Best Found! Energy: 26.8875 | FLOPs: 2688.75M | Params: 2.63M
-[Iter 662] New Best Found! Energy: 26.8600 | FLOPs: 2686.00M | Params: 2.62M
-[Iter 665] New Best Found! Energy: 26.6134 | FLOPs: 2661.34M | Params: 2.60M
-[Iter 669] New Best Found! Energy: 26.5820 | FLOPs: 2658.20M | Params: 2.60M
+Start Searching... Initial Energy: 112.5089
+[Iter 1] New Best Found! Energy: 112.4617 | FLOPs: 11246.17M | Params: 10.98M
+[Iter 2] New Best Found! Energy: 112.4529 | FLOPs: 11245.29M | Params: 10.98M
+[Iter 3] New Best Found! Energy: 111.6979 | FLOPs: 11169.79M | Params: 10.91M
+[Iter 4] New Best Found! Energy: 110.3767 | FLOPs: 11037.67M | Params: 10.78M
+[Iter 5] New Best Found! Energy: 110.0936 | FLOPs: 11009.36M | Params: 10.75M
+[Iter 9] New Best Found! Energy: 109.5274 | FLOPs: 10952.74M | Params: 10.70M
+[Iter 12] New Best Found! Energy: 109.3209 | FLOPs: 10932.09M | Params: 10.68M
+[Iter 13] New Best Found! Energy: 91.2015 | FLOPs: 9120.15M | Params: 8.91M
+[Iter 15] New Best Found! Energy: 86.2942 | FLOPs: 8629.42M | Params: 8.43M
+[Iter 20] New Best Found! Energy: 80.1600 | FLOPs: 8016.00M | Params: 7.83M
+[Iter 24] New Best Found! Energy: 79.9241 | FLOPs: 7992.41M | Params: 7.81M
+[Iter 25] New Best Found! Energy: 79.9197 | FLOPs: 7991.97M | Params: 7.80M
+[Iter 27] New Best Found! Energy: 65.4808 | FLOPs: 6548.08M | Params: 6.39M
+[Iter 30] New Best Found! Energy: 65.4786 | FLOPs: 6547.86M | Params: 6.39M
+[Iter 63] New Best Found! Energy: 57.7969 | FLOPs: 5779.69M | Params: 5.64M
+[Iter 64] New Best Found! Energy: 53.9615 | FLOPs: 5396.15M | Params: 5.27M
+[Iter 68] New Best Found! Energy: 52.1213 | FLOPs: 5212.13M | Params: 5.09M
+[Iter 72] New Best Found! Energy: 47.8274 | FLOPs: 4782.74M | Params: 4.67M
+[Iter 73] New Best Found! Energy: 46.9780 | FLOPs: 4697.80M | Params: 4.59M
+[Iter 95] New Best Found! Energy: 46.8055 | FLOPs: 4680.55M | Params: 4.57M
+[Iter 97] New Best Found! Energy: 41.1505 | FLOPs: 4115.05M | Params: 4.02M
+[Iter 98] New Best Found! Energy: 41.0444 | FLOPs: 4104.44M | Params: 4.01M
+[Iter 99] New Best Found! Energy: 40.6197 | FLOPs: 4061.97M | Params: 3.97M
+[Iter 109] New Best Found! Energy: 39.6576 | FLOPs: 3965.76M | Params: 3.87M
+[Iter 124] New Best Found! Energy: 39.1754 | FLOPs: 3917.54M | Params: 3.83M
+[Iter 127] New Best Found! Energy: 39.1651 | FLOPs: 3916.51M | Params: 3.82M
+[Iter 129] New Best Found! Energy: 38.9262 | FLOPs: 3892.62M | Params: 3.80M
+[Iter 131] New Best Found! Energy: 38.1299 | FLOPs: 3812.99M | Params: 3.72M
+[Iter 154] New Best Found! Energy: 31.1346 | FLOPs: 3113.46M | Params: 3.04M
+[Iter 155] New Best Found! Energy: 30.9930 | FLOPs: 3099.30M | Params: 3.03M
+[Iter 260] New Best Found! Energy: 28.7812 | FLOPs: 2878.12M | Params: 2.81M
+[Iter 264] New Best Found! Energy: 28.7370 | FLOPs: 2873.70M | Params: 2.81M
+[Iter 268] New Best Found! Energy: 25.2776 | FLOPs: 2527.76M | Params: 2.47M
+[Iter 272] New Best Found! Energy: 22.3182 | FLOPs: 2231.82M | Params: 2.18M
+[Iter 295] New Best Found! Energy: 22.2471 | FLOPs: 2224.71M | Params: 2.17M
+[Iter 296] New Best Found! Energy: 20.3980 | FLOPs: 2039.80M | Params: 1.99M
+[Iter 389] New Best Found! Energy: 17.5956 | FLOPs: 1759.56M | Params: 1.72M
+[Iter 422] New Best Found! Energy: 16.6141 | FLOPs: 1661.41M | Params: 1.62M
+[Iter 423] New Best Found! Energy: 16.2955 | FLOPs: 1629.55M | Params: 1.59M
+[Iter 429] New Best Found! Energy: 16.0803 | FLOPs: 1608.03M | Params: 1.57M
+[Iter 436] New Best Found! Energy: 16.0440 | FLOPs: 1604.40M | Params: 1.57M
+[Iter 453] New Best Found! Energy: 15.3988 | FLOPs: 1539.88M | Params: 1.50M
+[Iter 454] New Best Found! Energy: 14.8606 | FLOPs: 1486.06M | Params: 1.45M
+[Iter 467] New Best Found! Energy: 14.2184 | FLOPs: 1421.84M | Params: 1.39M
+[Iter 474] New Best Found! Energy: 13.4421 | FLOPs: 1344.21M | Params: 1.31M
+[Iter 476] New Best Found! Energy: 13.3027 | FLOPs: 1330.27M | Params: 1.30M
+[Iter 482] New Best Found! Energy: 13.2968 | FLOPs: 1329.68M | Params: 1.30M
+[Iter 483] New Best Found! Energy: 12.7586 | FLOPs: 1275.86M | Params: 1.25M
+[Iter 484] New Best Found! Energy: 12.6657 | FLOPs: 1266.57M | Params: 1.24M
+[Iter 496] New Best Found! Energy: 12.1548 | FLOPs: 1215.48M | Params: 1.19M
+[Iter 506] New Best Found! Energy: 12.1500 | FLOPs: 1215.00M | Params: 1.19M
+[Iter 515] New Best Found! Energy: 11.3346 | FLOPs: 1133.46M | Params: 1.11M
+[Iter 520] New Best Found! Energy: 11.3307 | FLOPs: 1133.07M | Params: 1.11M
+[Iter 526] New Best Found! Energy: 11.3086 | FLOPs: 1130.86M | Params: 1.10M
+[Iter 535] New Best Found! Energy: 11.3056 | FLOPs: 1130.56M | Params: 1.10M
+[Iter 537] New Best Found! Energy: 11.1515 | FLOPs: 1115.15M | Params: 1.09M
+[Iter 538] New Best Found! Energy: 11.1338 | FLOPs: 1113.38M | Params: 1.09M
+[Iter 539] New Best Found! Energy: 10.4474 | FLOPs: 1044.74M | Params: 1.02M
+[Iter 540] New Best Found! Energy: 10.3958 | FLOPs: 1039.58M | Params: 1.02M
+[Iter 542] New Best Found! Energy: 9.7397 | FLOPs: 973.97M | Params: 0.95M
+[Iter 549] New Best Found! Energy: 9.6954 | FLOPs: 969.54M | Params: 0.95M
+[Iter 550] New Best Found! Energy: 9.1705 | FLOPs: 917.05M | Params: 0.90M
+[Iter 563] New Best Found! Energy: 9.0414 | FLOPs: 904.14M | Params: 0.88M
+[Iter 568] New Best Found! Energy: 9.0326 | FLOPs: 903.26M | Params: 0.88M
+[Iter 591] New Best Found! Energy: 8.8191 | FLOPs: 881.91M | Params: 0.86M
+[Iter 595] New Best Found! Energy: 8.7306 | FLOPs: 873.06M | Params: 0.85M
+[Iter 601] New Best Found! Energy: 8.1717 | FLOPs: 817.17M | Params: 0.80M
+[Iter 608] New Best Found! Energy: 7.6704 | FLOPs: 767.04M | Params: 0.75M
+[Iter 630] New Best Found! Energy: 7.3017 | FLOPs: 730.17M | Params: 0.71M
+[Iter 632] New Best Found! Energy: 7.0422 | FLOPs: 704.22M | Params: 0.69M
+[Iter 634] New Best Found! Energy: 6.9338 | FLOPs: 693.38M | Params: 0.68M
+[Iter 635] New Best Found! Energy: 6.5578 | FLOPs: 655.78M | Params: 0.64M
+[Iter 636] New Best Found! Energy: 6.2445 | FLOPs: 624.45M | Params: 0.61M
+[Iter 637] New Best Found! Energy: 6.0498 | FLOPs: 604.98M | Params: 0.59M
+[Iter 639] New Best Found! Energy: 5.9083 | FLOPs: 590.83M | Params: 0.58M
+[Iter 649] New Best Found! Energy: 5.9016 | FLOPs: 590.16M | Params: 0.58M
+[Iter 651] New Best Found! Energy: 5.8906 | FLOPs: 589.06M | Params: 0.58M
+[Iter 655] New Best Found! Energy: 5.3059 | FLOPs: 530.59M | Params: 0.52M
+[Iter 660] New Best Found! Energy: 5.2823 | FLOPs: 528.23M | Params: 0.52M
 Testing Lambda = 2...
-Start Searching... Initial Energy: 268.5295
-[Iter 0] New Best Found! Energy: 267.9492 | FLOPs: 21145.26M | Params: 20.65M
-[Iter 5] New Best Found! Energy: 266.9544 | FLOPs: 21094.92M | Params: 20.60M
-[Iter 6] New Best Found! Energy: 266.6642 | FLOPs: 21080.24M | Params: 20.59M
-[Iter 7] New Best Found! Energy: 266.3740 | FLOPs: 21065.56M | Params: 20.57M
-[Iter 50] New Best Found! Energy: 265.4582 | FLOPs: 21019.23M | Params: 20.53M
-[Iter 52] New Best Found! Energy: 264.6292 | FLOPs: 20977.29M | Params: 20.49M
-[Iter 57] New Best Found! Energy: 251.4062 | FLOPs: 20308.30M | Params: 19.83M
-[Iter 65] New Best Found! Energy: 205.5653 | FLOPs: 17989.07M | Params: 17.57M
-[Iter 68] New Best Found! Energy: 200.1766 | FLOPs: 17716.45M | Params: 17.30M
-[Iter 71] New Best Found! Energy: 189.6181 | FLOPs: 17182.26M | Params: 16.78M
-[Iter 73] New Best Found! Energy: 189.4212 | FLOPs: 17172.30M | Params: 16.77M
-[Iter 82] New Best Found! Energy: 187.7029 | FLOPs: 17085.37M | Params: 16.68M
-[Iter 84] New Best Found! Energy: 187.3299 | FLOPs: 17066.49M | Params: 16.67M
-[Iter 88] New Best Found! Energy: 185.0358 | FLOPs: 16950.43M | Params: 16.55M
-[Iter 90] New Best Found! Energy: 181.1212 | FLOPs: 16752.38M | Params: 16.36M
-[Iter 97] New Best Found! Energy: 172.3231 | FLOPs: 16307.26M | Params: 15.93M
-[Iter 102] New Best Found! Energy: 171.7014 | FLOPs: 16275.80M | Params: 15.89M
-[Iter 103] New Best Found! Energy: 159.6610 | FLOPs: 15666.64M | Params: 15.30M
-[Iter 104] New Best Found! Energy: 158.7698 | FLOPs: 15621.55M | Params: 15.26M
-[Iter 108] New Best Found! Energy: 158.5107 | FLOPs: 15608.45M | Params: 15.24M
-[Iter 110] New Best Found! Energy: 157.1635 | FLOPs: 15540.29M | Params: 15.18M
-[Iter 111] New Best Found! Energy: 156.6247 | FLOPs: 15513.03M | Params: 15.15M
-[Iter 113] New Best Found! Energy: 152.9741 | FLOPs: 15297.41M | Params: 14.94M
-[Iter 127] New Best Found! Energy: 150.4733 | FLOPs: 15047.33M | Params: 14.69M
-[Iter 128] New Best Found! Energy: 147.6657 | FLOPs: 14766.57M | Params: 14.42M
-[Iter 131] New Best Found! Energy: 146.6171 | FLOPs: 14661.71M | Params: 14.32M
-[Iter 134] New Best Found! Energy: 146.4599 | FLOPs: 14645.99M | Params: 14.30M
-[Iter 135] New Best Found! Energy: 145.7016 | FLOPs: 14570.16M | Params: 14.23M
-[Iter 137] New Best Found! Energy: 145.6544 | FLOPs: 14565.44M | Params: 14.22M
-[Iter 138] New Best Found! Energy: 142.6345 | FLOPs: 14263.45M | Params: 13.93M
-[Iter 180] New Best Found! Energy: 137.1475 | FLOPs: 13714.75M | Params: 13.39M
-[Iter 194] New Best Found! Energy: 133.1793 | FLOPs: 13317.93M | Params: 13.01M
-[Iter 195] New Best Found! Energy: 133.1424 | FLOPs: 13314.24M | Params: 13.00M
-[Iter 222] New Best Found! Energy: 116.7158 | FLOPs: 11671.58M | Params: 11.40M
-[Iter 234] New Best Found! Energy: 112.6040 | FLOPs: 11260.40M | Params: 11.00M
-[Iter 247] New Best Found! Energy: 106.6216 | FLOPs: 10662.16M | Params: 10.41M
-[Iter 254] New Best Found! Energy: 101.7123 | FLOPs: 10171.23M | Params: 9.93M
-[Iter 259] New Best Found! Energy: 101.6494 | FLOPs: 10164.94M | Params: 9.93M
-[Iter 263] New Best Found! Energy: 101.6058 | FLOPs: 10160.58M | Params: 9.92M
-[Iter 265] New Best Found! Energy: 101.3658 | FLOPs: 10136.58M | Params: 9.90M
-[Iter 266] New Best Found! Energy: 98.0038 | FLOPs: 9800.38M | Params: 9.57M
-[Iter 267] New Best Found! Energy: 97.7482 | FLOPs: 9774.82M | Params: 9.55M
-[Iter 271] New Best Found! Energy: 97.5570 | FLOPs: 9755.70M | Params: 9.53M
-[Iter 276] New Best Found! Energy: 94.4526 | FLOPs: 9445.26M | Params: 9.22M
-[Iter 278] New Best Found! Energy: 90.5893 | FLOPs: 9058.93M | Params: 8.85M
-[Iter 281] New Best Found! Energy: 90.5598 | FLOPs: 9055.98M | Params: 8.84M
-[Iter 282] New Best Found! Energy: 89.9623 | FLOPs: 8996.23M | Params: 8.79M
-[Iter 289] New Best Found! Energy: 89.8129 | FLOPs: 8981.29M | Params: 8.77M
-[Iter 290] New Best Found! Energy: 88.8279 | FLOPs: 8882.79M | Params: 8.67M
-[Iter 296] New Best Found! Energy: 88.8196 | FLOPs: 8881.96M | Params: 8.67M
-[Iter 299] New Best Found! Energy: 87.3345 | FLOPs: 8733.45M | Params: 8.53M
-[Iter 300] New Best Found! Energy: 87.3109 | FLOPs: 8731.09M | Params: 8.53M
-[Iter 310] New Best Found! Energy: 86.9744 | FLOPs: 8697.44M | Params: 8.49M
-[Iter 316] New Best Found! Energy: 85.2600 | FLOPs: 8526.00M | Params: 8.33M
-[Iter 318] New Best Found! Energy: 82.6923 | FLOPs: 8269.23M | Params: 8.08M
-[Iter 348] New Best Found! Energy: 81.2334 | FLOPs: 8123.34M | Params: 7.93M
-[Iter 349] New Best Found! Energy: 77.6286 | FLOPs: 7762.86M | Params: 7.58M
-[Iter 370] New Best Found! Energy: 76.0046 | FLOPs: 7600.46M | Params: 7.42M
-[Iter 371] New Best Found! Energy: 75.7982 | FLOPs: 7579.82M | Params: 7.40M
-[Iter 381] New Best Found! Energy: 72.1996 | FLOPs: 7219.96M | Params: 7.05M
-[Iter 386] New Best Found! Energy: 72.1315 | FLOPs: 7213.15M | Params: 7.04M
-[Iter 387] New Best Found! Energy: 72.0920 | FLOPs: 7209.20M | Params: 7.04M
-[Iter 389] New Best Found! Energy: 71.5223 | FLOPs: 7152.23M | Params: 6.98M
-[Iter 391] New Best Found! Energy: 70.8588 | FLOPs: 7085.88M | Params: 6.92M
-[Iter 399] New Best Found! Energy: 70.5966 | FLOPs: 7059.66M | Params: 6.89M
-[Iter 419] New Best Found! Energy: 68.4546 | FLOPs: 6845.46M | Params: 6.69M
-[Iter 420] New Best Found! Energy: 65.9331 | FLOPs: 6593.31M | Params: 6.44M
-[Iter 427] New Best Found! Energy: 65.7313 | FLOPs: 6573.13M | Params: 6.42M
-[Iter 431] New Best Found! Energy: 65.2398 | FLOPs: 6523.98M | Params: 6.37M
-[Iter 434] New Best Found! Energy: 60.4268 | FLOPs: 6042.68M | Params: 5.90M
-[Iter 436] New Best Found! Energy: 60.4045 | FLOPs: 6040.45M | Params: 5.90M
-[Iter 437] New Best Found! Energy: 60.0362 | FLOPs: 6003.62M | Params: 5.86M
-[Iter 444] New Best Found! Energy: 60.0140 | FLOPs: 6001.40M | Params: 5.86M
-[Iter 458] New Best Found! Energy: 58.5168 | FLOPs: 5851.68M | Params: 5.71M
-[Iter 467] New Best Found! Energy: 58.1501 | FLOPs: 5815.01M | Params: 5.68M
-[Iter 468] New Best Found! Energy: 58.1378 | FLOPs: 5813.78M | Params: 5.68M
-[Iter 470] New Best Found! Energy: 57.7872 | FLOPs: 5778.72M | Params: 5.64M
-[Iter 473] New Best Found! Energy: 57.4185 | FLOPs: 5741.85M | Params: 5.61M
-[Iter 481] New Best Found! Energy: 55.7264 | FLOPs: 5572.64M | Params: 5.44M
-[Iter 486] New Best Found! Energy: 55.1202 | FLOPs: 5512.02M | Params: 5.38M
-[Iter 493] New Best Found! Energy: 55.0031 | FLOPs: 5500.31M | Params: 5.37M
-[Iter 500] New Best Found! Energy: 54.9468 | FLOPs: 5494.68M | Params: 5.37M
-[Iter 501] New Best Found! Energy: 54.6597 | FLOPs: 5465.97M | Params: 5.34M
-[Iter 506] New Best Found! Energy: 53.6649 | FLOPs: 5366.49M | Params: 5.24M
-[Iter 507] New Best Found! Energy: 53.2245 | FLOPs: 5322.45M | Params: 5.20M
-[Iter 519] New Best Found! Energy: 43.1139 | FLOPs: 4311.39M | Params: 4.21M
-[Iter 520] New Best Found! Energy: 42.3816 | FLOPs: 4238.16M | Params: 4.14M
-[Iter 523] New Best Found! Energy: 42.3782 | FLOPs: 4237.82M | Params: 4.14M
-[Iter 552] New Best Found! Energy: 42.2235 | FLOPs: 4222.35M | Params: 4.12M
-[Iter 601] New Best Found! Energy: 41.8716 | FLOPs: 4187.16M | Params: 4.09M
-[Iter 609] New Best Found! Energy: 41.3355 | FLOPs: 4133.55M | Params: 4.04M
-[Iter 613] New Best Found! Energy: 41.0534 | FLOPs: 4105.34M | Params: 4.01M
-[Iter 625] New Best Found! Energy: 39.2492 | FLOPs: 3924.92M | Params: 3.83M
-[Iter 634] New Best Found! Energy: 38.9833 | FLOPs: 3898.33M | Params: 3.81M
-[Iter 635] New Best Found! Energy: 38.8506 | FLOPs: 3885.06M | Params: 3.79M
-[Iter 636] New Best Found! Energy: 37.8806 | FLOPs: 3788.06M | Params: 3.70M
-[Iter 646] New Best Found! Energy: 36.8183 | FLOPs: 3681.83M | Params: 3.60M
-[Iter 647] New Best Found! Energy: 35.5600 | FLOPs: 3556.00M | Params: 3.47M
-[Iter 648] New Best Found! Energy: 35.1746 | FLOPs: 3517.46M | Params: 3.44M
-[Iter 651] New Best Found! Energy: 34.9225 | FLOPs: 3492.25M | Params: 3.41M
-[Iter 658] New Best Found! Energy: 34.6703 | FLOPs: 3467.03M | Params: 3.39M
-[Iter 662] New Best Found! Energy: 34.3386 | FLOPs: 3433.86M | Params: 3.35M
-[Iter 665] New Best Found! Energy: 34.2763 | FLOPs: 3427.63M | Params: 3.35M
-[Iter 670] New Best Found! Energy: 33.5729 | FLOPs: 3357.29M | Params: 3.28M
-[Iter 672] New Best Found! Energy: 33.2928 | FLOPs: 3329.28M | Params: 3.25M
+Start Searching... Initial Energy: 112.5089
+[Iter 8] New Best Found! Energy: 112.4957 | FLOPs: 11249.57M | Params: 10.99M
+[Iter 9] New Best Found! Energy: 109.4758 | FLOPs: 10947.58M | Params: 10.69M
+[Iter 14] New Best Found! Energy: 105.6773 | FLOPs: 10567.73M | Params: 10.32M
+[Iter 16] New Best Found! Energy: 103.6955 | FLOPs: 10369.55M | Params: 10.13M
+[Iter 18] New Best Found! Energy: 85.5761 | FLOPs: 8557.61M | Params: 8.36M
+[Iter 19] New Best Found! Energy: 77.1770 | FLOPs: 7717.70M | Params: 7.54M
+[Iter 21] New Best Found! Energy: 76.5164 | FLOPs: 7651.64M | Params: 7.47M
+[Iter 25] New Best Found! Energy: 76.4209 | FLOPs: 7642.09M | Params: 7.46M
+[Iter 32] New Best Found! Energy: 55.9422 | FLOPs: 5594.22M | Params: 5.46M
+[Iter 36] New Best Found! Energy: 51.9432 | FLOPs: 5194.32M | Params: 5.07M
+[Iter 37] New Best Found! Energy: 51.0467 | FLOPs: 5104.67M | Params: 4.99M
+[Iter 46] New Best Found! Energy: 50.3507 | FLOPs: 5035.07M | Params: 4.92M
+[Iter 64] New Best Found! Energy: 28.8323 | FLOPs: 2883.23M | Params: 2.82M
+[Iter 69] New Best Found! Energy: 28.3604 | FLOPs: 2836.04M | Params: 2.77M
+[Iter 71] New Best Found! Energy: 27.2043 | FLOPs: 2720.43M | Params: 2.66M
+[Iter 74] New Best Found! Energy: 24.5501 | FLOPs: 2455.01M | Params: 2.40M
+[Iter 75] New Best Found! Energy: 24.4558 | FLOPs: 2445.58M | Params: 2.39M
+[Iter 77] New Best Found! Energy: 23.6064 | FLOPs: 2360.64M | Params: 2.31M
+[Iter 78] New Best Found! Energy: 23.5710 | FLOPs: 2357.10M | Params: 2.30M
+[Iter 79] New Best Found! Energy: 23.4761 | FLOPs: 2347.61M | Params: 2.29M
+[Iter 82] New Best Found! Energy: 22.8037 | FLOPs: 2280.37M | Params: 2.23M
+[Iter 88] New Best Found! Energy: 22.1696 | FLOPs: 2216.96M | Params: 2.17M
+[Iter 92] New Best Found! Energy: 22.1343 | FLOPs: 2213.43M | Params: 2.16M
+[Iter 95] New Best Found! Energy: 19.6924 | FLOPs: 1969.24M | Params: 1.92M
+[Iter 99] New Best Found! Energy: 19.6334 | FLOPs: 1963.34M | Params: 1.92M
+[Iter 102] New Best Found! Energy: 18.9551 | FLOPs: 1895.51M | Params: 1.85M
+[Iter 107] New Best Found! Energy: 18.6513 | FLOPs: 1865.13M | Params: 1.82M
+[Iter 108] New Best Found! Energy: 18.4626 | FLOPs: 1846.26M | Params: 1.80M
+[Iter 110] New Best Found! Energy: 18.0645 | FLOPs: 1806.45M | Params: 1.76M
+[Iter 111] New Best Found! Energy: 16.1512 | FLOPs: 1615.12M | Params: 1.58M
+[Iter 135] New Best Found! Energy: 15.9584 | FLOPs: 1595.84M | Params: 1.56M
+[Iter 137] New Best Found! Energy: 15.7166 | FLOPs: 1571.66M | Params: 1.53M
+[Iter 139] New Best Found! Energy: 15.7019 | FLOPs: 1570.19M | Params: 1.53M
+[Iter 140] New Best Found! Energy: 13.8808 | FLOPs: 1388.08M | Params: 1.36M
+[Iter 399] New Best Found! Energy: 12.6309 | FLOPs: 1263.09M | Params: 1.23M
+[Iter 433] New Best Found! Energy: 11.8280 | FLOPs: 1182.80M | Params: 1.16M
+[Iter 440] New Best Found! Energy: 11.3222 | FLOPs: 1132.22M | Params: 1.11M
+[Iter 444] New Best Found! Energy: 11.1453 | FLOPs: 1114.53M | Params: 1.09M
+[Iter 447] New Best Found! Energy: 10.8858 | FLOPs: 1088.58M | Params: 1.06M
+[Iter 454] New Best Found! Energy: 10.7788 | FLOPs: 1077.88M | Params: 1.05M
+[Iter 461] New Best Found! Energy: 10.6941 | FLOPs: 1069.41M | Params: 1.04M
+[Iter 464] New Best Found! Energy: 10.6542 | FLOPs: 1065.42M | Params: 1.04M
+[Iter 492] New Best Found! Energy: 10.5665 | FLOPs: 1056.65M | Params: 1.03M
+[Iter 493] New Best Found! Energy: 9.3588 | FLOPs: 935.88M | Params: 0.91M
+[Iter 496] New Best Found! Energy: 9.2261 | FLOPs: 922.61M | Params: 0.90M
+[Iter 511] New Best Found! Energy: 9.1754 | FLOPs: 917.54M | Params: 0.90M
+[Iter 520] New Best Found! Energy: 8.6888 | FLOPs: 868.88M | Params: 0.85M
+[Iter 521] New Best Found! Energy: 8.3998 | FLOPs: 839.98M | Params: 0.82M
+[Iter 523] New Best Found! Energy: 8.1727 | FLOPs: 817.27M | Params: 0.80M
+[Iter 534] New Best Found! Energy: 8.1462 | FLOPs: 814.62M | Params: 0.80M
+[Iter 538] New Best Found! Energy: 7.4598 | FLOPs: 745.98M | Params: 0.73M
+[Iter 539] New Best Found! Energy: 7.4377 | FLOPs: 743.77M | Params: 0.73M
+[Iter 541] New Best Found! Energy: 7.4259 | FLOPs: 742.59M | Params: 0.73M
+[Iter 561] New Best Found! Energy: 6.9120 | FLOPs: 691.20M | Params: 0.68M
+[Iter 568] New Best Found! Energy: 6.3178 | FLOPs: 631.78M | Params: 0.62M
+[Iter 577] New Best Found! Energy: 5.9639 | FLOPs: 596.39M | Params: 0.58M
+[Iter 582] New Best Found! Energy: 5.5149 | FLOPs: 551.49M | Params: 0.54M
+[Iter 583] New Best Found! Energy: 5.4662 | FLOPs: 546.62M | Params: 0.53M
+[Iter 585] New Best Found! Energy: 5.3939 | FLOPs: 539.39M | Params: 0.53M
+[Iter 598] New Best Found! Energy: 5.0629 | FLOPs: 506.29M | Params: 0.49M
+[Iter 599] New Best Found! Energy: 4.7975 | FLOPs: 479.75M | Params: 0.47M
+[Iter 607] New Best Found! Energy: 4.4922 | FLOPs: 449.22M | Params: 0.44M
+[Iter 611] New Best Found! Energy: 4.3993 | FLOPs: 439.93M | Params: 0.43M
+[Iter 616] New Best Found! Energy: 4.1723 | FLOPs: 417.23M | Params: 0.41M
+[Iter 636] New Best Found! Energy: 3.9607 | FLOPs: 396.07M | Params: 0.39M
+[Iter 638] New Best Found! Energy: 3.8722 | FLOPs: 387.22M | Params: 0.38M
+[Iter 653] New Best Found! Energy: 3.8383 | FLOPs: 383.83M | Params: 0.37M
+[Iter 657] New Best Found! Energy: 3.8344 | FLOPs: 383.44M | Params: 0.37M
+[Iter 659] New Best Found! Energy: 3.7465 | FLOPs: 374.65M | Params: 0.37M
 Testing Lambda = 5...
-Start Searching... Initial Energy: 268.5295
-[Iter 3] New Best Found! Energy: 265.8766 | FLOPs: 21040.40M | Params: 20.55M
-[Iter 4] New Best Found! Energy: 263.7211 | FLOPs: 20931.35M | Params: 20.44M
-[Iter 7] New Best Found! Energy: 263.6917 | FLOPs: 20929.86M | Params: 20.44M
-[Iter 9] New Best Found! Energy: 247.7743 | FLOPs: 20124.55M | Params: 19.65M
-[Iter 13] New Best Found! Energy: 244.5825 | FLOPs: 19963.07M | Params: 19.50M
-[Iter 14] New Best Found! Energy: 242.4270 | FLOPs: 19854.02M | Params: 19.39M
-[Iter 19] New Best Found! Energy: 227.1936 | FLOPs: 19083.31M | Params: 18.64M
-[Iter 21] New Best Found! Energy: 226.0330 | FLOPs: 19024.59M | Params: 18.58M
-[Iter 24] New Best Found! Energy: 208.2710 | FLOPs: 18125.96M | Params: 17.70M
-[Iter 26] New Best Found! Energy: 205.1000 | FLOPs: 17965.53M | Params: 17.54M
-[Iter 36] New Best Found! Energy: 202.4885 | FLOPs: 17833.41M | Params: 17.42M
-[Iter 37] New Best Found! Energy: 186.5711 | FLOPs: 17028.10M | Params: 16.63M
-[Iter 38] New Best Found! Energy: 183.9182 | FLOPs: 16893.89M | Params: 16.50M
-[Iter 45] New Best Found! Energy: 182.3016 | FLOPs: 16812.10M | Params: 16.42M
-[Iter 46] New Best Found! Energy: 178.7653 | FLOPs: 16633.18M | Params: 16.24M
-[Iter 48] New Best Found! Energy: 178.5205 | FLOPs: 16620.80M | Params: 16.23M
-[Iter 50] New Best Found! Energy: 178.5073 | FLOPs: 16620.13M | Params: 16.23M
-[Iter 53] New Best Found! Energy: 154.6313 | FLOPs: 15412.17M | Params: 15.05M
-[Iter 86] New Best Found! Energy: 152.3030 | FLOPs: 15230.30M | Params: 14.87M
-[Iter 87] New Best Found! Energy: 150.4313 | FLOPs: 15043.13M | Params: 14.69M
-[Iter 88] New Best Found! Energy: 143.2119 | FLOPs: 14321.19M | Params: 13.99M
-[Iter 89] New Best Found! Energy: 141.8697 | FLOPs: 14186.97M | Params: 13.85M
-[Iter 90] New Best Found! Energy: 140.4900 | FLOPs: 14049.00M | Params: 13.72M
-[Iter 92] New Best Found! Energy: 138.1307 | FLOPs: 13813.07M | Params: 13.49M
-[Iter 98] New Best Found! Energy: 136.9367 | FLOPs: 13693.67M | Params: 13.37M
-[Iter 103] New Best Found! Energy: 136.7894 | FLOPs: 13678.94M | Params: 13.36M
-[Iter 105] New Best Found! Energy: 135.9610 | FLOPs: 13596.10M | Params: 13.28M
-[Iter 122] New Best Found! Energy: 134.2358 | FLOPs: 13423.58M | Params: 13.11M
-[Iter 124] New Best Found! Energy: 133.9631 | FLOPs: 13396.31M | Params: 13.08M
-[Iter 126] New Best Found! Energy: 133.8805 | FLOPs: 13388.05M | Params: 13.07M
-[Iter 130] New Best Found! Energy: 132.5885 | FLOPs: 13258.85M | Params: 12.95M
-[Iter 134] New Best Found! Energy: 131.5819 | FLOPs: 13158.19M | Params: 12.85M
-[Iter 135] New Best Found! Energy: 130.6778 | FLOPs: 13067.78M | Params: 12.76M
-[Iter 137] New Best Found! Energy: 128.8795 | FLOPs: 12887.95M | Params: 12.59M
-[Iter 139] New Best Found! Energy: 128.8343 | FLOPs: 12883.43M | Params: 12.58M
-[Iter 141] New Best Found! Energy: 124.3411 | FLOPs: 12434.11M | Params: 12.14M
-[Iter 144] New Best Found! Energy: 123.1563 | FLOPs: 12315.63M | Params: 12.03M
-[Iter 146] New Best Found! Energy: 122.9781 | FLOPs: 12297.81M | Params: 12.01M
-[Iter 147] New Best Found! Energy: 122.9414 | FLOPs: 12294.14M | Params: 12.01M
-[Iter 151] New Best Found! Energy: 122.3542 | FLOPs: 12235.42M | Params: 11.95M
-[Iter 152] New Best Found! Energy: 117.5746 | FLOPs: 11757.46M | Params: 11.48M
-[Iter 154] New Best Found! Energy: 115.6151 | FLOPs: 11561.51M | Params: 11.29M
-[Iter 157] New Best Found! Energy: 115.3212 | FLOPs: 11532.12M | Params: 11.26M
-[Iter 159] New Best Found! Energy: 114.5944 | FLOPs: 11459.44M | Params: 11.19M
-[Iter 161] New Best Found! Energy: 113.5038 | FLOPs: 11350.38M | Params: 11.08M
-[Iter 162] New Best Found! Energy: 111.1446 | FLOPs: 11114.46M | Params: 10.85M
-[Iter 167] New Best Found! Energy: 111.0697 | FLOPs: 11106.97M | Params: 10.85M
-[Iter 168] New Best Found! Energy: 110.8210 | FLOPs: 11082.10M | Params: 10.82M
-[Iter 169] New Best Found! Energy: 109.7177 | FLOPs: 10971.77M | Params: 10.71M
-[Iter 175] New Best Found! Energy: 109.1908 | FLOPs: 10919.08M | Params: 10.66M
-[Iter 176] New Best Found! Energy: 108.3834 | FLOPs: 10838.34M | Params: 10.58M
-[Iter 193] New Best Found! Energy: 108.2556 | FLOPs: 10825.56M | Params: 10.57M
-[Iter 195] New Best Found! Energy: 107.4675 | FLOPs: 10746.75M | Params: 10.49M
-[Iter 210] New Best Found! Energy: 106.9858 | FLOPs: 10698.58M | Params: 10.45M
-[Iter 250] New Best Found! Energy: 86.8337 | FLOPs: 8683.37M | Params: 8.48M
-[Iter 251] New Best Found! Energy: 86.2341 | FLOPs: 8623.41M | Params: 8.42M
-[Iter 253] New Best Found! Energy: 84.8762 | FLOPs: 8487.62M | Params: 8.29M
-[Iter 254] New Best Found! Energy: 83.5341 | FLOPs: 8353.41M | Params: 8.16M
-[Iter 263] New Best Found! Energy: 79.7313 | FLOPs: 7973.13M | Params: 7.79M
-[Iter 268] New Best Found! Energy: 79.4600 | FLOPs: 7946.00M | Params: 7.76M
-[Iter 280] New Best Found! Energy: 79.3224 | FLOPs: 7932.24M | Params: 7.75M
-[Iter 283] New Best Found! Energy: 77.3072 | FLOPs: 7730.72M | Params: 7.55M
-[Iter 284] New Best Found! Energy: 77.1204 | FLOPs: 7712.04M | Params: 7.53M
-[Iter 286] New Best Found! Energy: 75.8385 | FLOPs: 7583.85M | Params: 7.41M
-[Iter 293] New Best Found! Energy: 75.6078 | FLOPs: 7560.78M | Params: 7.38M
-[Iter 301] New Best Found! Energy: 72.2026 | FLOPs: 7220.26M | Params: 7.05M
-[Iter 302] New Best Found! Energy: 72.0158 | FLOPs: 7201.58M | Params: 7.03M
-[Iter 306] New Best Found! Energy: 70.8361 | FLOPs: 7083.61M | Params: 6.92M
-[Iter 322] New Best Found! Energy: 70.5166 | FLOPs: 7051.66M | Params: 6.89M
-[Iter 328] New Best Found! Energy: 69.1161 | FLOPs: 6911.61M | Params: 6.75M
-[Iter 331] New Best Found! Energy: 66.5569 | FLOPs: 6655.69M | Params: 6.50M
-[Iter 355] New Best Found! Energy: 65.3746 | FLOPs: 6537.46M | Params: 6.38M
-[Iter 356] New Best Found! Energy: 64.3679 | FLOPs: 6436.79M | Params: 6.29M
-[Iter 358] New Best Found! Energy: 61.3097 | FLOPs: 6130.97M | Params: 5.99M
-[Iter 359] New Best Found! Energy: 61.2605 | FLOPs: 6126.05M | Params: 5.98M
-[Iter 363] New Best Found! Energy: 60.7056 | FLOPs: 6070.56M | Params: 5.93M
-[Iter 366] New Best Found! Energy: 60.5876 | FLOPs: 6058.76M | Params: 5.92M
-[Iter 371] New Best Found! Energy: 60.5808 | FLOPs: 6058.08M | Params: 5.92M
-[Iter 385] New Best Found! Energy: 58.6171 | FLOPs: 5861.71M | Params: 5.72M
-[Iter 390] New Best Found! Energy: 55.5500 | FLOPs: 5555.00M | Params: 5.42M
-[Iter 391] New Best Found! Energy: 55.2492 | FLOPs: 5524.92M | Params: 5.40M
-[Iter 400] New Best Found! Energy: 54.2161 | FLOPs: 5421.61M | Params: 5.29M
-[Iter 407] New Best Found! Energy: 53.8364 | FLOPs: 5383.64M | Params: 5.26M
-[Iter 413] New Best Found! Energy: 53.4977 | FLOPs: 5349.77M | Params: 5.22M
-[Iter 414] New Best Found! Energy: 51.6766 | FLOPs: 5167.66M | Params: 5.05M
-[Iter 417] New Best Found! Energy: 50.8555 | FLOPs: 5085.55M | Params: 4.97M
-[Iter 422] New Best Found! Energy: 50.7454 | FLOPs: 5074.54M | Params: 4.96M
-[Iter 428] New Best Found! Energy: 50.4256 | FLOPs: 5042.56M | Params: 4.92M
-[Iter 429] New Best Found! Energy: 50.3784 | FLOPs: 5037.84M | Params: 4.92M
-[Iter 431] New Best Found! Energy: 48.2420 | FLOPs: 4824.20M | Params: 4.71M
-[Iter 434] New Best Found! Energy: 47.6548 | FLOPs: 4765.48M | Params: 4.65M
-[Iter 435] New Best Found! Energy: 46.8912 | FLOPs: 4689.12M | Params: 4.58M
-[Iter 437] New Best Found! Energy: 46.1964 | FLOPs: 4619.64M | Params: 4.51M
-[Iter 507] New Best Found! Energy: 42.5192 | FLOPs: 4251.92M | Params: 4.15M
-[Iter 517] New Best Found! Energy: 42.4032 | FLOPs: 4240.32M | Params: 4.14M
-[Iter 521] New Best Found! Energy: 42.3285 | FLOPs: 4232.85M | Params: 4.13M
-[Iter 523] New Best Found! Energy: 42.2066 | FLOPs: 4220.66M | Params: 4.12M
-[Iter 536] New Best Found! Energy: 41.8634 | FLOPs: 4186.34M | Params: 4.09M
-[Iter 539] New Best Found! Energy: 41.0007 | FLOPs: 4100.07M | Params: 4.00M
-[Iter 541] New Best Found! Energy: 40.2431 | FLOPs: 4024.31M | Params: 3.93M
-[Iter 542] New Best Found! Energy: 39.8499 | FLOPs: 3984.99M | Params: 3.89M
-[Iter 550] New Best Found! Energy: 39.7467 | FLOPs: 3974.67M | Params: 3.88M
-[Iter 551] New Best Found! Energy: 39.7397 | FLOPs: 3973.97M | Params: 3.88M
-[Iter 554] New Best Found! Energy: 39.6233 | FLOPs: 3962.33M | Params: 3.87M
-[Iter 572] New Best Found! Energy: 38.9786 | FLOPs: 3897.86M | Params: 3.81M
-[Iter 575] New Best Found! Energy: 38.9462 | FLOPs: 3894.62M | Params: 3.80M
-[Iter 577] New Best Found! Energy: 38.7864 | FLOPs: 3878.64M | Params: 3.79M
-[Iter 578] New Best Found! Energy: 38.5374 | FLOPs: 3853.74M | Params: 3.76M
-[Iter 587] New Best Found! Energy: 38.4633 | FLOPs: 3846.33M | Params: 3.76M
-[Iter 589] New Best Found! Energy: 38.1875 | FLOPs: 3818.75M | Params: 3.73M
-[Iter 602] New Best Found! Energy: 37.8970 | FLOPs: 3789.70M | Params: 3.70M
-[Iter 612] New Best Found! Energy: 37.4256 | FLOPs: 3742.56M | Params: 3.65M
-[Iter 615] New Best Found! Energy: 37.0426 | FLOPs: 3704.26M | Params: 3.62M
-[Iter 626] New Best Found! Energy: 36.9580 | FLOPs: 3695.80M | Params: 3.61M
-[Iter 633] New Best Found! Energy: 36.8935 | FLOPs: 3689.35M | Params: 3.60M
-[Iter 634] New Best Found! Energy: 36.8312 | FLOPs: 3683.12M | Params: 3.60M
-[Iter 635] New Best Found! Energy: 36.2439 | FLOPs: 3624.39M | Params: 3.54M
-[Iter 643] New Best Found! Energy: 36.2399 | FLOPs: 3623.99M | Params: 3.54M
-[Iter 646] New Best Found! Energy: 36.1642 | FLOPs: 3616.42M | Params: 3.53M
-[Iter 651] New Best Found! Energy: 35.6912 | FLOPs: 3569.12M | Params: 3.49M
-[Iter 657] New Best Found! Energy: 35.6042 | FLOPs: 3560.42M | Params: 3.48M
-[Iter 658] New Best Found! Energy: 34.9789 | FLOPs: 3497.89M | Params: 3.42M
-[Iter 670] New Best Found! Energy: 33.7432 | FLOPs: 3374.32M | Params: 3.30M
-[Iter 673] New Best Found! Energy: 32.2441 | FLOPs: 3224.41M | Params: 3.15M
+Start Searching... Initial Energy: 112.5089
+[Iter 5] New Best Found! Energy: 112.5001 | FLOPs: 11250.01M | Params: 10.99M
+[Iter 9] New Best Found! Energy: 111.3204 | FLOPs: 11132.04M | Params: 10.87M
+[Iter 15] New Best Found! Energy: 111.0373 | FLOPs: 11103.73M | Params: 10.84M
+[Iter 16] New Best Found! Energy: 110.7542 | FLOPs: 11075.42M | Params: 10.82M
+[Iter 20] New Best Found! Energy: 110.1172 | FLOPs: 11011.72M | Params: 10.75M
+[Iter 21] New Best Found! Energy: 109.9874 | FLOPs: 10998.74M | Params: 10.74M
+[Iter 24] New Best Found! Energy: 108.0056 | FLOPs: 10800.56M | Params: 10.55M
+[Iter 29] New Best Found! Energy: 107.6930 | FLOPs: 10769.30M | Params: 10.52M
+[Iter 31] New Best Found! Energy: 107.5633 | FLOPs: 10756.33M | Params: 10.50M
+[Iter 32] New Best Found! Energy: 106.4308 | FLOPs: 10643.08M | Params: 10.39M
+[Iter 41] New Best Found! Energy: 103.9535 | FLOPs: 10395.35M | Params: 10.15M
+[Iter 60] New Best Found! Energy: 100.8135 | FLOPs: 10081.35M | Params: 9.85M
+[Iter 86] New Best Found! Energy: 88.8776 | FLOPs: 8887.76M | Params: 8.68M
+[Iter 90] New Best Found! Energy: 87.7230 | FLOPs: 8772.30M | Params: 8.57M
+[Iter 140] New Best Found! Energy: 81.1008 | FLOPs: 8110.08M | Params: 7.92M
+[Iter 146] New Best Found! Energy: 79.8401 | FLOPs: 7984.01M | Params: 7.80M
+[Iter 149] New Best Found! Energy: 79.5879 | FLOPs: 7958.79M | Params: 7.77M
+[Iter 152] New Best Found! Energy: 78.7828 | FLOPs: 7878.28M | Params: 7.69M
+[Iter 154] New Best Found! Energy: 67.3520 | FLOPs: 6735.20M | Params: 6.58M
+[Iter 160] New Best Found! Energy: 63.3766 | FLOPs: 6337.66M | Params: 6.19M
+[Iter 168] New Best Found! Energy: 63.0286 | FLOPs: 6302.86M | Params: 6.16M
+[Iter 170] New Best Found! Energy: 62.9401 | FLOPs: 6294.01M | Params: 6.15M
+[Iter 173] New Best Found! Energy: 60.7696 | FLOPs: 6076.96M | Params: 5.93M
+[Iter 182] New Best Found! Energy: 55.6528 | FLOPs: 5565.28M | Params: 5.43M
+[Iter 189] New Best Found! Energy: 54.8035 | FLOPs: 5480.35M | Params: 5.35M
+[Iter 210] New Best Found! Energy: 37.1751 | FLOPs: 3717.51M | Params: 3.63M
+[Iter 225] New Best Found! Energy: 36.6148 | FLOPs: 3661.48M | Params: 3.58M
+[Iter 249] New Best Found! Energy: 36.3051 | FLOPs: 3630.51M | Params: 3.55M
+[Iter 267] New Best Found! Energy: 31.0011 | FLOPs: 3100.11M | Params: 3.03M
+[Iter 268] New Best Found! Energy: 30.5765 | FLOPs: 3057.65M | Params: 2.99M
+[Iter 293] New Best Found! Energy: 30.3265 | FLOPs: 3032.65M | Params: 2.96M
+[Iter 300] New Best Found! Energy: 25.7082 | FLOPs: 2570.82M | Params: 2.51M
+[Iter 309] New Best Found! Energy: 25.6492 | FLOPs: 2564.92M | Params: 2.50M
+[Iter 310] New Best Found! Energy: 25.1538 | FLOPs: 2515.38M | Params: 2.46M
+[Iter 385] New Best Found! Energy: 24.8231 | FLOPs: 2482.31M | Params: 2.42M
+[Iter 394] New Best Found! Energy: 24.4132 | FLOPs: 2441.32M | Params: 2.38M
+[Iter 398] New Best Found! Energy: 24.3048 | FLOPs: 2430.48M | Params: 2.37M
+[Iter 401] New Best Found! Energy: 24.2915 | FLOPs: 2429.15M | Params: 2.37M
+[Iter 407] New Best Found! Energy: 23.8138 | FLOPs: 2381.38M | Params: 2.33M
+[Iter 410] New Best Found! Energy: 22.3274 | FLOPs: 2232.74M | Params: 2.18M
+[Iter 415] New Best Found! Energy: 21.2348 | FLOPs: 2123.48M | Params: 2.07M
+[Iter 417] New Best Found! Energy: 20.5130 | FLOPs: 2051.30M | Params: 2.00M
+[Iter 418] New Best Found! Energy: 20.5072 | FLOPs: 2050.72M | Params: 2.00M
+[Iter 422] New Best Found! Energy: 20.4354 | FLOPs: 2043.54M | Params: 2.00M
+[Iter 423] New Best Found! Energy: 20.3469 | FLOPs: 2034.69M | Params: 1.99M
+[Iter 430] New Best Found! Energy: 18.0908 | FLOPs: 1809.08M | Params: 1.77M
+[Iter 475] New Best Found! Energy: 18.0525 | FLOPs: 1805.25M | Params: 1.76M
+[Iter 476] New Best Found! Energy: 17.9751 | FLOPs: 1797.51M | Params: 1.76M
+[Iter 478] New Best Found! Energy: 17.9507 | FLOPs: 1795.07M | Params: 1.75M
+[Iter 482] New Best Found! Energy: 17.8991 | FLOPs: 1789.91M | Params: 1.75M
+[Iter 497] New Best Found! Energy: 17.7126 | FLOPs: 1771.26M | Params: 1.73M
+[Iter 498] New Best Found! Energy: 17.3720 | FLOPs: 1737.20M | Params: 1.70M
+[Iter 499] New Best Found! Energy: 16.6642 | FLOPs: 1666.42M | Params: 1.63M
+[Iter 500] New Best Found! Energy: 16.6310 | FLOPs: 1663.10M | Params: 1.62M
+[Iter 505] New Best Found! Energy: 16.5470 | FLOPs: 1654.70M | Params: 1.62M
+[Iter 507] New Best Found! Energy: 16.3331 | FLOPs: 1633.31M | Params: 1.60M
+[Iter 509] New Best Found! Energy: 16.0854 | FLOPs: 1608.54M | Params: 1.57M
+[Iter 513] New Best Found! Energy: 16.0633 | FLOPs: 1606.33M | Params: 1.57M
+[Iter 514] New Best Found! Energy: 15.8923 | FLOPs: 1589.23M | Params: 1.55M
+[Iter 519] New Best Found! Energy: 15.8735 | FLOPs: 1587.35M | Params: 1.55M
+[Iter 532] New Best Found! Energy: 14.0686 | FLOPs: 1406.86M | Params: 1.37M
+[Iter 536] New Best Found! Energy: 13.5776 | FLOPs: 1357.76M | Params: 1.33M
+[Iter 542] New Best Found! Energy: 13.1861 | FLOPs: 1318.61M | Params: 1.29M
+[Iter 546] New Best Found! Energy: 13.1640 | FLOPs: 1316.40M | Params: 1.29M
+[Iter 562] New Best Found! Energy: 12.9273 | FLOPs: 1292.73M | Params: 1.26M
+[Iter 586] New Best Found! Energy: 11.9288 | FLOPs: 1192.88M | Params: 1.16M
+[Iter 598] New Best Found! Energy: 11.5425 | FLOPs: 1154.25M | Params: 1.13M
+[Iter 628] New Best Found! Energy: 10.9752 | FLOPs: 1097.52M | Params: 1.07M
+[Iter 629] New Best Found! Energy: 10.8955 | FLOPs: 1089.55M | Params: 1.06M
+[Iter 633] New Best Found! Energy: 9.7011 | FLOPs: 970.11M | Params: 0.95M
+[Iter 635] New Best Found! Energy: 8.7456 | FLOPs: 874.56M | Params: 0.85M
+[Iter 636] New Best Found! Energy: 8.7434 | FLOPs: 874.34M | Params: 0.85M
+[Iter 642] New Best Found! Energy: 8.4116 | FLOPs: 841.16M | Params: 0.82M
+[Iter 652] New Best Found! Energy: 8.0651 | FLOPs: 806.51M | Params: 0.79M
+[Iter 667] New Best Found! Energy: 7.7886 | FLOPs: 778.86M | Params: 0.76M
+[Iter 671] New Best Found! Energy: 7.6692 | FLOPs: 766.92M | Params: 0.75M
 
->>> Results saved to results/Table_3_Sensitivity_Analysis.csv
+>>> Results saved to results_50epochs_V2/Table_3_Sensitivity_Analysis.csv
 
 --- Table 3 Sensitivity ---
  Penalty Coef (λ)  Params (M)  GFLOPs  Latency (ms)  Peak Mem (MB)
-              0.0        4.37    4.47         25.45          52.41
-              0.1        3.57    3.66         24.51          42.90
-              0.5        2.60    2.66         20.06          31.15
-              2.0        3.25    3.33         26.56          39.01
-              5.0        3.15    3.22         24.25          37.79
-Table 3 Visualization saved.
+              0.0        0.73    0.75          6.78           8.78
+              0.1        0.48    0.49          6.71           5.75
+              0.5        0.52    0.53          6.35           6.19
+              2.0        0.37    0.37          6.55           4.39
+              5.0        0.75    0.77          6.67           8.99
 
-All Experiments Finished! Total Time: 367.26 mins
-Check the 'results' directory for CSVs and Plots.
+All Experiments Finished! Total Time: 295.09 mins
+Check 'results_50epochs_V2' for CSVs/Plots and 'pth' for Models.
 
 Process finished with exit code 0
