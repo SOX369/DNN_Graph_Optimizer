@@ -13,7 +13,7 @@ from train_eval import train_model, evaluate_performance
 from utils.model_utils import generate_default_config, get_model
 
 # 结果保存路径
-RESULTS_DIR = "results_50epochs_V3"
+RESULTS_DIR = "results_30epochs_V1"
 PTH_DIR = "pth"  # [新增] 模型权重保存路径
 
 if not os.path.exists(RESULTS_DIR):
@@ -47,12 +47,12 @@ def run_experiment_1_comparison():
     HARDWARE_CONSTRAINTS['PENALTY_COEF'] = 0.5
 
     # [修改] 更新后的模型列表
-    models_list = ['vgg16', 'resnet18', 'resnext50', 'googlenet', 'mobilenetv2']
+    models_list = ['vgg16', 'resnet18', 'shufflenetv2', 'googlenet', 'mobilenetv2']
     results = []
 
     # 获取数据 (Batch Size 128)
     train_loader, test_loader = get_cifar10_loaders(batch_size=128)
-    EPOCHS = 20
+    EPOCHS = 30
 
     for model_name in models_list:
         print(f"\n--- Processing Model: {model_name} ---")
@@ -156,7 +156,7 @@ def run_experiment_2_ablation():
     model_name = 'resnet18'
     base_config = generate_default_config(model_name)
     train_loader, test_loader = get_cifar10_loaders(batch_size=128)
-    EPOCHS = 10
+    EPOCHS = 30
 
     # 备份默认 lambda
     original_lambda = HARDWARE_CONSTRAINTS['PENALTY_COEF']

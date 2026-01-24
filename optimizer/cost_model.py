@@ -30,7 +30,7 @@ class HardwareAwareCostModel:
         size = 32  # CIFAR-10 输入图片大小
 
         for layer in graph_config:
-            # 1. 处理池化层标记 (VGG风格)
+            # 1. 处理池化层标记 (VGG风格) 或 ShuffleNet 的降采样标记
             if layer == 'M':
                 size //= 2
                 continue
@@ -40,29 +40,33 @@ class HardwareAwareCostModel:
                 continue
 
             # 3. 解析层配置
+            # out_c: 输出通道数
             out_c = layer.get('out', in_c)
-            groups = layer.get('groups', 1)
 
-            # 获取卷积核大小 k，默认为 3。
-            # 这一步对于正确评估 ResNet/MobileNet 的 1x1 卷积至关重要。
+            # [关键修改]: 优先读取显式的 'in' 属性 (用于 ShuffleNet/DenseNet)
+            # 如果配置中没有 'in'，则默认使用上一层的输出 (in_c)
+            actual_in_c = layer.get('in', in_c)
+
+            groups = layer.get('groups', 1)
+            # 获取卷积核大小 k，默认为 3
             k = layer.get('k', 3)
 
             # 4. 基础计算 (理论数值)
             # FLOPs = H * W * Cin * Cout * K^2 / groups
-            current_flops = (size * size * in_c * out_c * k * k) / groups
+            # 注意这里使用 actual_in_c 进行计算
+            current_flops = (size * size * actual_in_c * out_c * k * k) / groups
+
             # Params = Cin * Cout * K^2 / groups
-            current_params = (in_c * out_c * k * k) / groups
+            current_params = (actual_in_c * out_c * k * k) / groups
 
             # 5. 计算硬件效率系数 (Efficiency Factor, alpha)
-            # 虽然 Depthwise 卷积理论 FLOPs 很低，但受限于显存带宽，实际推理速度并没有线性提升。
-            # 这里通过启发式系数 alpha 对其 Effective FLOPs 进行加权。
             alpha = 1.0
-            if groups == in_c and in_c > 1:
-                # 深度卷积 (Depthwise): 算术强度低，受限于带宽，给予 2.0 倍延迟惩罚
+            if groups == actual_in_c and actual_in_c > 1:
+                # 深度卷积 (Depthwise): 给予 2.0 倍延迟惩罚
                 alpha = 2.0
             elif groups > 1:
-                # 普通分组卷积 (Group Conv): 相比标准卷积，内存访问效率略低
-                alpha = 1.2
+                # 普通分组卷积 (Group Conv): 给予 1.5 倍延迟惩罚 (ResNeXt 经验值修正)
+                alpha = 1.5
 
             effective_flops = current_flops * alpha
 
@@ -71,19 +75,17 @@ class HardwareAwareCostModel:
             total_effective_flops += effective_flops
             total_params += current_params
 
-            # 更新下一层的输入通道数
+            # 更新下一层的默认输入通道数
+            # 对于 ShuffleNet 这种复杂拓扑，这个 in_c 更新可能被下一次循环的 'in' 覆盖，这没问题。
             in_c = out_c
 
         # 7. 计算总能量值 (Energy)
-        # 使用 Effective FLOPs 来更准确地模拟真实 Latency
         norm_latency = total_effective_flops / 1e8
 
-        # 显存惩罚项 (Barrier Function)
-        # 如果 Params 超过 max_params，加入线性惩罚
+        # 显存惩罚项
         mem_violation = max(0, total_params - self.max_params)
         penalty = self.penalty_coef * (mem_violation / 1e6)
 
         energy = norm_latency + penalty
 
-        # 返回 energy 用于优化搜索，返回 原始flops 和 params 用于日志记录
         return energy, total_flops, total_params
