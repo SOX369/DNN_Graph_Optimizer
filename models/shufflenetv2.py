@@ -26,10 +26,14 @@ class InvertedResidual(nn.Module):
 
         # ShuffleNet V2 output channels are split equally
         branch_features = oup // 2
-        assert (self.stride != 1) or (inp == branch_features << 1)
+        # [Constraint]: If stride=1, inp must equal oup for split/concat to work
+        assert (self.stride != 1) or (inp == branch_features << 1), \
+            f"Stride=1 requires inp({inp}) == oup({oup})"
 
         # Helper to get config
         def get_next_cfg():
+            # 这里虽然加了默认值，但如果 cfg_iter 吐出的是 'M' 字符串，还是会报错
+            # 所以关键在外部过滤
             return next(cfg_iter, {'groups': 1, 'fused': False})
 
         if self.stride > 1:
@@ -37,7 +41,7 @@ class InvertedResidual(nn.Module):
             # 3x3 DW Conv
             c1 = get_next_cfg()
             self.branch1_conv1 = DynamicConv2d(inp, inp, kernel_size=3, stride=self.stride, padding=1,
-                                               groups=c1.get('groups', 1), fused_relu=False)  # DW usually no ReLU
+                                               groups=c1.get('groups', 1), fused_relu=False)
             self.branch1_bn1 = nn.BatchNorm2d(inp)
 
             # 1x1 PW Conv
@@ -86,7 +90,6 @@ class InvertedResidual(nn.Module):
         if self.stride == 1:
             x1, x2 = x.chunk(2, dim=1)
             # x1 is Identity
-            # x2 processing
             out2 = self.branch2_conv1(x2)
             out2 = self.branch2_bn1(out2)
             out2 = self.branch2_conv2(out2)  # DW
@@ -118,11 +121,15 @@ class InvertedResidual(nn.Module):
 class ShuffleNetV2_Cifar(nn.Module):
     def __init__(self, graph_config, num_classes=10):
         super(ShuffleNetV2_Cifar, self).__init__()
-        self.cfg_iter = iter(graph_config)
+
+        # [关键修复]: 过滤掉 graph_config 中的 'M' 字符串
+        # 这样模型构建时只看到字典配置，而 cost_model 依然可以看到 'M' 用于计算
+        self.cfg_iter = iter([x for x in graph_config if isinstance(x, dict)])
 
         # Scale 0.5 Configuration (Lightweight)
         stages_repeats = [4, 8, 4]
-        stages_out_channels = [24, 48, 96, 192, 1024]  # 0.5x width
+        # [Topology Fix]: Stage 1 output 24 -> 24 (Stride 1) matches input
+        stages_out_channels = [24, 24, 48, 96, 1024]
 
         if len(stages_repeats) != 3:
             raise ValueError('expected stages_repeats as list of 3 integers')
@@ -144,20 +151,8 @@ class ShuffleNetV2_Cifar(nn.Module):
         )
         input_channels = output_channels
 
-        self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)  # Optional for CIFAR
-
         self.features = []
         for i in range(len(stages_repeats)):
-            # First block of stage (Stride 2 if i>0 or logic depends)
-            # Standard CIFAR: Stage 1 keeps res, Stage 2/3 downsample
-            # Let's verify resolution: 32x32 -> (Stage1) 32x32 -> (Stage2) 16x16 -> (Stage3) 8x8
-
-            # Stage 1 (i=0): Stride 1 (keep 32x32, or use maxpool before?)
-            # Let's assume input is 32x32.
-            # If we don't use maxpool, Stage 1 starts with stride 2? No.
-            # Usually ShuffleNet starts with Stride 2.
-            # For CIFAR, let's make Stage 1 Stride 1, Stage 2 Stride 2, Stage 3 Stride 2.
-
             stride = 2 if i > 0 else 1
             output_channels = self._stage_out_channels[i + 1]
 
@@ -186,7 +181,6 @@ class ShuffleNetV2_Cifar(nn.Module):
 
     def forward(self, x):
         out = self.conv1(x)
-        # out = self.maxpool(out) # Skip maxpool for CIFAR 32x32 to keep info
         out = self.features(out)
         out = self.conv_last(out)
         out = self.global_pool(out)
